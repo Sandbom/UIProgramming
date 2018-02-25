@@ -1,0 +1,86 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Blow The Fog Horn </title>
+      <link rel="stylesheet" href="../Styles/welcome.css">
+  </head>
+  <body>
+
+    <!-- Button to open the modal login form -->
+    <div>
+    <button onclick="document.getElementById('id01').style.display='block'" class="loginb">Login</button>
+    </div>
+
+    <div>
+    <button onclick="document.getElementById('id02').style.display='block'" class="regb">Register</button>
+    </div>
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" 
+    class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content Login -->
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit" class="loginbutton">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'"
+    class="close" title="Close Modal">&times;</span>
+
+      <!-- Modal Content Register -->
+      <form class="modal-content animate" action"/action_page.php">
+        <div class="imgcontainer">
+          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Full Name" name="name" required>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit" class="registerbutton">Register</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+
+    <article>
+      <header>
+        <h1>Welcome to the Flying Dutchman</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur odio in purus tincidunt vehicula. Fusce imperdiet, justo eu tristique fringilla, leo enim vestibulum libero, nec gravida sem ligula et libero. Duis laoreet, mi at mollis placerat, nisi leo faucibus nisl, quis elementum magna nisl ac lorem. Nulla lorem neque, efficitur quis tempor id, imperdiet quis ipsum. Aliquam cursus suscipit ipsum, a placerat sem molestie quis. Suspendisse vitae lacinia lorem. Mauris tristique id odio non luctus. Donec eget lectus lobortis urna faucibus condimentum. Proin ut purus lobortis, luctus tortor nec, tincidunt dolor. Duis ullamcorper purus ac quam elementum, eget ultrices elit pulvinar. Cras maximus, mi ut condimentum viverra, nisi leo convallis purus, ut condimentum tortor sapien eu dolor. Proin sed fringilla arcu. Mauris dignissim finibus pellentesque. Aenean lobortis mollis egestas. Maecenas sit amet nibh libero. Mauris in erat sit amet neque egestas consequat nec dictum libero. </p>
+      </header>
+    </article>
+  </body>
+
+  </html>
