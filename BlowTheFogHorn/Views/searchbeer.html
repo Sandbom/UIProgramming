@@ -1,0 +1,192 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Blow The Fog Horn </title>
+      <link rel="stylesheet" href="../Styles/searchbeer.css">
+  </head>
+  <script>
+	function myFunction() {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('myInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+  </script>
+	<body>
+		 <!-- Button to open the modal login form -->
+    <div>
+    <button onclick="document.getElementById('id01').style.display='block'" class="loginb">Login</button>
+    </div>
+
+    <div>
+    <button onclick="document.getElementById('id02').style.display='block'" class="regb">Register</button>
+    </div>
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" 
+    class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content Login -->
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit" class="loginbutton">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'"
+    class="close" title="Close Modal">&times;</span>
+
+      <!-- Modal Content Register -->
+      <form class="modal-content animate" action"/action_page.php">
+        <div class="imgcontainer">
+          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Full Name" name="name" required>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit" class="registerbutton">Register</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <article>
+      <header>
+        <h1>Browse our beers!</h1>
+      </header>
+    </article>
+
+		<div>
+		<ul class ="Product_gallery" id="myUL">
+			<li class="Lagers ">
+				<img src="https://www.publicdomainpictures.net/pictures/250000/velka/beer-in-pint-glass.jpg" />
+
+				<div class="Product_information">
+					<h4>Lagers</h4>
+				</div>
+
+				<div class="Product_description">
+					<p>A lager, which can range from sweet to bitter and pale to black, is usually used to describe bottom-fermented brews of Dutch, German, and Czech styles. Most, however, are a pale to medium colour, have high carbonation, and a medium to high hop flavour.	</p>
+					<a href="#" class="See_Inventory">See Inventory</a>
+				</div>
+
+			</li>
+
+				<li class="Porters_Stouts">
+				<img src="https://www.bbcgoodfood.com/sites/default/files/stout-lead.jpg" />
+
+				<div class="Product_information">
+					<h4>Porters & Stouts</h4>
+				</div>
+
+				<div class="Product_description">
+					<p>There’s very little distinction between a Porter and a Stout, but they do have their differences.
+
+					Porter is a dark, almost black, fruity-dry, top fermenting style. An ale, porter is brewed with a combination of roasted malt to impart flavour, colour and aroma. Stout is also a black, roast brew made by top fermentation. </p>
+					<a href="#" class="See_Inventory">See Inventory</a>
+				</div>
+
+			</li>
+
+				<li class="Ales">
+				<img src="https://fthmb.tqn.com/JuD95GFh-napbJ3CehFuuuOUSYQ=/3382x2333/filters:no_upscale():fill(transparent,1)/124337728-56a090355f9b58eba4b19625.jpg" />
+
+				<div class="Product_information">
+					<h4>Ales</h4>
+				</div>
+
+				<div class="Product_description">
+					<p>Ales are often darker than lagers, ranging from rich gold to reddish amber. Top fermenting, and more hops in the wort gives these beers a distinctive fruitfulness, acidity and pleasantly bitter seasoning. Ales have a more assertive, individual personality than lager, though their alcoholic strength is the same.</p>
+					<a href="#" class="See_Inventory">See Inventory</a>
+				</div>
+
+			</li>
+
+				<li class="IPA">
+				<img src="http://alltomolfestivalen.se/wp-content/uploads/sites/182/2017/01/John_Sleeman_India_Pale_Ale-300x207.jpg	" />
+
+				<div class="Product_information">
+					<h4>Indian Pale Ale (IPA)</h4>
+
+				</div>
+
+				<div class="Product_description">
+					<p>You want a hoppy beer? Here you are. This style more than any other has become synonymous with craft brewing in the United States due to the current wave of breweries reveling in IPAs and APAs. India Pale Ales started off in England as “Pale Export” to be shipped to British troops in India in the 1700s.</p>
+					<a href="#" class="See_Inventory">See Inventory</a>
+				</div>
+
+			</li>
+
+				<li class="Scottish_ale">
+				<img src="https://learn.kegerator.com/wp-content/uploads/2016/07/wee-heavy-scotch-ale.jpg" />
+
+				<div class="Product_information">
+					<h4>Scottish Ale</h4>
+				</div>
+
+				<div class="Product_description">
+					<p>Scottish ales are typically full-bodied and malty, with some of the classic examples being dark brown in color. They are more lowly hopped than the English counterparts and often have a slightly viscous and sweet caramel malt character due to incomplete fermentation. Scottish-style ales can be found in far-flung corners of the world where faithful versions are brewed, this being a legacy of the style’s popularity in the British Empire. </p>
+					<a href="#" class="See_Inventory">See Inventory</a>
+				</div>
+
+			</li>
+
+				<li class="Belgian_style">
+				<img src="http://www.muntonshomebrew.com/wp-content/uploads/2015/01/muntonshandcrafted-belgianstyle1.jpg" />
+
+				<div class="Product_information">
+					<h4>Belgian Style Beer</h4>
+				</div>
+
+				<div class="Product_description">
+					<p> If you're put off by intensely bitter IPAs or bland canned lagers, the Belgian beer section at the flying dutchman may be a good place to start your love affair with beer. </p>
+					<a href="#" class="See_Inventory">See Inventory</a>
+				</div>
+
+			</li>
+		</ul>
+	</div>
+	</body>
