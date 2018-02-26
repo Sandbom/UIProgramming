@@ -1,0 +1,98 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Blow The Fog Horn </title>
+      <link rel="stylesheet" href="../Styles/beertype.css">
+  </head>
+ <!-- Button to open the modal login form -->
+    <div>
+    <button onclick="document.getElementById('id01').style.display='block'" class="loginb">Login</button>
+    </div>
+
+    <div>
+    <button onclick="document.getElementById('id02').style.display='block'" class="regb">Register</button>
+    </div>
+    <!-- The Modal -->
+    <div id="id01" class="modal">
+      <span onclick="document.getElementById('id01').style.display='none'" 
+    class="close" title="Close Modal">&times;</span>
+
+  <!-- Modal Content Login -->
+      <form class="modal-content animate" action="/action_page.php">
+        <div class="imgcontainer">
+          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+          <button type="submit" class="loginbutton">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+
+    <div id="id02" class="modal">
+      <span onclick="document.getElementById('id02').style.display='none'"
+    class="close" title="Close Modal">&times;</span>
+
+      <!-- Modal Content Register -->
+      <form class="modal-content animate" action"/action_page.php">
+        <div class="imgcontainer">
+          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Name</b></label>
+          <input type="text" placeholder="Enter Full Name" name="name" required>
+
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+
+          <label for="uname"><b>Username</b></label>
+          <input type="text" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+
+          <button type="submit" class="registerbutton">Register</button>
+        </div>
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+    <article>
+      <header>
+        <h1 id="beertypeheader">Beer Type</h1>
+      </header>
+    </article>
+    <div class="beerlist">
+    	<ul>
+    		<div class="beeritems">
+    			<li>Beer 1</li>
+    			<li>Beer 2</li>
+    			<li>Beer 3</li>
+    			<li>Beer 4</li>
+       			<li>Beer 5</li>
+    			<li>Beer 6</li>
+				<li>Beer 7</li>
+    			<li>Beer 8</li>
+				<li>Beer 9</li>
+    			<li>Beer 10</li>
+    		</div>
+    	</ul>
+    </div>
+      </body>
+
+  </html>
