@@ -10,6 +10,8 @@
     <script src="../Database/Dutchman%20Files/loader.js"></script>
     <script src="../Database/Dutchman%20Files/ModelFunctions.js"></script>
 
+
+
 </head>
 <body>
  <div id="main_menu" >
@@ -23,9 +25,25 @@
      <div class="inline" id = "home">
          <img class="imgSize" src="../img/homeButton.png">
      </div>
-     <div class="inline_flags" id = "swedish">
+
+     <div class="inline" id = "settings">
+         <img hidden id = "settingsIcon" class="imgSize" src="../img/settings.png">
+         <label hidden id="vipLabel"><em>V.I.P</em></label>
+
+     </div>
+
+     <div class="inline" id = "login">
+         <img hidden id = "loginIcon" class="imgSize" src="../img/login.png">
+         <label hidden id="loginLabel"><em>Johan</em></label>
+
+     </div>
+
+
+
+
+     <div class="inline_flags" id = "swedish" >
          <div class="flag">
-             <img  class= "flag_img" src="../img/if_Sweden_flat_92366.png" >
+             <img  class= "flag_img" src="../img/if_Sweden_flat_92366.png"  >
          </div>
 
          <div class="flag">
@@ -46,6 +64,14 @@
          <button class="curved_btn">V.I.P Login</button>
 
      </div>
+
+     <div id="cart" class="inline_buttons">
+         <button class="curved_btn">Cart</button>
+         <label id ="cartLabel">1</label>
+
+     </div>
+
+
  </div>
 </body>
 </html>

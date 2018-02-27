@@ -26,6 +26,11 @@ div.inline_buttons{
     right:0;
 
 }
+
+div.checkout_buttons{
+    float: right;
+    position: center;
+}
 div.flag {
     float:left;
     margin-right: 20px;
@@ -38,18 +43,24 @@ img.flag_img{
 }
 
 button.curved_btn {
-    background-color: #FFC02E; /* Same colour as icons */
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-    line-height: 0.5px;
+     background-color: #FFC02E; /* Same colour as icons */
+     border: none;
+     color: white;
+     padding: 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-radius: 8px;
+     line-height: 0.5px;
+
+
+ }
+
+button.checkout_btn {
+    background: url('../img/shopping-cart-icon.png') no-repeat;
 
 
 }
@@ -440,4 +451,14 @@ div.buttonboxinner {
 
 .imgSize{
     width: 30px;
+}
+
+.cartImgSize{
+    width: 50px;
+
+}
+
+#cart{
+    margin-top: 50px;
+
 }
