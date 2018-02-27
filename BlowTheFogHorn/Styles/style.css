@@ -395,3 +395,40 @@ input[type=text], input[type=password] {
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 
 }
+
+div.wrapper {
+  text-align: center;
+  padding-top: 3%;
+}
+
+div.text {
+    font-size: 40px;
+    color: white;
+    display: inline-block;
+    width: 70%;
+    height:70%;
+}
+
+div.buttonbox {
+    display: block;
+    text-align:center;
+}
+
+div.buttonboxinner {
+    display: inline-block;
+    text-align: center;
+    width: 35%;
+    height:70%;
+}
+
+.buttonTable {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 18px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 50px 60px 40px;
+}
