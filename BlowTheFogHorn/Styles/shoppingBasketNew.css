@@ -45,11 +45,14 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 2px 50px 45px 40px;
+    margin: 2px 50px 25px 40px;
+    border-radius: 4px;
 }
 
 .payButton {
     background-color: green;
+    width: 12%;
+    padding: 6px 40px;
 }
 
 div.wrapper {
