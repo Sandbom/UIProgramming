@@ -1,12 +1,14 @@
 body {
     background-color: chocolate;
     margin-left: 20px;
+    background:url("../img/paper_texture_v5_by_bashcorpo.jpg");
 }
 
 #beerArea{
     margin-left: 0px;
     margin-bottom: 100px;
     margin-top: 10px;
+
 }
 
 #infoArea{
@@ -16,7 +18,7 @@ body {
     margin-right: auto;
     margin-top: none;
     margin-bottom: none;
-    background-color: #FFC02E;
+    background-color: #ffa005;
     width:35%;
     border: 4px;
     border-bottom-left-radius: 15px;
