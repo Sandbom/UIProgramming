@@ -5,6 +5,7 @@ h1 {
 div.inline {
     float:left;
     margin-right: 20px;
+    margin-bottom: 65px;
 }
 
 div.inline_flags {
