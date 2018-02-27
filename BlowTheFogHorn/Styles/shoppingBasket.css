@@ -7,6 +7,7 @@ div.main{
     top:200px;
     left: 30%;
     width: 800px;
+    height: 650px;
 }
 
 div.basket{
@@ -21,11 +22,53 @@ div.basket{
 }
 
 
+table, tr, td{
+    border: 1px black solid;
+    border-collapse: collapse;
+    width: 100%;
+
+
+}
+
+div.tableButton{
+    display: block;
+
+
+}
+
+div#payButton{
+
+
+}
+
+h1{
+    text-align: center;
+    color: white;
+    font-size: 45px;
+    margin: 10px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+/*
+background image
+*/
+
+html {
+    background: url(../img/paper_texture_v5_by_bashcorpo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+/*
+
 div.headers{
     height: 30%;
     display:table-row;
 }
-
 
 div#articleHeader{
     width:50%;
@@ -80,63 +123,5 @@ div#cost1{
 }
 
 
-h1{
-    text-align: center;
-    color: white;
-    font-size: 45px;
-    margin: 10px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
-}
-/*
-#article1{
-    position: absolute;
-    top: 20%;
-}
-
-#article2{
-    position: absolute;
-    top: 30%;
-}
-
-#article3{
-    position: absolute;
-    top: 40%;
-}
-
-#article4{
-    position: absolute;
-    top: 50%;
-}
-
-#article5{
-    position: absolute;
-    top: 60%;
-}
-
-#article6{
-    position: absolute;
-    top: 70%;
-}
-
-#article7{
-    position: absolute;
-    top: 80%;
-}
-
-#article8{
-    position: absolute;
-    top: 90%;
-}
 */
-/*
-background image
-*/
-html {
-    background: url(../img/paper_texture_v5_by_bashcorpo.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-}
 
