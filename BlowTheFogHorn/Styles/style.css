@@ -1,10 +1,15 @@
 h1 {
      color: #dce28d;
  }
+#main_menu{
+
+}
 
 div.inline {
     float:left;
+
     margin-right: 20px;
+    margin-bottom: 65px;
 }
 
 div.inline_flags {
@@ -21,6 +26,11 @@ div.inline_buttons{
     right:0;
 
 }
+
+div.checkout_buttons{
+    float: right;
+    position: center;
+}
 div.flag {
     float:left;
     margin-right: 20px;
@@ -33,18 +43,24 @@ img.flag_img{
 }
 
 button.curved_btn {
-    background-color: #FFC02E; /* Same colour as icons */
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 8px;
-    line-height: 0.5px;
+     background-color: #FFC02E; /* Same colour as icons */
+     border: none;
+     color: white;
+     padding: 20px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     border-radius: 8px;
+     line-height: 0.5px;
+
+
+ }
+
+button.checkout_btn {
+    background: url('../img/shopping-cart-icon.png') no-repeat;
 
 
 }
@@ -71,7 +87,7 @@ input[type=text], input[type=password] {
 /*Buttons for the front page*/
 
 body {
-    background-image: url("https://images.pexels.com/photos/745410/pexels-photo-745410.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb");
+   /* background-image: url("https://images.pexels.com/photos/745410/pexels-photo-745410.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"); */
     background-size: 120%;
 }
 
@@ -393,5 +409,56 @@ input[type=text], input[type=password] {
     color:white;
     font-weight: bold;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+div.wrapper {
+  text-align: center;
+  padding-top: 3%;
+}
+
+div.text {
+    font-size: 40px;
+    color: white;
+    display: inline-block;
+    width: 70%;
+    height:70%;
+}
+
+div.buttonbox {
+    display: block;
+    text-align:center;
+}
+
+div.buttonboxinner {
+    display: inline-block;
+    text-align: center;
+    width: 35%;
+    height:70%;
+}
+
+.buttonTable {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 18px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 50px 60px 40px;
+}
+
+.imgSize{
+    width: 30px;
+}
+
+.cartImgSize{
+    width: 50px;
+
+}
+
+#cart{
+    margin-top: 50px;
 
 }

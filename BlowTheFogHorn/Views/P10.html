@@ -10,6 +10,13 @@
     <script>
         $(function(){
             $("#masterContent").load("master.html");
+            $(document).ready(function(){
+                $("#settingsIcon").show();
+                $("#vipLabel").show();
+                $("#loginIcon").show();
+                $("#loginLabel").show();
+
+                });
         });
     </script>
 </head>
@@ -19,6 +26,7 @@
 
 <div id="BeerArea">
     <label id="beerLabel">Beer A</label>
+    <button id="cart"></button>
     <br>
      <div id="infoArea">
         <div id="infoLeft" class="infoHeader">
@@ -27,9 +35,17 @@
           <div id="vertical-line"></div>
          <div id="infoRight">
            <span class="infoHeader">Results:</span>
-             
+
          </div>
      </div>
+            <button id="addToBasket">
+                Add To Basket
+            </button>
+
+    <button id="beersToOrder">
+        Add Beers To Order
+    </button>
+
 
      </div>
 
