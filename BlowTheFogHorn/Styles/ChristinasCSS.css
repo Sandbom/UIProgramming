@@ -41,11 +41,12 @@ button {
     font-size: 20px;
     font-weight: bold;
     border: 2px solid black;
-    padding: 18px 40px;
+    padding: 13px 40px; 
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 2px 50px 45px 40px;
+    margin: 2px 50px 25px 40px;
+    border-radius: 4px;
 
 
     	/* old green buttons
@@ -94,4 +95,10 @@ td, th {
 
 .payButton {
 	background-color: green;
+	width: 20%;
+	padding: 6px 40px;
+}
+
+.settingButton {
+	width: 95%;
 }
