@@ -1,7 +1,56 @@
 h1 {
-     color: blueviolet;
+     color: #dce28d;
  }
 
 body {
     background-color: chocolate;
 }
+
+div.inline {
+    float:left;
+    margin-right: 20px;
+}
+
+div.inline_flags {
+    float:left;
+    margin-left: 360px;
+
+
+}
+
+div.inline_buttons{
+    float:right;
+    position:absolute;
+    top:0;
+    right:0;
+
+}
+div.flag {
+    float:left;
+    margin-right: 20px;
+
+}
+
+img.flag_img{
+    height: 25px;
+    width:35px;
+}
+
+button.curved_btn {
+    background-color: #FFC02E; /* Same colour as icons */
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 8px;
+    line-height: 0.5px;
+
+
+}
+
+.clearBoth { clear:both; }

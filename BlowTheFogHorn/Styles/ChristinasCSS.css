@@ -1,0 +1,82 @@
+
+/*
+background image
+ */
+
+html {
+    background: url(https://static.pexels.com/photos/172292/pexels-photo-172292.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+div.wrapper {
+	text-align: center;
+	padding-top: 3%;
+}
+
+div.text {
+    font-size: 40px;
+    color: white;
+    display: inline-block;
+    width: 70%;
+    height:70%;
+}
+
+div.buttonbox {
+    display: block;
+    text-align:center;
+/*    padding: 2% 40%;*/
+}
+
+div.buttonboxinner {
+    display: inline-block;
+    text-align: center;
+    width: 35%;
+    height:70%;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 18px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 50px 60px 40px;
+}
+
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+table {
+    border-collapse: collapse;
+    display: inline-block;
+}
+
+td, th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 7px  15px;
+}
+
+.bgdiff {
+    background-color: white;
+}
+
+.tablebutton {
+    margin: 5px;
+    background-color: red;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.nolines {
+    border: none;
+    background: default;
+}
