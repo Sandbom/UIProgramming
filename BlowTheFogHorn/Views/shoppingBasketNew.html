@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Basket</title>
+    <link rel="styleSheet" href="../Styles/shoppingBasketNew.css">
+
+    <script src="../Scripts/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#masterContent").load("master.html");
+        });
+    </script>
+
+</head>
+<body>
+
+<div id="masterContent"></div>
+    <div class = "header">
+        <!-- This should include the header master.html a logged in customer -->
+
+   <div class="wrapper">
+        <div class="text">
+
+        <h2>This is the shopping basket</h2>
+        </div>
+
+        <!--All the cells in the table -->
+        <div>
+            <table>
+                <tr>
+                    <th class="nolines"></th>
+                    <th class="items">Article </th>
+                    <th class="items">Amount</th>
+                    <th class="items">Cost</th>
+                </tr>
+
+                <tr>
+                    <td class="nolines"><button type="button" class="tableButton">X</button> </td>
+                    <td class="items">Article1</td>
+                    <td class="items">Amount1</td>
+                    <td class="items">Cost1</td>
+                </tr>
+
+                <tr>
+                    <th class="nolines"><button type="button" class="tableButton">X</button> </th>
+                    <td class="items">Article2</td>
+                    <td class="items">Amount2</td>
+                    <td class="items">Cost2</td>
+                </tr>
+
+                <tr>
+                    <th class="nolines"><button type="button" class="tableButton">X</button> </th>
+                    <td class="items">Article3</td>
+                    <td class="items">Amount3</td>
+                    <td class="items">Cost3</td>
+                </tr>
+
+
+            </table>
+        </div>
+        <div>
+        <button type="button" class="payButton">Pay</button>
+    </div>
+
+</body>
+</html>

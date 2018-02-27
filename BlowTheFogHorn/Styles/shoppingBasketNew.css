@@ -1,0 +1,86 @@
+@import 'https://fonts.googleapis.com/css?family=Pacifico|Dosis';
+
+
+table {
+    border-collapse: collapse;
+    display: inline-block;
+}
+
+td, th {
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 7px  15px;
+}
+
+.bgdiff {
+    background-color: white;
+}
+
+.tablebutton {
+    margin: 5px;
+    background-color: red;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.nolines {
+    border: none;
+    background: default;
+}
+
+button.tableButton{
+    margin: 5px;
+    background-color: red;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+button {
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid black;
+    padding: 18px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 50px 45px 40px;
+}
+
+.payButton {
+    background-color: green;
+}
+
+div.wrapper {
+    text-align: center;
+}
+
+div.text {
+    font-size: 40px;
+    color: black;
+    display: inline-block;
+    width: 70%;
+    height:50%;
+}
+
+/*
+background image
+*/
+
+html {
+    background: url(../img/paper_texture_v5_by_bashcorpo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.items {
+    background-color: white;
+}
+
+button:hover{
+    opacity: 0.8;
+    cursor: pointer;
+}
