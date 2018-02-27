@@ -1,0 +1,75 @@
+body {
+    background-color: chocolate;
+    margin-left: 20px;
+}
+
+#beerArea{
+    margin-left: 0px;
+    margin-bottom: 100px;
+    margin-top: 10px;
+}
+
+#infoArea{
+    height: 200px;
+
+    margin-left: 22px;
+    margin-right: auto;
+    margin-top: none;
+    margin-bottom: none;
+    background-color: #FFC02E;
+    width:35%;
+    border: 4px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 7px;
+
+
+
+}
+#beerLabel {
+    text-align: left;
+    line-height: 150%;
+    font-size: 20px;
+
+    vertical-align:top;
+    display:block;
+    margin-left:209px;
+    margin-bottom: 5px;
+    font-weight:bold
+
+}
+
+#infoLeft{
+    float: left;
+    width: 60%;
+    height: inherit;
+
+}
+
+#infoRight{
+    padding-left: 1.4px;
+    float: left;
+    width: 39%;
+    height: inherit;
+
+}
+
+.infoHeader{
+ font-weight: bold;
+}
+
+html,body{
+    height:100%
+}
+
+#vertical-line
+{
+    width: 0.5%;
+
+    background-color: black; /* Line color */
+    height: inherit; /* Override in-line if you want specific height. */
+    float: left; /* Causes the line to float to left of content. You can instead use position:absolute or display:inline-block if this fits better with your design */
+
+}
