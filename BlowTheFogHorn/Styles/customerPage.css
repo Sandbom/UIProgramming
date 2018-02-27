@@ -1,54 +1,31 @@
 @import 'https://fonts.googleapis.com/css?family=Pacifico|Dosis';
 
 
-div.main{
+.main {
+    font-size: 40px;
     color: black;
-    font-family: "DejaVu Serif";
-    font-weight: bold;
-    position: relative ;
-    left:35%;
-    top:200px;
-}
-
-div#username{
-    font-size: 50px;
-    color: white;
-    width: 26%;
-    height:26%;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    display: inline-block;
+    width: 70%;
+    height:50%;
 }
 
 
-button{
-    /*
-  Position of the button
-   */
-    top: 105%;
-    left: 0%;
-    height: 50px;
-    width: 200px;
-    border-radius: 4px;
-
-    /*
-    Color of the button
-     */
+button {
     background-color: white;
     color: black;
     font-size: 20px;
     font-weight: bold;
     border: 2px solid black;
-
-    /*
-    Positions of the bottons
-     */
-    padding: 15px 32px;
+    width: 95%;
+    padding: 13px 40px;
     text-align: center;
-    margin: 10px;
-    width: 100%;
-
+    text-decoration: none;
+    display: inline-block;
+    margin: 2px 50px 25px 40px;
+    border-radius: 4px;
 }
 
-button:hover{
+button:hover {
     opacity: 0.8;
     cursor: pointer;
 }
@@ -62,4 +39,20 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+div.wrapper {
+    text-align: center;
+}
+
+.buttonGroup {
+    display: block;
+    text-align:center;
+}
+
+.buttonGroupInner {
+    display: inline-block;
+    text-align: center;
+    width: 35%;
+    height:70%;
 }
