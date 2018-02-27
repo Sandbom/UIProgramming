@@ -73,3 +73,24 @@ html,body{
     float: left; /* Causes the line to float to left of content. You can instead use position:absolute or display:inline-block if this fits better with your design */
 
 }
+
+#addToBasket{
+    width: 10%;
+    background-color: #FFC02E;
+    border-radius: 12px;
+    color: black;
+    margin-top: 15px;
+    margin-left: 22px;
+    text-align: center;
+}
+
+#beersToOrder {
+    position: fixed;
+    width: 25%;
+    height: 9%;
+    bottom: 10px;
+    right: 0px;
+    background-color: #FFC02E;
+    border-radius: 20px;
+    color: black;
+}
