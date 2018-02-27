@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <title>Beer Information</title>
     <link rel="styleSheet" href="../Styles/customerBeerInfo.css">
+    <script src="../Scripts/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#masterContent").load("master.html");
+        });
+    </script>
+
+
 </head>
 <body>
+
+<div id="masterContent"></div>
 
 <div class="beerName"> <h1>Beer A</h1> </div>
 
@@ -35,7 +45,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
     </div>
 
-    <button type="button" class="payButton">  Add to basket</button>
+    <button type="button" class="payButton"> Add to basket</button>
 
 </div>
 

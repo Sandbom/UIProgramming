@@ -4,55 +4,62 @@
     <meta charset="UTF-8">
     <title>Shopping Basket</title>
     <link rel="styleSheet" href="../Styles/shoppingBasket.css">
+
+    <script src="../Scripts/jquery.js"></script>
+    <script>
+        $(function(){
+            $("#masterContent").load("master.html");
+        });
+    </script>
+
 </head>
 <body>
 
-<div class="background">
-
+<div id="masterContent"></div>
     <div class = "header">
         <!-- This should include the header master.html a logged in customer -->
 
     </div>
 
-
-    <div class = "main">
-
         <h1>This is the shopping basket</h1>
 
         <!--All the cells in the table -->
-        <div class = basket>
-            <div class="headers" id="header">
+        <div class = customerCart>
+            <table>
+                <tr>
+                    <th class="noLines">Hej</th>
+                    <th class="items">Article </th>
+                    <th class="items">Amount</th>
+                    <th class="items">Cost</th>
+                </tr>
 
-                <div class = "headers" id="articleHeader">Article</div>
-                <div class="headers" id="amountHeader">Amount</div>
-                <div class="headers" id="costHeader">Cost</div>
+                <tr>
+                    <td class="noLines"><button type="button" class="tableButton">X</button> </td>
+                    <td class="items">Article1</td>
+                    <td class="items">Amount1</td>
+                    <td class="items">Cost1</td>
+                </tr>
 
-            </div>
+                <tr>
+                    <th class="noLines"><button type="button" class="tableButton">X</button> </th>
+                    <td class="items">Article2</td>
+                    <td class="items">Amount2</td>
+                    <td class="items">Cost2</td>
+                </tr>
 
-            <div class = "items" id="item1">
-                <div class="items" id="article1">article 1</div>
-                <div class="items" id="cost1">cost 1</div>
-                <div class="items" id="amount1">amount 1</div>
-
-            </div>
-            <!--
-            <div class="articleItem" id="article1">A1 </div>
-            <div class="articleItem" id="article2">A2 </div>
-            <div class="articleItem" id="article3">A3 </div>
-            <div class="articleItem" id="article4">A4 </div>
-            <div class="articleItem" id="article5">A5 </div>
-            <div class="articleItem" id="article6">A6 </div>
-            <div class="articleItem" id="article7">A7 </div>
-            <div class="articleItem" id="article8">A8 </div>
--->
-        </div>
-
-        <button type="submit" >Pay</button>
+                <tr>
+                    <th class="noLines"><button type="button" class="tableButton">X</button> </th>
+                    <td class="items">Article3</td>
+                    <td class="items">Amount3</td>
+                    <td class="items">Cost3</td>
+                </tr>
 
 
-    </div>
+            </table>
 
-</div>
+        <button type="submit" class="payButton">Pay</button>
+
+
 
 </body>
 </html>

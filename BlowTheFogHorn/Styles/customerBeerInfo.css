@@ -2,7 +2,7 @@
 div.main{
     height: 400px;
     position: relative;
-    top: 300px;
+    top: 200px;
     display: flex;
     justify-content: center;
 }
@@ -43,7 +43,7 @@ div.beerName h1{
     font-size: 45px;
     margin: 10px;
     position: relative;
-    top: 300px;
+    top: 200px;
 
 }
 
@@ -83,6 +83,9 @@ button.payButton{
     background-position: left;
 }
 
+/*
+
+ */
 .payButton:hover{
     cursor: pointer;
     background-color: #d9d7d9;

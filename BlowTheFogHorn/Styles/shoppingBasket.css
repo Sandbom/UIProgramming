@@ -1,44 +1,59 @@
 @import 'https://fonts.googleapis.com/css?family=Pacifico|Dosis';
 
-
-
-div.main{
-    position: relative;
-    top:200px;
-    left: 30%;
-    width: 800px;
-    height: 650px;
-}
-
-div.basket{
+div.customerCart{
     background-color: white;
     color:black;
     font-size: 25px;
     border: 4px solid black;
-    width: 100%;
+    width: 50%;
     height: 500px;
     opacity: 0.8;
     display: table;
+    position: absolute;
+    left: 25%;
 }
 
 
 table, tr, td{
-    border: 1px black solid;
+    border: 2px black solid;
     border-collapse: collapse;
     width: 100%;
-
-
-}
-
-div.tableButton{
-    display: block;
-
+    text-align: left;
+    padding: 7px  15px;
 
 }
 
-div#payButton{
+button.tableButton{
+    margin: 5px;
+    background-color: red;
+    padding: 12px;
+    border-radius: 50%;
+}
 
+th.noLines{
+    border: none;
 
+}
+
+button.payButton{
+    /*
+  Position of the button
+   */
+    position: absolute;
+    top: 105%;
+    left: 0%;
+    height: 50px;
+    width: 200px;
+    border-radius: 4px;
+
+    /*
+    Color of the button
+     */
+    background-color: white;
+    opacity: 0.8;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 h1{
@@ -61,7 +76,6 @@ html {
     -o-background-size: cover;
     background-size: cover;
 }
-
 
 /*
 
