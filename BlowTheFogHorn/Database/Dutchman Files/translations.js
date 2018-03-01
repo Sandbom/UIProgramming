@@ -25,7 +25,7 @@ var greek = {
             "classOfGoods" : "Είδος: ",
             "alcoholPercentage" : "Περιεκτικότητα: ",
             "packaging" : "Συσκευασία: ",
-            "payButton" : "Πατήστε εδώ για να πληρώσετε"
+            "payButton" : "Προσθήκη"
 
         }
 

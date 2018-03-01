@@ -18,6 +18,12 @@
     <script src="../Database/Dutchman%20Files/ModelFunctions.js"></script>
 
     <script>
+
+        $( document ).ready(function() {
+            console.log( "ready!" );
+            $( window ).on( "load", translateTo(english) );
+        });
+
     $(function() {
         $("#swedishFlag").on("click", function(){
             translateTo(swedish);
@@ -42,7 +48,7 @@
 
 
 </head>
-<body>
+<body ">
  <div id="main_menu" >
      <div class="inline" id="back">
          <img  class="imgSize" src="../img/arrowleft.png">
