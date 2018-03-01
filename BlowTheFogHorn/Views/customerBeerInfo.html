@@ -5,6 +5,7 @@
     <title>Beer Information</title>
     <link rel="styleSheet" href="../Styles/customerBeerInfo.css">
     <script src="../Scripts/jquery.js"></script>
+    <script src="../Scripts/translateCustomerBeerInfo.js"></script>
     <!--
     Import translation script
 
@@ -15,6 +16,7 @@
     Import the swedish translations
     -->
     <script src="../Database/Dutchman Files/translations.js"></script>
+
     <script>
 
         /*
@@ -24,6 +26,9 @@
             $("#masterContent").load("master.html");
         });
 
+        $().click(function(){
+            alert("The paragraph was clicked.");
+        });
         /*
         Print Beer information into the two divs
         */

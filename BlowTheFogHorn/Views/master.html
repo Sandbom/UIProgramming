@@ -20,13 +20,19 @@
     <script>
     $(function() {
         $("#swedishFlag").on("click", function(){
-            translateToSwedish();
+            translateTo(swedish);
         });
     });
 
     $(function() {
         $("#ukFlag").on("click", function(){
-            translateToEnglish();
+            translateTo(english);
+        });
+    });
+
+    $(function() {
+        $("#greekFlag").on("click", function(){
+            translateTo(greek);
         });
     });
 
@@ -78,7 +84,7 @@
          </div>
 
          <div class="flag">
-             <img  class= "flag_img" src="../img/if_Greece_flat_92102.png" >
+             <img  class= "flag_img" id="greekFlag" src="../img/if_Greece_flat_92102.png" >
          </div>
      </div>
 
