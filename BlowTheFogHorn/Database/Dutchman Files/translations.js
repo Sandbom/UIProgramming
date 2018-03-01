@@ -16,6 +16,24 @@ var swedish = {
 
 }
 
+var greek = {
+    "customerBeerInfo": [
+        {
+            "origin" : "Προέλευση: ",
+            "provider" : "Προμηθευτής: ",
+            "nr" : "Αρ: ",
+            "classOfGoods" : "Είδος: ",
+            "alcoholPercentage" : "Περιεκτικότητα: ",
+            "packaging" : "Συσκευασία: ",
+            "payButton" : "Πατήστε εδώ για να πληρώσετε"
+
+        }
+
+
+    ]
+
+}
+
 
 var english = {
     "customerBeerInfo" : [
