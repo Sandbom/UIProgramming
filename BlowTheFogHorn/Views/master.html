@@ -21,6 +21,7 @@
 
         $( document ).ready(function() {
             console.log( "ready!" );
+
             $( window ).on( "load", translateTo(english) );
         });
 
@@ -96,12 +97,12 @@
 
      <br class="clearBoth" />
      <div class="inline_buttons">
-         <button class="curved_btn">V.I.P Login</button>
+         <button  id ="vipBtn" class="curved_btn"></button>
 
      </div>
 
      <div id="cart" class="inline_buttons">
-         <button class="curved_btn">Cart</button>
+         <button id ="cartBtn" class="curved_btn"></button>
          <label id ="cartLabel">1</label>
 
      </div>

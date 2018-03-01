@@ -66,8 +66,11 @@
 
 
         $(document).ready(function(){
+            var counter = 0;
             $(".payButton").click(function(){
                 alert("The item is now in the cart");
+
+                $("#cartLabel").text(counter++);
             });
         });
 

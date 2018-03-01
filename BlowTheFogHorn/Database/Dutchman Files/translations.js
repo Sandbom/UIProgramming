@@ -12,9 +12,20 @@ var swedish = {
         }
 
 
+    ],
+    "masterPage" : [
+        {
+            "vipBtn" : "V.I.P Logga in ",
+            "cartBtn" : "Kundvagn"
+        }
+
+
+
+
+
     ]
 
-}
+};
 
 var greek = {
     "customerBeerInfo": [
@@ -30,9 +41,20 @@ var greek = {
         }
 
 
+    ],
+    "masterPage" : [
+        {
+            "vipBtn" : "V.I.P Σύνδεση",
+            "cartBtn" : "Καλάθι"
+        }
+
+
+
+
+
     ]
 
-}
+};
 
 
 var english = {
@@ -49,8 +71,23 @@ var english = {
 
 
 
+
+
+    ],
+    "masterPage" : [
+        {
+            "vipBtn" : "V.I.P Login ",
+            "cartBtn" : "Cart"
+        }
+
+
+
+
+
     ]
 
 
 
-}
+
+
+};
