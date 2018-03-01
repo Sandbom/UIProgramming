@@ -6,10 +6,11 @@ var swedish = {
             "nr" : "Nr: ",
             "classOfGoods" : "Varugrupp: ",
             "alcoholPercentage" : "Alkoholhalt: ",
-            "packaging" : "förpackning: "
+            "packaging" : "Förpackning: ",
+            "payButton" : "Tryck för att betala"
 
         }
-        
+
 
     ]
 
@@ -24,8 +25,8 @@ var english = {
             "nr" : "Nr: ",
             "classOfGoods" : "Class of goods: ",
             "alcoholPercentage" : "Alcohol percentage: ",
-            "packaging" : "packaging: "
-
+            "packaging" : "packaging: ",
+            "payButton" : "Add to basket"
         }
 
 

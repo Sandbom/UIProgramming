@@ -6,13 +6,15 @@
     <link rel="styleSheet" href="../Styles/customerBeerInfo.css">
     <script src="../Scripts/jquery.js"></script>
     <!--
+    Import translation script
+
     Import Beverages db
     -->
     <script src="../Database/Dutchman Files/Beverages.js"></script>
     <!--
     Import the swedish translations
     -->
-    <script src="../Database/Dutchman Files/swedish.js"></script>
+    <script src="../Database/Dutchman Files/translations.js"></script>
     <script>
 
         /*
@@ -57,20 +59,6 @@
 
         });
 
-        /*
-        Appends the different swedish translations to the html file
-        */
-        $(function translateToSwedish() {
-            translation = swedishTranslation();
-            $("#origin").append(translation[0])
-            $("#provider").append(translation[1])
-            $("#nr").append(translation[2])
-            $("#classOfGoods").append(translation[3])
-            $("#alcoholPercentage").append(translation[4])
-            $("#packaging").append(translation[5])
-
-
-        })
 
         $(document).ready(function(){
             $(".payButton").click(function(){
@@ -101,24 +89,6 @@
                 }
             }
             return info;
-        }
-
-        /*
-        Fetches data for translations.js and returns an array with the translations
-        */
-        function swedishTranslation(){
-            var translations = [];
-
-            for(i=0;i<swedish.customerBeerInfo.length;i++){
-                translations.push(swedish.customerBeerInfo[i].origin);
-                translations.push(swedish.customerBeerInfo[i].provider);
-                translations.push(swedish.customerBeerInfo[i].nr);
-                translations.push(swedish.customerBeerInfo[i].classOfGoods);
-                translations.push(swedish.customerBeerInfo[i].alcoholPercentage);
-                translations.push(swedish.customerBeerInfo[i].packaging);
-
-            }
-            return translations;
         }
 
         /*

@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <title>Blow The Fog Horn </title>
     <link rel="stylesheet" href="../Styles/style.css">
+    <!--
+    Import jquery
+    -->
+    <script src="../Scripts/jquery.js"></script>
+
+    <script src="../Scripts/translateCustomerBeerInfo.js"></script>
+
     <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
     <script src="../Database/Dutchman%20Files/Beverages.js"></script>
     <script src="../Database/Dutchman%20Files/DBLoaded.js"></script>
     <script src="../Database/Dutchman%20Files/loader.js"></script>
     <script src="../Database/Dutchman%20Files/ModelFunctions.js"></script>
+
+    <script>
+    $(function() {
+        $("#swedishFlag").on("click", function(){
+            translateToSwedish();
+        });
+    });
+
+    $(function() {
+        $("#ukFlag").on("click", function(){
+            translateToEnglish();
+        });
+    });
+
+
+    </script>
 
 
 
@@ -43,11 +66,11 @@
 
      <div class="inline_flags" id = "swedish" >
          <div class="flag">
-             <img  class= "flag_img" src="../img/if_Sweden_flat_92366.png"  >
+             <img  class= "flag_img" id="swedishFlag" src="../img/if_Sweden_flat_92366.png"   >
          </div>
 
          <div class="flag">
-             <img  class= "flag_img" src="../img/if_United-Kingdom_92403.png" >
+             <img  class= "flag_img" id="ukFlag" src="../img/if_United-Kingdom_92403.png" >
          </div>
 
          <div class="flag">
