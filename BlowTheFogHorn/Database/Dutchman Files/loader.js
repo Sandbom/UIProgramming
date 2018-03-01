@@ -19,7 +19,7 @@ function allUserNames() {
 
 // =====================================================================================================
 // This is an example of a file that will return an array with some specific details about a
-// selected user name (not the first name/alst name). It will also add details from another "database"
+// selected user name (not the first name/last name). It will also add details from another "database"
 // which contains the current account status for the person.
 //
 function userDetails(userName) {
@@ -102,7 +102,7 @@ function allBeverages() {
     // items, you may introduce filter functions in the loop... see the template within comments.
     //
     for (i = 0; i < DB2.spirits.length; i++) {
-        collector.push([DB2.spirits[i].namn, DB2.spirits[i].varugrupp]);
+            collector.push([DB2.spirits[i].namn, DB2.spirits[i].varugrupp]);
     };
     //
     return collector;

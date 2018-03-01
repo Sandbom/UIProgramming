@@ -37,7 +37,16 @@ div.beerCostInfo{
     border-bottom: 1px black solid;
 }
 
-div.beerName h1{
+ul{
+    list-style-type: square;
+    font-size: 25px;
+}
+
+span{
+    font-weight: bold;
+}
+
+h1#beerName{
     text-align: center;
     color: black;
     font-size: 45px;

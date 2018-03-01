@@ -5,42 +5,128 @@
     <title>Beer Information</title>
     <link rel="styleSheet" href="../Styles/customerBeerInfo.css">
     <script src="../Scripts/jquery.js"></script>
+    <!--
+    Import Beverages db
+    -->
+    <script src="../Database/Dutchman Files/Beverages.js"></script>
     <script>
+
+        /*
+                Loads the master.html into the page
+         */
         $(function(){
             $("#masterContent").load("master.html");
         });
-    </script>
 
+        /*
+        Print Beer information into the two divs
+        */
+        $(function displayToDivs(){
+            /*
+            Variables for each beer
+             */
+            var beer = findBeer("Highland Park");
+            var name = beer[0];
+            var nr = beer[1];
+            var varugrupp = beer[2];
+            var ursprung = beer[3];
+            var leverantor = beer[4];
+            var pris = beer[5];
+            var alkholhalt = beer[6];
+            var forpackning = beer[7];
+
+            /*
+            Append some info to the left div
+             */
+            $("#item5").append(varugrupp);
+            $("#item6").append(ursprung);
+            $("#item7").append(leverantor);
+
+            /*
+            Append some info the right div
+             */
+            $("#item1").append(nr);
+            $("#item2").append(varugrupp);
+            $("#item3").append(alkholhalt);
+            $("#item4").append(forpackning);
+
+            $("#beerName").append(name);
+
+        });
+
+        $(document).ready(function(){
+            $(".payButton").click(function(){
+                alert("The item is now in the cart");
+            });
+        });
+
+        /*
+          Returns information (nr,varugrupp,ursprung,leverantor,pris) for the last beer from the DB with
+          a particular name
+        */
+        function findBeer(spiritName){
+            var info = [];
+            var nr =  findBeerNr(spiritName);
+
+            for (i = 0; i<DB2.spirits.length;i++){
+                if (DB2.spirits[i].nr == nr){
+
+                    info.push(DB2.spirits[i].namn);
+                    info.push(DB2.spirits[i].nr);
+                    info.push(DB2.spirits[i].varugrupp);
+                    info.push(DB2.spirits[i].ursprung);
+                    info.push(DB2.spirits[i].leverantor);
+                    info.push(DB2.spirits[i].pris);
+                    info.push(DB2.spirits[i].alkoholhalt);
+                    info.push(DB2.spirits[i].forpackning)
+
+                }
+            }
+            return info;
+        }
+
+        /*
+        Returns the last nr of a specific spirit
+         */
+        function findBeerNr(beerName){
+            var nr;
+
+            for (i=0; i<DB2.spirits.length;i++){
+                if (DB2.spirits[i].namn == beerName){
+                    nr = DB2.spirits[i].nr;
+                }
+            }
+            return nr;
+        }
+
+    </script>
 
 </head>
 <body>
 
 <div id="masterContent"></div>
 
-<div class="beerName"> <h1>Beer A</h1> </div>
+<div > <h1 id="beerName":></h1> </div>
 
 <div class = "main" >
 
     <div class="beerBackgroundInfo">
-        <span >
+        <ul>
+            <li id="item5"><span>Varugrupp:</span> </li>
+            <li id="item6"><span>Ursprung:</span> </li>
+            <li id="item7"><span>Leverantor:</span> </li>
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Fusce mattis eleifend tempus.
-            Morbi tempor non turpis nec consectetur.
-            Pellentesque ut erat nec est facilisis elementum sit amet et mi.
-            Quisque eget facilisis mauris. Nunc condimentum maximus nunc,
-            sed faucibus velit viverra at. Nullam interdum felis est,
-            at ultrices lacus pretium sit amet.
-            Mauris in sem in sem scelerisque sodales. Vivamus interdum nibh l</span>
+        </ul>
+        
 
     </div>
 
     <div class="beerCostInfo">
         <ul>
-            <li>Lorem Ipsum </li>
-            <li>Lorem Ipsum </li>
-            <li>Lorem Ipsum </li>
-            <li>Lorem Ipsum </li>
+            <li id="item1"><span>Nr:</span> </li>
+            <li id="item2"><span>Varugrupp:</span> </li>
+            <li id="item3"><span>Alkoholhalt:</span> </li>
+            <li id="item4"><span>Förpackning:</span> </li>
         </ul>
 
     </div>
