@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="73764855-e85b-47f4-abfa-3f6e4e918544" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/Styles/shoppingBasket.css" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Database/Dutchman Files/loader.js" afterPath="$PROJECT_DIR$/Database/Dutchman Files/loader.js" />
+      <change beforePath="$PROJECT_DIR$/Styles/customerBeerInfo.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Styles/shoppingBasket.html" afterPath="" />
       <change beforePath="$PROJECT_DIR$/Styles/style.css" afterPath="$PROJECT_DIR$/Styles/style.css" />
+      <change beforePath="$PROJECT_DIR$/Views/customerBeerInfo.html" afterPath="$PROJECT_DIR$/Views/customerBeerInfo.html" />
       <change beforePath="$PROJECT_DIR$/Views/index.html" afterPath="$PROJECT_DIR$/Views/index.html" />
       <change beforePath="$PROJECT_DIR$/Views/master.html" afterPath="$PROJECT_DIR$/Views/master.html" />
     </list>
@@ -26,8 +28,8 @@
           <file leaf-file-name="customerBeerInfo.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/Views/customerBeerInfo.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="427">
-                  <caret line="58" column="50" lean-forward="false" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+                <state relative-caret-position="349">
+                  <caret line="107" column="10" lean-forward="true" selection-start-line="107" selection-start-column="10" selection-end-line="107" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -48,6 +50,16 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="936">
                   <caret line="36" column="23" lean-forward="false" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DBLoaded.js" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/DBLoaded.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
                   <folding />
                 </state>
               </provider>
@@ -77,7 +89,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="customerBeerInfo.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="customerBeerInfo.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/Styles/customerBeerInfo.css">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="-67">
@@ -91,7 +103,17 @@
             <entry file="file://$PROJECT_DIR$/Views/customerBeerInfo.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="286">
-                  <caret line="42" column="20" lean-forward="true" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
+                  <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="translations.js" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/translations.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="286">
+                  <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
@@ -139,7 +161,9 @@
         <option value="$PROJECT_DIR$/Scripts/loader.js" />
         <option value="$PROJECT_DIR$/Database/Dutchman Files/loader.js" />
         <option value="$PROJECT_DIR$/Styles/customerBeerInfo.css" />
+        <option value="$PROJECT_DIR$/Database/Dutchman Files/swedish.js" />
         <option value="$PROJECT_DIR$/Views/customerBeerInfo.html" />
+        <option value="$PROJECT_DIR$/Database/Dutchman Files/translations.js" />
       </list>
     </option>
   </component>
@@ -238,12 +262,12 @@
       <workItem from="1519836495536" duration="7936000" />
       <workItem from="1519895944480" duration="960000" />
       <workItem from="1519897029675" duration="232000" />
-      <workItem from="1519897397552" duration="6863000" />
+      <workItem from="1519897397552" duration="11269000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38961000" />
+    <option name="totallyTimeSpent" value="43367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="-4" width="1922" height="1085" extended-state="6" />
@@ -281,20 +305,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/DBLoaded.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/BeerDB.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/loader.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -566,25 +576,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/DBLoaded.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Scripts/jquery.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1326">
           <caret line="1" column="50031" lean-forward="false" selection-start-line="1" selection-start-column="50031" selection-end-line="1" selection-end-column="50031" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Styles/customerBeerInfo.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-67">
-          <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -597,10 +592,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/DBLoaded.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="true" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/swedish.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Styles/customerBeerInfo.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-67">
+          <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Views/customerBeerInfo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="58" column="50" lean-forward="false" selection-start-line="58" selection-start-column="50" selection-end-line="58" selection-end-column="50" />
+        <state relative-caret-position="286">
+          <caret line="45" column="20" lean-forward="true" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Database/Dutchman Files/translations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding />
         </state>
       </provider>

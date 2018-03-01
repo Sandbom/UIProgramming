@@ -9,6 +9,10 @@
     Import Beverages db
     -->
     <script src="../Database/Dutchman Files/Beverages.js"></script>
+    <!--
+    Import the swedish translations
+    -->
+    <script src="../Database/Dutchman Files/swedish.js"></script>
     <script>
 
         /*
@@ -38,7 +42,6 @@
             /*
             Append some info to the left div
              */
-            $("#item5").append(varugrupp);
             $("#item6").append(ursprung);
             $("#item7").append(leverantor);
 
@@ -53,6 +56,21 @@
             $("#beerName").append(name);
 
         });
+
+        /*
+        Appends the different swedish translations to the html file
+        */
+        $(function translateToSwedish() {
+            translation = swedishTranslation();
+            $("#origin").append(translation[0])
+            $("#provider").append(translation[1])
+            $("#nr").append(translation[2])
+            $("#classOfGoods").append(translation[3])
+            $("#alcoholPercentage").append(translation[4])
+            $("#packaging").append(translation[5])
+
+
+        })
 
         $(document).ready(function(){
             $(".payButton").click(function(){
@@ -86,6 +104,24 @@
         }
 
         /*
+        Fetches data for translations.js and returns an array with the translations
+        */
+        function swedishTranslation(){
+            var translations = [];
+
+            for(i=0;i<swedish.customerBeerInfo.length;i++){
+                translations.push(swedish.customerBeerInfo[i].origin);
+                translations.push(swedish.customerBeerInfo[i].provider);
+                translations.push(swedish.customerBeerInfo[i].nr);
+                translations.push(swedish.customerBeerInfo[i].classOfGoods);
+                translations.push(swedish.customerBeerInfo[i].alcoholPercentage);
+                translations.push(swedish.customerBeerInfo[i].packaging);
+
+            }
+            return translations;
+        }
+
+        /*
         Returns the last nr of a specific spirit
          */
         function findBeerNr(beerName){
@@ -112,9 +148,8 @@
 
     <div class="beerBackgroundInfo">
         <ul>
-            <li id="item5"><span>Varugrupp:</span> </li>
-            <li id="item6"><span>Ursprung:</span> </li>
-            <li id="item7"><span>Leverantor:</span> </li>
+            <li id="item6"><span id="origin"></span> </li>
+            <li id="item7"><span id="provider"></span> </li>
 
         </ul>
         
@@ -123,10 +158,10 @@
 
     <div class="beerCostInfo">
         <ul>
-            <li id="item1"><span>Nr:</span> </li>
-            <li id="item2"><span>Varugrupp:</span> </li>
-            <li id="item3"><span>Alkoholhalt:</span> </li>
-            <li id="item4"><span>Förpackning:</span> </li>
+            <li id="item1"><span id="nr"></span> </li>
+            <li id="item2"><span id="classOfGoods"></span> </li>
+            <li id="item3"><span id="alcoholPercentage"></span> </li>
+            <li id="item4"><span id="packaging"></span> </li>
         </ul>
 
     </div>
