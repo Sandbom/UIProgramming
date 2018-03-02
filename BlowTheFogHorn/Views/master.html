@@ -35,10 +35,14 @@
         });
 
     $(function() {
-        $("#swedishFlag").on("click", function(){
+        $("#swedishFlag").on("click", function () {
             translateCustomerBeerInfoTo(swedish);
+        });
+
+        $("#swedishFlag").on("click", function () {
             translateCustomerPageTo(swedish);
         });
+
     });
 
     $(function() {
@@ -51,12 +55,12 @@
     $(function() {
         $("#greekFlag").on("click", function(){
             translateCustomerBeerInfoTo(greek);
+            translateCustomerPageTo(greek);
         });
     });
 
 
     </script>
-
 
 
 </head>
