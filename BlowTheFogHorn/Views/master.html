@@ -22,24 +22,24 @@
         $( document ).ready(function() {
             console.log( "ready!" );
 
-            $( window ).on( "load", translateTo(english) );
+            $( window ).on( "load", translateCustomerBeerInfoTo(english) );
         });
 
     $(function() {
         $("#swedishFlag").on("click", function(){
-            translateTo(swedish);
+            translateCustomerBeerInfoTo(swedish);
         });
     });
 
     $(function() {
         $("#ukFlag").on("click", function(){
-            translateTo(english);
+            translateCustomerBeerInfoTo(english);
         });
     });
 
     $(function() {
         $("#greekFlag").on("click", function(){
-            translateTo(greek);
+            translateCustomerBeerInfoTo(greek);
         });
     });
 
