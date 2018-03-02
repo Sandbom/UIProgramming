@@ -6,6 +6,10 @@
     <link rel="styleSheet" href="../Styles/shoppingBasketNew.css">
 
     <script src="../Scripts/jquery.js"></script>
+
+    <script src="../Scripts/translateShoppingBasket.js"></script>
+    <script src="../Database/Dutchman Files/translations.js"></script>
+
     <script>
         $(function(){
             $("#masterContent").load("master.html");
@@ -30,9 +34,9 @@
             <table>
                 <tr>
                     <th class="nolines"></th>
-                    <th class="items">Article </th>
-                    <th class="items">Amount</th>
-                    <th class="items">Cost</th>
+                    <th class="items" id="article"> </th>
+                    <th class="items" id="amount"></th>
+                    <th class="items" id="cost"></th>
                 </tr>
 
                 <tr>

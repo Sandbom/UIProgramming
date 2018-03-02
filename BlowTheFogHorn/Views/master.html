@@ -10,14 +10,16 @@
     <script src="../Scripts/jquery.js"></script>
 
     <!--
-    Translate customerBeerInfo.html
+    Import to translate customerBeerInfo.html
     -->
     <script src="../Scripts/translateCustomerBeerInfo.js"></script>
 
     <!--
-    Translate customerPage.html
+    Import to translate customerPage.html
     -->
     <script src="../Scripts/translateCustomerPage.js"></script>
+
+    <script src="../Scripts/translateShoppingBasket.js"></script>
 
     <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
     <script src="../Database/Dutchman%20Files/Beverages.js"></script>
@@ -32,23 +34,22 @@
 
             $( window ).on( "load", translateCustomerBeerInfoTo(english) );
             $( window ).on( "load", translateCustomerPageTo(english) );
+            $( window ).on( "load", translateShoppingBasketTo(english) );
         });
 
-    $(function() {
-        $("#swedishFlag").on("click", function () {
-            translateCustomerBeerInfoTo(swedish);
+        $(function() {
+            $("#swedishFlag").on("click", function(){
+                translateCustomerBeerInfoTo(swedish);
+                translateCustomerPageTo(swedish);
+                translateShoppingBasketTo(swedish);
+            });
         });
-
-        $("#swedishFlag").on("click", function () {
-            translateCustomerPageTo(swedish);
-        });
-
-    });
 
     $(function() {
         $("#ukFlag").on("click", function(){
             translateCustomerBeerInfoTo(english);
             translateCustomerPageTo(english);
+            translateShoppingBasketTo(english);
         });
     });
 
@@ -58,7 +59,6 @@
             translateCustomerPageTo(greek);
         });
     });
-
 
     </script>
 

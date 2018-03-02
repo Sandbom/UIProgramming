@@ -30,7 +30,13 @@ var swedish = {
 
         }
 
-
+    ],
+    "shoppingBasket" : [
+        {
+            "article" : "Artikel",
+            "amount" : "Antal",
+            "cost" : "Kostnad"
+        }
 
 
     ]
@@ -101,11 +107,17 @@ var english = {
         }
 
 
+    ],
+    "shoppingBasket" : [
+        {
+            "article" : "Article",
+            "amount" : "Amount",
+            "cost" : "Cost",
+            "payButton" : "Pay"
+        }
 
 
     ]
-
-
 
 
 
