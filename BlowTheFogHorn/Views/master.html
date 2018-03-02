@@ -23,6 +23,8 @@
 
     <script src="../Scripts/translateStaffSettings.js"></script>
 
+    <script src="../Scripts/translateStaffBasket.js"></script>
+
     <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
     <script src="../Database/Dutchman%20Files/Beverages.js"></script>
     <script src="../Database/Dutchman%20Files/DBLoaded.js"></script>
@@ -38,6 +40,7 @@
             $( window ).on( "load", translateCustomerPageTo(english) );
             $( window ).on( "load", translateShoppingBasketTo(english) );
             $( window ).on( "load", translateStaffSettingsTo(english) );
+            $( window ).on( "load", translateStaffBasketTo(english) );
         });
 
         $(function() {
@@ -46,6 +49,7 @@
                 translateCustomerPageTo(swedish);
                 translateShoppingBasketTo(swedish);
                 translateStaffSettingsTo(swedish);
+                translateStaffBasketTo(swedish);
             });
         });
 
@@ -55,6 +59,8 @@
             translateCustomerPageTo(english);
             translateShoppingBasketTo(english);
             translateStaffSettingsTo(english);
+            translateStaffBasketTo(english);
+
         });
     });
 

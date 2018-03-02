@@ -6,6 +6,13 @@
     <link rel="stylesheet" href="../Styles/ChristinasCSS.css">
 
     <script src="../Scripts/jquery.js"></script>
+
+	<!--
+    Import translation script
+    -->
+	<script src="../Scripts/translateStaffBasket.js"></script>
+	<script src="../Database/Dutchman Files/translations.js"></script>
+
     <script>
         $(function(){
             $("#masterContent").load("master.html");
@@ -30,9 +37,9 @@
    			<table>
  				<tr>
  					<th class="nolines"></th>
-				    <th class="bgdiff">Lorem ipsum</th>
-				    <th class="bgdiff">Lorem ipsum</th>
-				    <th class="bgdiff">Lorem ipsum</th>
+				    <th class="bgdiff" id="article"></th>
+				    <th class="bgdiff" id="amount"></th>
+				    <th class="bgdiff" id="cost"></th>
   				</tr>
   				<tr>
   					<th class="nolines"><button type="button" class="tablebutton">X</button></th>
@@ -55,7 +62,7 @@
 			</table> 
 		</div>
 		<div>
-			<button type="button" class="payButton">Lorem ipsum</button>
+			<button type="button" class="payButton"></button>
 		</div>
 
 </body>

@@ -49,8 +49,17 @@ var swedish = {
         }
 
 
+    ],
+    "staffBasket" : [
+    {
+        "article" : "Artikel",
+        "amount" : "Antal",
+        "cost" : "Kostnad",
+        "payButton" : "Betala"
+    }
 
-    ]
+
+]
 
 };
 
@@ -124,7 +133,7 @@ var english = {
             "article" : "Article",
             "amount" : "Amount",
             "cost" : "Cost",
-            "payButton" : "Pay"
+            "payButton" : "Press to pay"
         }
 
 
@@ -137,6 +146,16 @@ var english = {
 
         }
 
+    ],
+    "staffBasket" : [
+        {
+
+            "article" : "Article",
+            "amount" : "Amount",
+            "cost" : "Cost",
+            "payButton" : "Press to pay"
+
+        }
 
 
     ]
