@@ -21,6 +21,8 @@
 
     <script src="../Scripts/translateShoppingBasket.js"></script>
 
+    <script src="../Scripts/translateStaffSettings.js"></script>
+
     <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
     <script src="../Database/Dutchman%20Files/Beverages.js"></script>
     <script src="../Database/Dutchman%20Files/DBLoaded.js"></script>
@@ -35,6 +37,7 @@
             $( window ).on( "load", translateCustomerBeerInfoTo(english) );
             $( window ).on( "load", translateCustomerPageTo(english) );
             $( window ).on( "load", translateShoppingBasketTo(english) );
+            $( window ).on( "load", translateStaffSettingsTo(english) );
         });
 
         $(function() {
@@ -42,6 +45,7 @@
                 translateCustomerBeerInfoTo(swedish);
                 translateCustomerPageTo(swedish);
                 translateShoppingBasketTo(swedish);
+                translateStaffSettingsTo(swedish);
             });
         });
 
@@ -50,6 +54,7 @@
             translateCustomerBeerInfoTo(english);
             translateCustomerPageTo(english);
             translateShoppingBasketTo(english);
+            translateStaffSettingsTo(english);
         });
     });
 

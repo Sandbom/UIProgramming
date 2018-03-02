@@ -39,6 +39,17 @@ var swedish = {
         }
 
 
+    ],
+    "staffSettings" : [
+        {
+            "vipOrders" : "Se VIP beställningar",
+            "updateBeerDB" : "Uppdatera Öl-databasen",
+            "updateVIPDB" : "Uppdatera VIP-databasen"
+
+        }
+
+
+
     ]
 
 };
@@ -115,6 +126,17 @@ var english = {
             "cost" : "Cost",
             "payButton" : "Pay"
         }
+
+
+    ],
+    "staffSettings" : [
+        {
+            "vipOrders" : "Check VIP orders",
+            "updateBeerDB" : "Update Beer Database",
+            "updateVIPDB" : "Update VIP Database"
+
+        }
+
 
 
     ]
