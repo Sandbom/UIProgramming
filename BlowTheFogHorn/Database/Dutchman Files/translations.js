@@ -19,6 +19,16 @@ var swedish = {
             "cartBtn" : "Kundvagn"
         }
 
+    ],
+
+    "customerPage" : [
+        {
+            "checkBalance" : "Kolla saldo",
+            "topUpCredit" : "Fyll på saldo",
+            "seeOrderHistory" : "Se order historiken",
+            "changePassword" : "Byt lösenord"
+
+        }
 
 
 
@@ -80,6 +90,15 @@ var english = {
             "cartBtn" : "Cart"
         }
 
+
+    ],
+    "customerPage" : [
+        {
+            "checkBalance" : "Check Balance",
+            "topUpCredit" : "Top up credit",
+            "seeOrderHistory" : "See order history",
+            "changePassword" : "Change password"
+        }
 
 
 

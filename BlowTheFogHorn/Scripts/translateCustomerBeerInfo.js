@@ -4,7 +4,7 @@ Scripts for translations
 */
 
 function translateCustomerBeerInfoTo(language) {
-    var translation = Translation(language);
+    var translation = translationBeerInfo(language);
 
     $("#origin").text(translation[0]);
     $("#provider").text(translation[1]);
@@ -22,7 +22,7 @@ function translateCustomerBeerInfoTo(language) {
 /*
 Fetches translations from translations.js
  */
-function Translation(language){
+function translationBeerInfo(language){
     var translations = [];
 
     for(i=0;i<language.customerBeerInfo.length;i++){

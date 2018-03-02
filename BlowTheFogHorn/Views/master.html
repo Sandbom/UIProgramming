@@ -9,7 +9,15 @@
     -->
     <script src="../Scripts/jquery.js"></script>
 
+    <!--
+    Translate customerBeerInfo.html
+    -->
     <script src="../Scripts/translateCustomerBeerInfo.js"></script>
+
+    <!--
+    Translate customerPage.html
+    -->
+    <script src="../Scripts/translateCustomerPage.js"></script>
 
     <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
     <script src="../Database/Dutchman%20Files/Beverages.js"></script>
@@ -23,17 +31,20 @@
             console.log( "ready!" );
 
             $( window ).on( "load", translateCustomerBeerInfoTo(english) );
+            $( window ).on( "load", translateCustomerPageTo(english) );
         });
 
     $(function() {
         $("#swedishFlag").on("click", function(){
             translateCustomerBeerInfoTo(swedish);
+            translateCustomerPageTo(swedish);
         });
     });
 
     $(function() {
         $("#ukFlag").on("click", function(){
             translateCustomerBeerInfoTo(english);
+            translateCustomerPageTo(english);
         });
     });
 
