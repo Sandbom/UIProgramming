@@ -1,9 +1,79 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8">
       <title>Blow The Fog Horn </title>
-      <link rel="stylesheet" href="../Styles/style.css">
+      <link rel="stylesheet" href="../Styles/Simon.css">
+      <script src="../Scripts/jquery.js"></script>
+      <script src="../Database/Dutchman Files/Beverages.js"></script>
+
+    <script>
+
+        /*
+                Loads the master.html into the page
+         */
+
+        /*
+        Print Beer information into the two divs
+        */
+        $(function displayToDivs(){
+            /*
+            Variables for each beer
+             */
+            var beer = findBeer("\u00c3\u2013l, Porter och Stout");
+            var name = beer[0];
+            var nr = beer[1];
+            var varugrupp = beer[2];
+
+            /*
+            Append some info to the left div
+             */
+
+
+            /*
+            Append some info the right div
+             */
+            $("#item2").append(varugrupp);
+            $("#item3").append(name);
+            $("#item4").append(name);
+
+        });
+
+        /*
+          Returns information (nr,varugrupp,ursprung,leverantor,pris) for the last beer from the DB with
+          a particular name
+        */
+        function findBeer(spiritName){
+            var info = [];
+            var nr =  findBeerNr(spiritName);
+
+            for (i = 0; i<DB2.spirits.length;i++){
+                if (DB2.spirits[i].nr == nr){
+
+                    info.push(DB2.spirits.namn);
+                    info.push(DB2.spirits[i].nr);
+                    info.push(DB2.spirits[i].varugrupp);
+
+                }
+            }
+            return info;
+        }
+
+        /*
+        Returns the last nr of a specific spirit
+         */
+        function findBeerNr(beerName){
+            var nr;
+
+            for (i=0; i<DB2.spirits.length;i++){
+                if (DB2.spirits[i].varugrupp == beerName){
+                    nr = DB2.spirits[i].nr;
+                }
+            }
+            return nr;
+        }
+
+    </script>
   </head>
  <!-- Button to open the modal login form -->
     <div>
@@ -74,25 +144,21 @@
     </div>
     <article>
       <header>
-        <h1 id="beertypeheader">Beer Type</h1>
+        <h1 id="beertypeheader"></h1>
       </header>
     </article>
     <div class="beerlist">
-    	<ul>
-    		<div class="beeritems">
-    			<li>Beer 1</li>
-    			<li>Beer 2</li>
-    			<li>Beer 3</li>
-    			<li>Beer 4</li>
-       			<li>Beer 5</li>
-    			<li>Beer 6</li>
-				<li>Beer 7</li>
-    			<li>Beer 8</li>
-				<li>Beer 9</li>
-    			<li>Beer 10</li>
-    		</div>
-    	</ul>
+      <ul>
+        <div class="beeritems">
+            <li id="item1"><span id="nr"></span> </li>
+            <li id="item2"><span id="classOfGoods"></span> </li>
+            <li id="item3"><span id="alcoholPercentage"></span> </li>
+            <li id="item4"><span id="packaging"></span> </li>
+        </div>
+      </ul>
     </div>
       </body>
+
+  </html>
 
   </html>
