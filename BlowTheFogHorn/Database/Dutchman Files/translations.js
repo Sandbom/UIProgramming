@@ -1,4 +1,8 @@
+
+/* SWEDISH */
+
 var swedish = {
+
     "customerBeerInfo": [
         {
             "origin" : "Ursprung: ",
@@ -8,11 +12,9 @@ var swedish = {
             "alcoholPercentage" : "Alkoholhalt: ",
             "packaging" : "Förpackning: ",
             "payButton" : "Tryck för att betala"
-
         }
-
-
     ],
+
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Logga in ",
@@ -27,10 +29,9 @@ var swedish = {
             "topUpCredit" : "Fyll på saldo",
             "seeOrderHistory" : "Se order historiken",
             "changePassword" : "Byt lösenord"
-
         }
-
     ],
+
     "shoppingBasket" : [
         {
             "article" : "Artikel",
@@ -38,32 +39,31 @@ var swedish = {
             "cost" : "Kostnad"
         }
 
-
     ],
     "staffSettings" : [
         {
             "vipOrders" : "Se VIP beställningar",
             "updateBeerDB" : "Uppdatera Öl-databasen",
             "updateVIPDB" : "Uppdatera VIP-databasen"
-
         }
 
-
     ],
+
     "staffBasket" : [
-    {
-        "article" : "Artikel",
-        "amount" : "Antal",
-        "cost" : "Kostnad",
-        "payButton" : "Betala"
-    }
-
-
-]
+	    {
+	        "article" : "Artikel",
+	        "amount" : "Antal",
+	        "cost" : "Kostnad",
+	        "payButton" : "Betala"
+	    }
+	]
 
 };
 
+/* GREEK */ 
+
 var greek = {
+
     "customerBeerInfo": [
         {
             "origin" : "Προέλευση: ",
@@ -73,27 +73,21 @@ var greek = {
             "alcoholPercentage" : "Περιεκτικότητα: ",
             "packaging" : "Συσκευασία: ",
             "payButton" : "Προσθήκη"
-
         }
-
-
     ],
+
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Σύνδεση",
             "cartBtn" : "Καλάθι"
         }
-
-
-
-
-
     ]
-
 };
 
+/* ENGLISH */
 
 var english = {
+
     "customerBeerInfo" : [
         {
             "origin" : "Origin: ",
@@ -104,20 +98,15 @@ var english = {
             "packaging" : "packaging: ",
             "payButton" : "Add to basket"
         }
-
-
-
-
-
     ],
+
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Login ",
             "cartBtn" : "Cart"
         }
-
-
     ],
+
     "customerPage" : [
         {
             "checkBalance" : "Check Balance",
@@ -125,9 +114,8 @@ var english = {
             "seeOrderHistory" : "See order history",
             "changePassword" : "Change password"
         }
-
-
     ],
+
     "shoppingBasket" : [
         {
             "article" : "Article",
@@ -135,18 +123,16 @@ var english = {
             "cost" : "Cost",
             "payButton" : "Press to pay"
         }
-
-
     ],
+
     "staffSettings" : [
         {
             "vipOrders" : "Check VIP orders",
             "updateBeerDB" : "Update Beer Database",
             "updateVIPDB" : "Update VIP Database"
-
         }
-
     ],
+
     "staffBasket" : [
         {
 
@@ -154,12 +140,64 @@ var english = {
             "amount" : "Amount",
             "cost" : "Cost",
             "payButton" : "Press to pay"
-
         }
-
-
     ]
+};
 
+/* GERMAN */
 
+var german = {
 
+    "customerBeerInfo": [
+        {
+            "origin" : "Ursprung: ",
+            "provider" : "Hersteller: ",
+            "nr" : "Nr: ",
+            "classOfGoods" : "Warengruppe: ",
+            "alcoholPercentage" : "Alkoholgehalt: ",
+            "packaging" : "Verpackung: ",
+            "payButton" : "Zum Warenkorb hinzufügen"
+        }
+    ],
+
+    "masterPage" : [
+        {
+            "vipBtn" : "V.I.P. Login ",
+            "cartBtn" : "Warenkorb"
+        }
+    ],
+
+    "customerPage" : [
+        {
+            "checkBalance" : "Guthaben überprüfen",
+            "topUpCredit" : "Guthaben aufladen",
+            "seeOrderHistory" : "Meine Bestellungen",
+            "changePassword" : "Passwort ändern"
+        }
+    ],
+
+    "shoppingBasket" : [
+        {
+            "article" : "Artikel",
+            "amount" : "Anzahl",
+            "cost" : "Preis"
+        }
+    ],
+
+    "staffSettings" : [
+        {
+            "vipOrders" : "VIP-Bestellungen überprüfen",
+            "updateBeerDB" : "Bier-Datenbank aktualisieren",
+            "updateVIPDB" : "VIP-Datenbank aktualisieren"
+        }
+    ],
+
+    "staffBasket" : [
+	    {
+	        "article" : "Artikel",
+	        "amount" : "Anzahl",
+	        "cost" : "Preis",
+	        "payButton" : "Bezahlen"
+	    }
+	]
 };
