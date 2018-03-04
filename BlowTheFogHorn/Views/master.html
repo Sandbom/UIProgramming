@@ -71,6 +71,16 @@
         });
     });
 
+    $(function() {
+        $("#germanFlag").on("click", function(){
+            translateCustomerBeerInfoTo(german);
+            translateCustomerPageTo(german);
+            translateShoppingBasketTo(german);
+            translateStaffSettingsTo(german);
+            translateStaffBasketTo(german);
+        });
+    });
+
     </script>
 
 
@@ -113,7 +123,7 @@
          </div>
 
          <div class="flag">
-             <img  class= "flag_img" src="../img/if_Germany_92095.png" >
+             <img  class= "flag_img" id="germanFlag" src="../img/if_Germany_92095.png" >
          </div>
 
          <div class="flag">

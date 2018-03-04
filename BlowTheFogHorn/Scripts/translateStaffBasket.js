@@ -5,7 +5,7 @@ Script for translating StaffBasket page
 
 function translateStaffBasketTo(language) {
     var translation = translateStaffBasket(language);
-    alert("kom in i translationTO")
+    alert("kom in i translationTO");
     $("#article").text(translation[0]);
     $("#amount").text(translation[1]);
     $("#cost").text(translation[2]);
