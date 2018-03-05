@@ -35,6 +35,9 @@
     <script src="../Database/Dutchman%20Files/ModelFunctions.js"></script>
 
     <script>
+        $(function() {
+
+        });
 
         $( document ).ready(function() {
             console.log( "ready!" );
@@ -61,48 +64,47 @@
             });
         });
 
-    $(function() {
-        $("#ukFlag").on("click", function(){
-            translateCustomerBeerInfoTo(english);
-            translateCustomerPageTo(english);
-            translateShoppingBasketTo(english);
-            translateStaffSettingsTo(english);
-            translateStaffBasketTo(english);
-            translatePlaceNewOrderTo(english);
-            translateCompleteOrderTo(english);
-            translateMasterPageTo(english)
+        $(function() {
+            $("#ukFlag").on("click", function(){
+                translateCustomerBeerInfoTo(english);
+                translateCustomerPageTo(english);
+                translateShoppingBasketTo(english);
+                translateStaffSettingsTo(english);
+                translateStaffBasketTo(english);
+                translatePlaceNewOrderTo(english);
+                translateCompleteOrderTo(english);
+                translateMasterPageTo(english)
 
 
+            });
         });
-    });
 
-    $(function() {
-        $("#greekFlag").on("click", function(){
-            translateCustomerBeerInfoTo(greek);
-            translateCustomerPageTo(greek);
-            translatePlaceNewOrderTo(greek);
-            translateShoppingBasketTo(greek);
-            translateStaffSettingsTo(greek);
-            translateStaffBasketTo(greek);
-            translateCompleteOrderTo(greek);
-            translateMasterPageTo(greek);
+        $(function() {
+            $("#greekFlag").on("click", function(){
+                translateCustomerBeerInfoTo(greek);
+                translateCustomerPageTo(greek);
+                translatePlaceNewOrderTo(greek);
+                translateShoppingBasketTo(greek);
+                translateStaffSettingsTo(greek);
+                translateStaffBasketTo(greek);
+                translateCompleteOrderTo(greek);
+                translateMasterPageTo(greek);
 
+            });
         });
-    });
 
-    $(function() {
-        $("#germanFlag").on("click", function(){
-            translateCustomerBeerInfoTo(german);
-            translateCustomerPageTo(german);
-            translateShoppingBasketTo(german);
-            translateStaffSettingsTo(german);
-            translateStaffBasketTo(german);
-            translateCompleteOrderTo(german);
-            translateMasterPageTo(german);
+        $(function() {
+            $("#germanFlag").on("click", function(){
+                translateCustomerBeerInfoTo(german);
+                translateCustomerPageTo(german);
+                translateShoppingBasketTo(german);
+                translateStaffSettingsTo(german);
+                translateStaffBasketTo(german);
+                translateCompleteOrderTo(german);
+                translateMasterPageTo(german);
+            });
         });
-    });
 
-<<<<<<< HEAD
         $(function() {
             $("#swedishFlag").on("click", function(){
                 translateCustomerBeerInfoTo(swedish);
@@ -121,7 +123,7 @@
                 $( "#cart" ).hide();
                 $( "#vipBtn" ).hide();
                 $("#settingsIcon").show();
-                 $("#vipLabel").show();
+                $("#vipLabel").show();
                 $("#loginIcon").show();
                 $("#loginLabel").show();
 
@@ -142,88 +144,77 @@
         });
 
 
-=======
-    $(function() {
-        $( document ).ready(function(){
-            $("#back").on("click",function () {
-                window.history.back();
-                alert("went back");
-            });
-        });
-    });
->>>>>>> ef975532e420516ef7b31b6662efd01142b14b59
 
     </script>
 
 
 </head>
 <body>
- <div id="main_menu" >
-     <div class="inline" id="back">
-         <img  class="imgSize" src="../img/arrowleft.png">
-     </div>
+<div id="main_menu" >
+    <div class="inline" id="back">
+        <img  class="imgSize" src="../img/arrowleft.png">
+    </div>
 
-     <div class="inline" id = "help">
-         <img  class="imgSize" src="../img/questionmark.png">
-     </div>
-     <div class="inline" id = "home">
-         <a href="welcome.html">
-         <img class="imgSize" src="../img/homeButton.png">
-         </a>
-     </div>
+    <div class="inline" id = "help">
+        <img  class="imgSize" src="../img/questionmark.png">
+    </div>
+    <div class="inline" id = "home">
+        <img class="imgSize" src="../img/homeButton.png">
+    </div>
 
-     <div class="inline" id = "settings">
-         <img style="display: none;" id = "settingsIcon" class="imgSize" src="../img/settings.png">
-         <label style="display: none;" id="vipLabel"><em>V.I.P</em></label>
+    <div class="inline" id = "settings">
+        <img style="display: none;" id = "settingsIcon" class="imgSize" src="../img/settings.png">
+        <label style="display: none;" id="vipLabel"><em>V.I.P</em></label>
 
-     </div>
+    </div>
 
-     <div class="inline" id = "login">
-         <img hidden id = "loginIcon" class="imgSize" src="../img/login.png">
-         <label hidden id="loginLabel"><em>Johan</em></label>
+    <div class="inline" id = "login">
+        <img hidden id = "loginIcon" class="imgSize" src="../img/login.png">
+        <label hidden id="loginLabel"><em>Johan</em></label>
 
-     </div>
+    </div>
 
 
 
 
-     <div class="inline_flags" id = "swedish" >
-         <div class="flag">
-             <img  class= "flag_img" id="swedishFlag" src="../img/if_Sweden_flat_92366.png"   >
-         </div>
+    <div class="inline_flags" id = "swedish" >
+        <div class="flag">
+            <img  class= "flag_img" id="swedishFlag" src="../img/if_Sweden_flat_92366.png"   >
+        </div>
 
-         <div class="flag">
-             <img  class= "flag_img" id="ukFlag" src="../img/if_United-Kingdom_92403.png" >
-         </div>
+        <div class="flag">
+            <img  class= "flag_img" id="ukFlag" src="../img/if_United-Kingdom_92403.png" >
+        </div>
 
-         <div class="flag">
-             <img  class= "flag_img" id="germanFlag" src="../img/if_Germany_92095.png" >
-         </div>
+        <div class="flag">
+            <img  class= "flag_img" id="germanFlag" src="../img/if_Germany_92095.png" >
+        </div>
 
-         <div class="flag">
-             <img  class= "flag_img" id="greekFlag" src="../img/if_Greece_flat_92102.png" >
-         </div>
-     </div>
+        <div class="flag">
+            <img  class= "flag_img" id="greekFlag" src="../img/if_Greece_flat_92102.png" >
+        </div>
+    </div>
 
-     <br class="clearBoth" />
-     <div class="inline_buttons">
-         <button  id ="vipBtn" class="curved_btn" ></button>
+    <br class="clearBoth" />
+    <div class="inline_buttons">
+        <button  id ="vipBtn" class="curved_btn" ></button>
 
-     </div>
-
-
-     <div  id= "logout" class="inline_buttons" style="display:none">
-         <button   id ="logoutBtn" class="curved_btn"  href="#"></button>
-
-     </div>
-
-     <div id="cart" class="inline_buttons">
-         <button id ="cartBtn" class="curved_btn"></button>
-         <label id ="cartLabel">1</label>
-
-     </div>
+    </div>
 
 
- </div>
+    <div  id= "logout" class="inline_buttons" style="display:none">
+        <button   id ="logoutBtn" class="curved_btn"  href="#"></button>
+
+    </div>
+
+    <div id="cart" class="inline_buttons">
+        <button id ="cartBtn" class="curved_btn"></button>
+        <label id ="cartLabel">1</label>
+
+    </div>
+
+
+</div>
 </body>
 </html>
+
