@@ -36,7 +36,7 @@ var swedish = {
             "info" : "Info: ",
             "result" : "Resultat",
             "addToBasket" : "Lägg I korgen",
-            "beersToOrder" : "Lägg Till Att betalla "
+            "beersToOrder" : "Tryck för att betala "
 
         }
 
@@ -269,7 +269,7 @@ var german = {
             "info" : "Info: ",
             "result" : "Ergebnis",
             "addToBasket" : "Lägg I korgen",
-            "beersToOrder" : "Lägg Till Att betalla "
+            "beersToOrder" : "Tryck för att betala "
 
         }
 

@@ -38,8 +38,8 @@ div.flag {
 }
 
 img.flag_img{
-    height: 25px;
-    width:35px;
+    height: 40%;
+    width:65%;
 }
 
 button.curved_btn {
@@ -195,6 +195,9 @@ img.avatar {
     width: 40%;
     border-radius: 100%;
 }
+
+
+
 
 /* Add padding to containers */
 .container {
@@ -413,7 +416,8 @@ input[type=text], input[type=password] {
 }
 
 .imgSize{
-    width: 30px;
+    width: 40px
+
 }
 
 .cartImgSize{
