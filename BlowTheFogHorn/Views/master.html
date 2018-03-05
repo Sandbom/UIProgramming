@@ -35,9 +35,6 @@
     <script src="../Database/Dutchman%20Files/ModelFunctions.js"></script>
 
     <script>
-        $(function() {
-
-        });
 
         $( document ).ready(function() {
             console.log( "ready!" );
@@ -101,6 +98,15 @@
         });
     });
 
+    $(function() {
+        $( document ).ready(function(){
+            $("#back").on("click",function () {
+                window.history.back();
+                alert("went back");
+            });
+        });
+    });
+
     </script>
 
 
@@ -115,7 +121,9 @@
          <img  class="imgSize" src="../img/questionmark.png">
      </div>
      <div class="inline" id = "home">
+         <a href="welcome.html">
          <img class="imgSize" src="../img/homeButton.png">
+         </a>
      </div>
 
      <div class="inline" id = "settings">
