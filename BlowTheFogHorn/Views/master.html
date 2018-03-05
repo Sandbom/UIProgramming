@@ -40,15 +40,33 @@
         });
 
         $( document ).ready(function() {
-            console.log( "ready!" );
-            $( window ).on( "load", translateCustomerBeerInfoTo(english) );
-            $( window ).on( "load", translateCustomerPageTo(english) );
-            $( window ).on( "load", translateShoppingBasketTo(english) );
-            $( window ).on( "load", translateStaffSettingsTo(english) );
-            $( window ).on( "load", translateStaffBasketTo(english) );
-            $( window ).on( "load", translatePlaceNewOrderTo(english) );
-            $( window ).on( "load", translateCompleteOrderTo(english) );
-            $( window ).on( "load", translateMasterPageTo(english) );
+            var language;
+            language = localStorage.getItem("language");
+            if(localStorage.getItem("language") === null) {
+                console.log("ready!");
+                $(window).on("load", translateCustomerBeerInfoTo(english));
+                $(window).on("load", translateCustomerPageTo(english));
+                $(window).on("load", translateShoppingBasketTo(english));
+                $(window).on("load", translateStaffSettingsTo(english));
+                $(window).on("load", translateStaffBasketTo(english));
+                $(window).on("load", translatePlaceNewOrderTo(english));
+                $(window).on("load", translateCompleteOrderTo(english));
+                $(window).on("load", translateMasterPageTo(english));
+            }
+
+        else{
+
+                language = eval("(" + language + ')');
+            $(window).on("load", translateCustomerBeerInfoTo(language));
+            $(window).on("load", translateCustomerPageTo(language));
+            $(window).on("load", translateShoppingBasketTo(language));
+            $(window).on("load", translateStaffSettingsTo(language));
+            $(window).on("load", translateStaffBasketTo(language));
+            $(window).on("load", translatePlaceNewOrderTo(language));
+            $(window).on("load", translateCompleteOrderTo(language));
+            $(window).on("load", translateMasterPageTo(language));
+
+        }
         });
 
         $(function() {
@@ -81,6 +99,8 @@
 
         $(function() {
             $("#greekFlag").on("click", function(){
+                // Store
+                localStorage.setItem("language", "greek");
                 translateCustomerBeerInfoTo(greek);
                 translateCustomerPageTo(greek);
                 translatePlaceNewOrderTo(greek);
@@ -95,6 +115,7 @@
 
         $(function() {
             $("#germanFlag").on("click", function(){
+                localStorage.setItem("language", "german");
                 translateCustomerBeerInfoTo(german);
                 translateCustomerPageTo(german);
                 translateShoppingBasketTo(german);
@@ -107,6 +128,7 @@
 
         $(function() {
             $("#swedishFlag").on("click", function(){
+                localStorage.setItem("language", "swedish");
                 translateCustomerBeerInfoTo(swedish);
                 translateCustomerPageTo(swedish);
                 translateShoppingBasketTo(swedish);
