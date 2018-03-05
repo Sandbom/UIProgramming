@@ -48,6 +48,7 @@
             $( window ).on( "load", translateStaffBasketTo(english) );
             $( window ).on( "load", translatePlaceNewOrderTo(english) );
             $( window ).on( "load", translateCompleteOrderTo(english) );
+            $( window ).on( "load", translateMasterPageTo(english) );
         });
 
         $(function() {
@@ -71,7 +72,8 @@
             translateStaffSettingsTo(english);
             translateStaffBasketTo(english);
             translatePlaceNewOrderTo(english);
-            translateCompleteOrderTo(english)
+            translateCompleteOrderTo(english);
+            translateMasterPageTo(english)
 
 
         });
@@ -85,7 +87,8 @@
             translateShoppingBasketTo(greek);
             translateStaffSettingsTo(greek);
             translateStaffBasketTo(greek);
-            translateCompleteOrderTo(greek)
+            translateCompleteOrderTo(greek);
+            translateMasterPageTo(greek);
 
         });
     });
@@ -97,9 +100,50 @@
             translateShoppingBasketTo(german);
             translateStaffSettingsTo(german);
             translateStaffBasketTo(german);
-            translateCompleteOrderTo(german)
+            translateCompleteOrderTo(german);
+            translateMasterPageTo(german);
         });
     });
+
+        $(function() {
+            $("#swedishFlag").on("click", function(){
+                translateCustomerBeerInfoTo(swedish);
+                translateCustomerPageTo(swedish);
+                translateShoppingBasketTo(swedish);
+                translateStaffSettingsTo(swedish);
+                translateStaffBasketTo(swedish);
+                translateCompleteOrderTo(swedish);
+                translateMasterPageTo(swedish);
+            });
+        });
+        <!-- Login Function -->
+        $(function() {
+            $("#vipBtn").on("click", function(){
+                $( "#logout" ).toggle();
+                $( "#cart" ).hide();
+                $( "#vipBtn" ).hide();
+                $("#settingsIcon").show();
+                 $("#vipLabel").show();
+                $("#loginIcon").show();
+                $("#loginLabel").show();
+
+            });
+        });
+        <!-- Logout Function -->
+        $(function() {
+            $("#logoutBtn").on("click", function(){
+                $( "#logout" ).toggle();
+                $( "#cart" ).show();
+                $( "#vipBtn" ).show();
+                $("#settingsIcon").hide();
+                $("#vipLabel").hide();
+                $("#loginIcon").hide();
+                $("#loginLabel").hide();
+
+            });
+        });
+
+
 
     </script>
 
@@ -153,7 +197,13 @@
 
      <br class="clearBoth" />
      <div class="inline_buttons">
-         <button  id ="vipBtn" class="curved_btn"></button>
+         <button  id ="vipBtn" class="curved_btn" ></button>
+
+     </div>
+
+
+     <div  id= "logout" class="inline_buttons" style="display:none">
+         <button   id ="logoutBtn" class="curved_btn"  href="#"></button>
 
      </div>
 

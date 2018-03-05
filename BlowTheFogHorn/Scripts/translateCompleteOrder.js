@@ -13,6 +13,7 @@ function translateCompleteOrderTo(language) {
 
     $("#vipBtn").text(translation[4]);
     $("#cartBtn").text(translation[5]);
+    $("#logoutBtn").text(translation[6]);
 
 
 }
@@ -39,6 +40,7 @@ function translationCompleteOrder(language){
     for(j=0;j<language.masterPage.length;j++){
         translations.push(language.masterPage[j].vipBtn);
         translations.push(language.masterPage[j].cartBtn);
+        translations.push(language.masterPage[j].logoutBtn);
 
     }
 

@@ -8,6 +8,7 @@ function translateMasterPageTo(language) {
 
     $("#vipBtn").text(translation[0]);
     $("#cartBtn").text(translation[1]);
+    $("#logoutBtn").text(translation[2]);
 
 
 }
@@ -23,6 +24,7 @@ function translationMasterPage(language){
     for(j=0;j<language.masterPage.length;j++){
         translations.push(language.masterPage[j].vipBtn);
         translations.push(language.masterPage[j].cartBtn);
+        translations.push(language.masterPage[j].logoutBtn);
 
     }
     return translations;

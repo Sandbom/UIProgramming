@@ -10,6 +10,7 @@ function translatePlaceNewOrderTo(language) {
     $("#mostPopular").text(translation[1]);
     $("#vipBtn").text(translation[2]);
     $("#cartBtn").text(translation[3]);
+    $("#logoutBtn").text(translation[4]);
 
 
 }
@@ -34,6 +35,7 @@ function translationPlaceNewOrder(language){
     for(j=0;j<language.masterPage.length;j++){
         translations.push(language.masterPage[j].vipBtn);
         translations.push(language.masterPage[j].cartBtn);
+        translations.push(language.masterPage[j].logoutBtn);
 
     }
 

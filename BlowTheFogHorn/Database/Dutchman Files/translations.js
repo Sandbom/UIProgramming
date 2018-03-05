@@ -25,7 +25,8 @@ var swedish = {
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Logga in ",
-            "cartBtn" : "Kundvagn"
+            "cartBtn" : "Kundvagn",
+            "logoutBtn":"Logga Ut"
         }
 
     ],
@@ -107,7 +108,8 @@ var greek = {
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Σύνδεση",
-            "cartBtn" : "Καλάθι"
+            "cartBtn" : "Καλάθι",
+            "logoutBtn":"Αποσύνδεση"
         }
     ],
 
@@ -186,7 +188,9 @@ var english = {
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Login ",
-            "cartBtn" : "Cart"
+            "cartBtn" : "Cart",
+            "logoutBtn": "Logout"
+
         }
     ],
 
@@ -291,7 +295,8 @@ var german = {
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Login ",
-            "cartBtn" : "Cart"
+            "cartBtn" : "Cart",
+            "logoutBtn": "Logout"
         }
     ],
 
