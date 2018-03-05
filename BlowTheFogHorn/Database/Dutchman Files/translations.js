@@ -14,11 +14,29 @@ var swedish = {
             "payButton" : "Tryck för att betala"
         }
     ],
+    "placeNewOrder" : [
+        {
+            "newOrder" : "Lägg En Ny Order ",
+            "mostPopular" : "Mest Populär"
+        }
+
+    ],
 
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Logga in ",
             "cartBtn" : "Kundvagn"
+        }
+
+    ],
+
+    "completeOrder" : [
+        {
+            "info" : "Info: ",
+            "result" : "Resultat",
+            "addToBasket" : "Lägg I korgen",
+            "beersToOrder" : "Lägg Till Att betalla "
+
         }
 
     ],
@@ -75,11 +93,65 @@ var greek = {
             "payButton" : "Προσθήκη"
         }
     ],
+    "completeOrder" : [
+        {
+            "info" : "Πληροφορίες: ",
+            "result" : "Αποτελέσματα",
+            "addToBasket" : "Προσθήκη",
+            "beersToOrder" : "Προς Πληρωμή "
+
+        }
+
+    ],
 
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Σύνδεση",
             "cartBtn" : "Καλάθι"
+        }
+    ],
+
+    "customerPage" : [
+        {
+            "checkBalance" : "Υπόλοιπο",
+            "topUpCredit" : "Ανανέωση Μονάδων",
+            "seeOrderHistory" : "Ιστορικό",
+            "changePassword" : "Αλλαγή Συνθηματικού"
+        }
+    ],
+
+
+    "shoppingBasket" : [
+        {
+            "article" : "Άρθρο",
+            "amount" : "Ποσότητα",
+            "cost" : "Κόστος"
+        }
+
+    ],
+
+    "staffSettings" : [
+        {
+            "vipOrders" : " Παραγγελίες VIP ",
+            "updateBeerDB" : "Ενημέρωση Βάσης Δ",
+            "updateVIPDB" : "Ενημέρωση VIP-Βάσης Δ"
+        }
+
+    ],
+
+    "placeNewOrder" : [
+        {
+            "newOrder" : "Προσθήκη Παραγγελίας ",
+            "mostPopular" : "Πιο Δημοφιλείς:"
+        }
+
+    ],
+    "staffBasket" : [
+        {
+            "article" : "Άρθρο",
+            "amount" : "Ποσότητα",
+            "cost" : "Κόστος",
+            "payButton" : "Πληρωμή"
         }
     ]
 };
@@ -100,11 +172,30 @@ var english = {
         }
     ],
 
+    "completeOrder" : [
+        {
+            "info" : "Info: ",
+            "result" : "Results: ",
+            "addToBasket" : "Add To Basket",
+            "beersToOrder" : "Add Beers To Order "
+
+        }
+
+    ],
+
     "masterPage" : [
         {
             "vipBtn" : "V.I.P Login ",
             "cartBtn" : "Cart"
         }
+    ],
+
+    "placeNewOrder" : [
+        {
+            "newOrder" : "Place New Order ",
+            "mostPopular" : "Most Popular"
+        }
+
     ],
 
     "customerPage" : [
@@ -148,6 +239,7 @@ var english = {
 
 var german = {
 
+
     "customerBeerInfo": [
         {
             "origin" : "Ursprung: ",
@@ -160,11 +252,23 @@ var german = {
         }
     ],
 
-    "masterPage" : [
+    "placeNewOrder" : [
         {
-            "vipBtn" : "V.I.P. Login ",
-            "cartBtn" : "Warenkorb"
+            "newOrder" : "Place New Order ",
+            "mostPopular" : "Most Popular"
         }
+
+    ],
+
+    "completeOrder" : [
+        {
+            "info" : "Info: ",
+            "result" : "Ergebnis",
+            "addToBasket" : "Lägg I korgen",
+            "beersToOrder" : "Lägg Till Att betalla "
+
+        }
+
     ],
 
     "customerPage" : [
@@ -181,6 +285,13 @@ var german = {
             "article" : "Artikel",
             "amount" : "Anzahl",
             "cost" : "Preis"
+        }
+    ],
+
+    "masterPage" : [
+        {
+            "vipBtn" : "V.I.P Login ",
+            "cartBtn" : "Cart"
         }
     ],
 

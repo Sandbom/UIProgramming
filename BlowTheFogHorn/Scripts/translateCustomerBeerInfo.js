@@ -13,9 +13,9 @@ function translateCustomerBeerInfoTo(language) {
     $("#alcoholPercentage").text(translation[4]);
     $("#packaging").text(translation[5]);
     $(".payButton").text(translation[6]);
-    console.log(translation[7]);
     $("#vipBtn").text(translation[7]);
     $("#cartBtn").text(translation[8]);
+
 
 }
 
@@ -39,10 +39,11 @@ function translationBeerInfo(language){
     /* Master Page */
     for(j=0;j<language.masterPage.length;j++){
         translations.push(language.masterPage[j].vipBtn);
-
         translations.push(language.masterPage[j].cartBtn);
 
     }
+
+
     return translations;
 }
 

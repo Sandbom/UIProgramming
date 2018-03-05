@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>P10</title>
+    <title>Place New Order</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../Styles/style.css">
     <link rel="stylesheet" href="../Styles/P10.css">
 
     <script src="../Scripts/jquery.js"></script>
+    <script src="../Scripts/translateCompleteOrder.js"></script>
+    <script src="../Database/Dutchman Files/Beverages.js"></script>
+
+    <script src="../Database/Dutchman Files/translations.js"></script>
     <script>
         $(function(){
-            $("#masterContent").load("master.html");
-            $(document).ready(function(){
+            $("#masterContent").load("master.html",null,function(){
+                // $(document).ready(function(){
                 $("#settingsIcon").show();
                 $("#vipLabel").show();
                 $("#loginIcon").show();
                 $("#loginLabel").show();
 
-                });
+            });
         });
     </script>
 </head>
@@ -29,11 +33,11 @@
     <br>
      <div id="infoArea">
         <div id="infoLeft" class="infoHeader">
-            <span class="infoHeader">Info:</span>
+            <span id="infoSpan" class="infoHeader">Info:</span>
         </div>
           <div id="vertical-line"></div>
          <div id="infoRight">
-           <span class="infoHeader">Results:</span>
+           <span  id = "resultSpan" class="infoHeader">Results:</span>
 
          </div>
      </div>

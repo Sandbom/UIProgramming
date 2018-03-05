@@ -24,6 +24,9 @@
     <script src="../Scripts/translateStaffSettings.js"></script>
 
     <script src="../Scripts/translateStaffBasket.js"></script>
+    <script src="../Scripts/translatePlaceNewOrder.js"></script>
+    <script src="../Scripts/translateMasterPage.js"></script>
+    <script src="../Scripts/translateCompleteOrder.js"></script>
 
     <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
     <script src="../Database/Dutchman%20Files/Beverages.js"></script>
@@ -32,15 +35,19 @@
     <script src="../Database/Dutchman%20Files/ModelFunctions.js"></script>
 
     <script>
+        $(function() {
+
+        });
 
         $( document ).ready(function() {
             console.log( "ready!" );
-
             $( window ).on( "load", translateCustomerBeerInfoTo(english) );
             $( window ).on( "load", translateCustomerPageTo(english) );
             $( window ).on( "load", translateShoppingBasketTo(english) );
             $( window ).on( "load", translateStaffSettingsTo(english) );
             $( window ).on( "load", translateStaffBasketTo(english) );
+            $( window ).on( "load", translatePlaceNewOrderTo(english) );
+            $( window ).on( "load", translateCompleteOrderTo(english) );
         });
 
         $(function() {
@@ -50,6 +57,9 @@
                 translateShoppingBasketTo(swedish);
                 translateStaffSettingsTo(swedish);
                 translateStaffBasketTo(swedish);
+                translatePlaceNewOrderTo(swedish);
+                translateCompleteOrderTo(swedish)
+
             });
         });
 
@@ -60,6 +70,9 @@
             translateShoppingBasketTo(english);
             translateStaffSettingsTo(english);
             translateStaffBasketTo(english);
+            translatePlaceNewOrderTo(english);
+            translateCompleteOrderTo(english)
+
 
         });
     });
@@ -68,6 +81,12 @@
         $("#greekFlag").on("click", function(){
             translateCustomerBeerInfoTo(greek);
             translateCustomerPageTo(greek);
+            translatePlaceNewOrderTo(greek);
+            translateShoppingBasketTo(greek);
+            translateStaffSettingsTo(greek);
+            translateStaffBasketTo(greek);
+            translateCompleteOrderTo(greek)
+
         });
     });
 
@@ -78,6 +97,7 @@
             translateShoppingBasketTo(german);
             translateStaffSettingsTo(german);
             translateStaffBasketTo(german);
+            translateCompleteOrderTo(german)
         });
     });
 
@@ -85,7 +105,7 @@
 
 
 </head>
-<body ">
+<body>
  <div id="main_menu" >
      <div class="inline" id="back">
          <img  class="imgSize" src="../img/arrowleft.png">
@@ -99,8 +119,8 @@
      </div>
 
      <div class="inline" id = "settings">
-         <img hidden id = "settingsIcon" class="imgSize" src="../img/settings.png">
-         <label hidden id="vipLabel"><em>V.I.P</em></label>
+         <img style="display: none;" id = "settingsIcon" class="imgSize" src="../img/settings.png">
+         <label style="display: none;" id="vipLabel"><em>V.I.P</em></label>
 
      </div>
 
