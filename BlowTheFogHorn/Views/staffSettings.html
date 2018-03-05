@@ -11,7 +11,14 @@
 
     <script>
         $(function(){
-            $("#masterContent").load("master.html");
+            $("#masterContent").load("master.html",null,function(){
+                // $(document).ready(function(){
+                //   $("#settingsIcon").show();
+                //  $("#vipLabel").show();
+                //$("#loginIcon").show();
+                // $("#loginLabel").show();
+
+            });
         });
     </script>
 </head>
