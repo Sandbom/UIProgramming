@@ -1,12 +1,12 @@
 /* Welcome.html */
 /* The Modal (background) */
 
+/* putting the two background images on top of each other */
 html {
-    background: url(../img/paper_texture_v5_by_bashcorpo.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-image: url(../img/ghostship.png), url(../img/paper_texture_v5_by_bashcorpo.jpg);
+    background-size: 25%, cover;
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom left, center;
 }
 
 form {
@@ -31,6 +31,39 @@ h1 {
     font-size:400%;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+
+/* the big heading */ 
+#welcome {
+  font-family: Garamond, Times, serif;
+  color: grey;
+}
+
+#ourbeers {
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: #2c6da0;
+    border: none;
+    color: white;
+    border: none;
+    font-size: 35px;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 10px;
+    text-shadow: 1px 1px #666;
+    }
+
+#ourbeers:hover {
+    background-position: 0 -48px;
+    }
+
+#ourbeers:active {
+    background-position: 0 top;
+    position: relative;
+    top: 1px;
+    padding: 6px 10px 4px;
+    }
 
 .loginb {
     background-color: #4CAF50;
@@ -88,9 +121,42 @@ h1 {
     font-size: 18px;
 }
 
+
+#our_beer_container {
+  text-align: center;
+  padding-bottom: 15%;
+}
+
 /* Our beers button */
 
-.ourbeers {
+#ourbeers {
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: #2c6da0;
+    border: none;
+    color: white;
+    border: none;
+    font-size: 35px;
+    padding: 20px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 10px;
+    text-shadow: 1px 1px #666;
+    }
+
+#ourbeers:hover {
+    background-position: 0 -48px;
+    }
+
+#ourbeers:active {
+    background-position: 0 top;
+    position: relative;
+    top: 1px;
+    padding: 6px 10px 4px;
+    }
+
+/*.ourbeers {
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -100,8 +166,7 @@ h1 {
     top: 50%;
     left: 42%;
     font-size: 40px;
-
-}
+} */
 
 /* Add a hover effect for buttons */
 button:hover {
