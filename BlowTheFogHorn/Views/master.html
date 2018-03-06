@@ -1,247 +1,249 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Blow The Fog Horn </title>
-    <link rel="stylesheet" href="../Styles/style.css">
-    <!--
-    Import jquery
-    -->
-    <script src="../Scripts/jquery.js"></script>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Blow The Fog Horn </title>
+        <link rel="stylesheet" href="../Styles/style.css">
+        <!--
+        Import jquery
+        -->
+        <script src="../Scripts/jquery.js"></script>
 
-    <!--
-    Import to translate customerBeerInfo.html
-    -->
-    <script src="../Scripts/translateCustomerBeerInfo.js"></script>
+        <!--
+        Import to translate customerBeerInfo.html
+        -->
+        <script src="../Scripts/translateCustomerBeerInfo.js"></script>
 
-    <!--
-    Import to translate customerPage.html
-    -->
-    <script src="../Scripts/translateCustomerPage.js"></script>
+        <!--
+        Import to translate customerPage.html
+        -->
+        <script src="../Scripts/translateCustomerPage.js"></script>
 
-    <script src="../Scripts/translateShoppingBasket.js"></script>
+        <script src="../Scripts/translateShoppingBasket.js"></script>
 
-    <script src="../Scripts/translateStaffSettings.js"></script>
+        <script src="../Scripts/translateStaffSettings.js"></script>
 
-    <script src="../Scripts/translateStaffBasket.js"></script>
-    <script src="../Scripts/translatePlaceNewOrder.js"></script>
-    <script src="../Scripts/translateMasterPage.js"></script>
-    <script src="../Scripts/translateCompleteOrder.js"></script>
+        <script src="../Scripts/translateStaffBasket.js"></script>
+        <script src="../Scripts/translatePlaceNewOrder.js"></script>
+        <script src="../Scripts/translateMasterPage.js"></script>
+        <script src="../Scripts/translateCompleteOrder.js"></script>
 
-    <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
-    <script src="../Database/Dutchman%20Files/Beverages.js"></script>
-    <script src="../Database/Dutchman%20Files/DBLoaded.js"></script>
-    <script src="../Database/Dutchman%20Files/loader.js"></script>
-    <script src="../Database/Dutchman%20Files/ModelFunctions.js"></script>
+        <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
+        <script src="../Database/Dutchman%20Files/Beverages.js"></script>
+        <script src="../Database/Dutchman%20Files/DBLoaded.js"></script>
+        <script src="../Database/Dutchman%20Files/loader.js"></script>
+        <script src="../Database/Dutchman%20Files/ModelFunctions.js"></script>
 
-    <script>
-        $(function() {
+        <script>
+            $(function() {
 
-        });
+            });
 
-        $( document ).ready(function() {
-            var language;
-            language = localStorage.getItem("language");
-            if(localStorage.getItem("language") === null) {
-                console.log("ready!");
-                $(window).on("load", translateCustomerBeerInfoTo(english));
-                $(window).on("load", translateCustomerPageTo(english));
-                $(window).on("load", translateShoppingBasketTo(english));
-                $(window).on("load", translateStaffSettingsTo(english));
-                $(window).on("load", translateStaffBasketTo(english));
-                $(window).on("load", translatePlaceNewOrderTo(english));
-                $(window).on("load", translateCompleteOrderTo(english));
-                $(window).on("load", translateMasterPageTo(english));
+            $( document ).ready(function() {
+                var language;
+                language = localStorage.getItem("language");
+                if(localStorage.getItem("language") === null) {
+                    console.log("ready!");
+                    $(window).on("load", translateCustomerBeerInfoTo(english));
+                    $(window).on("load", translateCustomerPageTo(english));
+                    $(window).on("load", translateShoppingBasketTo(english));
+                    $(window).on("load", translateStaffSettingsTo(english));
+                    $(window).on("load", translateStaffBasketTo(english));
+                    $(window).on("load", translatePlaceNewOrderTo(english));
+                    $(window).on("load", translateCompleteOrderTo(english));
+                    $(window).on("load", translateMasterPageTo(english));
+                }
+
+            else{
+
+                    language = eval("(" + language + ')');
+                $(window).on("load", translateCustomerBeerInfoTo(language));
+                $(window).on("load", translateCustomerPageTo(language));
+                $(window).on("load", translateShoppingBasketTo(language));
+                $(window).on("load", translateStaffSettingsTo(language));
+                $(window).on("load", translateStaffBasketTo(language));
+                $(window).on("load", translatePlaceNewOrderTo(language));
+                $(window).on("load", translateCompleteOrderTo(language));
+                $(window).on("load", translateMasterPageTo(language));
+
             }
-
-        else{
-
-                language = eval("(" + language + ')');
-            $(window).on("load", translateCustomerBeerInfoTo(language));
-            $(window).on("load", translateCustomerPageTo(language));
-            $(window).on("load", translateShoppingBasketTo(language));
-            $(window).on("load", translateStaffSettingsTo(language));
-            $(window).on("load", translateStaffBasketTo(language));
-            $(window).on("load", translatePlaceNewOrderTo(language));
-            $(window).on("load", translateCompleteOrderTo(language));
-            $(window).on("load", translateMasterPageTo(language));
-
-        }
-        });
-
-        $(function() {
-            $("#swedishFlag").on("click", function(){
-                translateCustomerBeerInfoTo(swedish);
-                translateCustomerPageTo(swedish);
-                translateShoppingBasketTo(swedish);
-                translateStaffSettingsTo(swedish);
-                translateStaffBasketTo(swedish);
-                translatePlaceNewOrderTo(swedish);
-                translateCompleteOrderTo(swedish)
-
-            });
-        });
-
-        $(function() {
-            $("#ukFlag").on("click", function(){
-                translateCustomerBeerInfoTo(english);
-                translateCustomerPageTo(english);
-                translateShoppingBasketTo(english);
-                translateStaffSettingsTo(english);
-                translateStaffBasketTo(english);
-                translatePlaceNewOrderTo(english);
-                translateCompleteOrderTo(english);
-                translateMasterPageTo(english)
-
-
-            });
-        });
-
-        $(function() {
-            $("#greekFlag").on("click", function(){
-                // Store
-                localStorage.setItem("language", "greek");
-                translateCustomerBeerInfoTo(greek);
-                translateCustomerPageTo(greek);
-                translatePlaceNewOrderTo(greek);
-                translateShoppingBasketTo(greek);
-                translateStaffSettingsTo(greek);
-                translateStaffBasketTo(greek);
-                translateCompleteOrderTo(greek);
-                translateMasterPageTo(greek);
-
-            });
-        });
-
-        $(function() {
-            $("#germanFlag").on("click", function(){
-                localStorage.setItem("language", "german");
-                translateCustomerBeerInfoTo(german);
-                translateCustomerPageTo(german);
-                translateShoppingBasketTo(german);
-                translateStaffSettingsTo(german);
-                translateStaffBasketTo(german);
-                translateCompleteOrderTo(german);
-                translateMasterPageTo(german);
-            });
-        });
-
-        $(function() {
-            $("#swedishFlag").on("click", function(){
-                localStorage.setItem("language", "swedish");
-                translateCustomerBeerInfoTo(swedish);
-                translateCustomerPageTo(swedish);
-                translateShoppingBasketTo(swedish);
-                translateStaffSettingsTo(swedish);
-                translateStaffBasketTo(swedish);
-                translateCompleteOrderTo(swedish);
-                translateMasterPageTo(swedish);
-            });
-        });
-        <!-- Login Function -->
-        $(function() {
-            $("#vipBtn").on("click", function(){
-                $( "#logout" ).toggle();
-                $( "#cart" ).show();
-                $( "#vipBtn" ).hide();
-                $("#settingsIcon").show();
-                $("#vipLabel").show();
-                $("#loginIcon").show();
-                $("#loginLabel").show();
-
-            });
-        });
-        <!-- Logout Function -->
-        $(function() {
-            $("#logoutBtn").on("click", function(){
-                $( "#logout" ).toggle();
-                $( "#cart" ).hide();
-                $( "#vipBtn" ).show();
-                $("#settingsIcon").hide();
-                $("#vipLabel").hide();
-                $("#loginIcon").hide();
-                $("#loginLabel").hide();
-
-            });
-        });
-
-        $(function goBack() {
-
-                $("#back").on("click",function () {
-                    window.history.back();
-                    alert("went back"); });
             });
 
-    </script>
+            $(function() {
+                $("#swedishFlag").on("click", function(){
+                    translateCustomerBeerInfoTo(swedish);
+                    translateCustomerPageTo(swedish);
+                    translateShoppingBasketTo(swedish);
+                    translateStaffSettingsTo(swedish);
+                    translateStaffBasketTo(swedish);
+                    translatePlaceNewOrderTo(swedish);
+                    translateCompleteOrderTo(swedish)
+
+                });
+            });
+
+            $(function() {
+                $("#ukFlag").on("click", function(){
+                    translateCustomerBeerInfoTo(english);
+                    translateCustomerPageTo(english);
+                    translateShoppingBasketTo(english);
+                    translateStaffSettingsTo(english);
+                    translateStaffBasketTo(english);
+                    translatePlaceNewOrderTo(english);
+                    translateCompleteOrderTo(english);
+                    translateMasterPageTo(english)
 
 
-</head>
-<body>
-<div id="main_menu" >
-    <div class="inline" id="back">
-        <img  class="imgSize" src="../img/arrowleft.png">
-    </div>
+                });
+            });
 
-    <div class="inline" id = "help">
-        <img  class="imgSize" src="../img/questionmark.png">
-    </div>
-    <div class="inline" id = "home">
-        <img class="imgSize" src="../img/homeButton.png">
-    </div>
+            $(function() {
+                $("#greekFlag").on("click", function(){
+                    // Store
+                    localStorage.setItem("language", "greek");
+                    translateCustomerBeerInfoTo(greek);
+                    translateCustomerPageTo(greek);
+                    translatePlaceNewOrderTo(greek);
+                    translateShoppingBasketTo(greek);
+                    translateStaffSettingsTo(greek);
+                    translateStaffBasketTo(greek);
+                    translateCompleteOrderTo(greek);
+                    translateMasterPageTo(greek);
 
-    <div class="inline" id = "settings">
-        <img style="display: none;" id = "settingsIcon" class="imgSize" src="../img/settings.png">
-        <label style="display: none;" id="vipLabel"><em>V.I.P</em></label>
+                });
+            });
 
-    </div>
+            $(function() {
+                $("#germanFlag").on("click", function(){
+                    localStorage.setItem("language", "german");
+                    translateCustomerBeerInfoTo(german);
+                    translateCustomerPageTo(german);
+                    translateShoppingBasketTo(german);
+                    translateStaffSettingsTo(german);
+                    translateStaffBasketTo(german);
+                    translateCompleteOrderTo(german);
+                    translateMasterPageTo(german);
+                });
+            });
 
-    <div class="inline" id = "login">
-        <img hidden id = "loginIcon" class="imgSize" src="../img/login.png">
-        <label hidden id="loginLabel"><em>Johan</em></label>
+            $(function() {
+                $("#swedishFlag").on("click", function(){
+                    localStorage.setItem("language", "swedish");
+                    translateCustomerBeerInfoTo(swedish);
+                    translateCustomerPageTo(swedish);
+                    translateShoppingBasketTo(swedish);
+                    translateStaffSettingsTo(swedish);
+                    translateStaffBasketTo(swedish);
+                    translateCompleteOrderTo(swedish);
+                    translateMasterPageTo(swedish);
+                });
+            });
+            <!-- Login Function -->
+            $(function() {
+                $("#vipBtn").on("click", function(){
+                    $( "#logout" ).toggle();
+                    $( "#cart" ).show();
+                    $( "#vipBtn" ).hide();
+                    $("#settingsIcon").show();
+                    $("#vipLabel").show();
+                    $("#loginIcon").show();
+                    $("#loginLabel").show();
 
-    </div>
+                });
+            });
+            <!-- Logout Function -->
+            $(function() {
+                $("#logoutBtn").on("click", function(){
+                    $( "#logout" ).toggle();
+                    $( "#cart" ).hide();
+                    $( "#vipBtn" ).show();
+                    $("#settingsIcon").hide();
+                    $("#vipLabel").hide();
+                    $("#loginIcon").hide();
+                    $("#loginLabel").hide();
 
+                });
+            });
 
+            $(function goBack() {
 
+                    $("#back").on("click",function () {
+                        window.history.back();
+                        alert("went back"); });
+                });
 
-    <div class="inline_flags" id = "swedish" >
-        <div class="flag">
-            <img  class= "flag_img" id="swedishFlag" src="../img/if_Sweden_flat_92366.png"   >
+        </script>
+
+    </head>
+    <body>
+
+    <!-- The header -->
+    <div id="main_menu" style="clear:both;">
+
+        <!-- The buttons on the left -->
+        <div id="container_back_help_home">
+            <div class="inline" id="back">
+                <img  class="imgSize" src="../img/arrowleft.png">
+            </div>
+
+            <div class="inline" id = "help">
+                <img  class="imgSize" src="../img/questionmark.png">
+            </div>
+
+            <div class="inline" id = "home">
+                <img class="imgSize" src="../img/homeButton.png">
+            </div>
+
+            <div class="inline" id = "settings">
+                <img style="display: none;" id = "settingsIcon" class="imgSize" src="../img/settings.png">
+                <label style="display: none;" id="vipLabel"><em>V.I.P</em></label>
+            </div>
+
+            <div class="inline" id = "login">
+                <img hidden id = "loginIcon" class="imgSize" src="../img/login.png">
+                <label hidden id="loginLabel"><em>Johan</em></label>
+            </div> 
+
         </div>
 
-        <div class="flag">
-            <img  class= "flag_img" id="ukFlag" src="../img/if_United-Kingdom_92403.png" >
+        <!-- login/logout/cart buttons on the right -->
+        <div id="container_login_cart">
+            <div class="inline_buttons">
+                <button  id ="vipBtn" class="curved_btn" ></button>
+            </div>
+
+            <div id= "logout" class="inline_buttons" style="display:none">
+                <button id ="logoutBtn" class="curved_btn"  href="#"></button>
+            </div>
+
+            <div id="cart" class="inline_buttons">
+                <button id ="cartBtn" class="curved_btn"></button>
+                <label id ="cartLabel"></label>
+            </div>
         </div>
 
-        <div class="flag">
-            <img  class= "flag_img" id="germanFlag" src="../img/if_Germany_92095.png" >
+        <!-- The 4 flags in the middle -->
+        <div class="inline_flags" id="container_flags">
+            <div class="flag">
+                <img  class= "flag_img" id="swedishFlag" src="../img/if_Sweden_flat_92366.png"   >
+            </div>
+
+            <div class="flag">
+                <img  class= "flag_img" id="ukFlag" src="../img/if_United-Kingdom_92403.png" >
+            </div>
+
+            <div class="flag">
+                <img  class= "flag_img" id="germanFlag" src="../img/if_Germany_92095.png" >
+            </div>
+
+            <div class="flag">
+                <img  class= "flag_img" id="greekFlag" src="../img/if_Greece_flat_92102.png" >
+            </div>
         </div>
 
-        <div class="flag">
-            <img  class= "flag_img" id="greekFlag" src="../img/if_Greece_flat_92102.png" >
-        </div>
     </div>
-
-    <br class="clearBoth" />
-    <div class="inline_buttons">
-        <button  id ="vipBtn" class="curved_btn" ></button>
-
-    </div>
+    </body>
+    </html>
 
 
-    <div  id= "logout" class="inline_buttons" style="display:none">
-        <button   id ="logoutBtn" class="curved_btn"  href="#"></button>
-
-    </div>
-
-    <div id="cart" class="inline_buttons">
-        <button id ="cartBtn" class="curved_btn"></button>
-        <label id ="cartLabel"></label>
-
-    </div>
-
-
-</div>
-</body>
-</html>
-
+            
