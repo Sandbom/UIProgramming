@@ -1,45 +1,41 @@
 h1 {
      color: #dce28d;
  }
-#main_menu{
 
-}
+ #main_menu {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 8%;
+ }
 
 div.inline {
     float:left;
-
-    margin-right: 20px;
-    margin-bottom: 65px;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    cursor: pointer;
 }
 
 div.inline_flags {
-    float:left;
-    margin-left: 20%;
-
-
+    margin: 0 auto;
 }
 
 div.inline_buttons{
     float:right;
-    position:absolute;
-    top:0;
-    right:0;
-
+    clear: both;
+    margin-bottom: 5%;
+    cursor: pointer;
 }
 
-div.checkout_buttons{
-    float: right;
-    position: center;
-}
 div.flag {
-    float:left;
-    margin-right: 20px;
-
+    margin: 0 auto;
+    display: inline-block;
+    padding: 3%;
 }
 
 img.flag_img{
-    height: 40%;
-    width:65%;
+    height: 50%;
+    width:80%;
+    cursor: pointer;
 }
 
 button.curved_btn {
@@ -47,385 +43,41 @@ button.curved_btn {
      border: none;
      color: white;
      padding: 20px;
-     text-align: center;
      text-decoration: none;
-     display: inline-block;
      font-size: 16px;
-     margin: 4px 2px;
      cursor: pointer;
      border-radius: 8px;
      line-height: 0.5px;
-
-
  }
 
 button.checkout_btn {
     background: url('../img/shopping-cart-icon.png') no-repeat;
-
-
 }
 
-.clearBoth { clear:both; }
-
-
-/* Welcome.html */
-/* The Modal (background) */
-form {
-    border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-/*Buttons for the front page*/
-
-body {
-   /* background-image: url("https://images.pexels.com/photos/745410/pexels-photo-745410.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb"); */
-    background-size: 120%;
-}
-
-h1 {
-    color:white;
-    text-align:center;
-    font-size:400%;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-.loginb {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 15%;
-    text-align: center;
-    position: relative;
-    font-size: 18px;
-    right:-1150px;
-}
-
-.regb {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 15%;
-    text-align: center;
-    position: relative;
-    font-size: 18px;
-    right:-1150px;
-}
-
-/*Buttons in the modal */
-
-.loginbutton {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 15%;
-    text-align: center;
-    position: relative;
-    font-size: 18px;
-}
-
-.registerbutton {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 15%;
-    text-align: center;
-    position: relative;
-    font-size: 18px;
-}
-
-/* Our beers button */
-
-.ourbeers {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 30px 40px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    position: relative;
-    top: 50%;
-    left: 42%;
-    font-size: 40px;
-
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-    opacity: 0.8;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-    width: auto;
-    padding: 10px 18px;
-    background-color: #f44336;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-    text-align: center;
-    margin: 26px 12px 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-/* Avatar image */
-img.avatar {
-    width: 40%;
-    border-radius: 100%;
-}
-
-
-
-
-/* Add padding to containers */
-.container {
-    padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-    float: right;
-    padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-        display: block;
-        float: none;
-    }
-    .cancelbtn {
-        width: 100%;
-    }
-}
-.modal {
-    display: none; /* Hidden by default */
-    position: absolute; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    padding-top: 40px;
-    padding-bottom: 40px;
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #fefefe;
-    margin: 5px auto; /* 15% from the top and centered */
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-    /* Position it in the top right corner outside of the modal */
-    position: absolute;
-    right: 25px;
-    top: 0; 
-    color: #000;
-    font-size: 35px;
-    font-weight: bold;
-    left:0px;
-}
-
-/* Close button on hover */
-.close:hover,
-.close:focus {
-    color: red;
-    cursor: pointer;
-}
-
-/* Add Zoom Animation */
-.animate {
-    -webkit-animation: animatezoom 0.6s;
-    animation: animatezoom 0.6s
-}
-
-@-webkit-keyframes animatezoom {
-    from {-webkit-transform: scale(0)} 
-    to {-webkit-transform: scale(1)}
-}
-
-@keyframes animatezoom {
-    from {transform: scale(0)} 
-    to {transform: scale(1)}
-}
-
-.Product_gallery{
-    margin: 0 auto;
-    width: 1400px;
-    list-style: none;
-    padding-left:180px;
-}
-
-.Product_gallery li{
-    float:left;
-    width: 300px;
-    margin-right: 50px;
-    margin-top:50px;
-    border: 4px solid #999;
-    }
-
-.Product_gallery li img{
-    width: 300px;
-    height: 300px;
-    float:left;
-}
-
-
-.Product_description
-{
- background:rgba(0,0,0,0.7);
- position: absolute;
- width: 300px;
- height:300px;
- opacity: 0.0;
-}
-
-.Product_gallery li:hover .Product_description{
-    opacity: 1;
-}
-
-.Product_description p{
-    padding: 15px;
-    color: #fff;
-    font-size:16px;
-    padding-bottom: 20px;
-}
-
-.See_Inventory{
-  background: #c7d6e0;
-  background-image: -webkit-linear-gradient(top, #c7d6e0, #aed4eb);
-  background-image: -moz-linear-gradient(top, #c7d6e0, #aed4eb);
-  background-image: -ms-linear-gradient(top, #c7d6e0, #aed4eb);
-  background-image: -o-linear-gradient(top, #c7d6e0, #aed4eb);
-  background-image: linear-gradient(to bottom, #c7d6e0, #aed4eb);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Georgia;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-     width: 170px;
-     color: white; 
-     font-size: 26px; 
-     font-weight: bold; 
-     text-align:center;
-     text-decoration: none;
-     float: right;
-     height:60px;
-     padding-top: 10px;
-     position: absolute;
-     right: 20px;
-     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
-    }
-.See_Inventory:hover {
-  background: #b8d4e6;
-  background-image: -webkit-linear-gradient(top, #b8d4e6, #34d9d1);
-  background-image: -moz-linear-gradient(top, #b8d4e6, #34d9d1);
-  background-image: -ms-linear-gradient(top, #b8d4e6, #34d9d1);
-  background-image: -o-linear-gradient(top, #b8d4e6, #34d9d1);
-  background-image: linear-gradient(to bottom, #b8d4e6, #34d9d1);
-  text-decoration: none;
-}
-
-.Product_information{
-  background: #c7d6e0;
-  background-image: -webkit-linear-gradient(top, #c7d6e0, #aed4eb);
-  background-image: -moz-linear-gradient(top, #c7d6e0, #aed4eb);
-  background-image: -ms-linear-gradient(top, #c7d6e0, #aed4eb);
-  background-image: -o-linear-gradient(top, #c7d6e0, #aed4eb);
-  background-image: linear-gradient(to bottom, #c7d6e0, #aed4eb);
-  font-family: Georgia;
-  color: #ffffff;
-  font-size: 20px;
-    height:40px;
-    width: 100%;
-    float:left;
-    text-align: center;
-    font-size: 22px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    border-radius: 10px;
-}
-.Product_information h4{
-    margin:10px;
-}
-
-.Product_information span{
-   float:right;
-   color:#fff;
-   margin: 5px;
-   font-size:20px;
-}
-
-/* The Modal (background) */
-form {
-    border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-.beerlist {
-    margin-left:400px;
-}
-
-.beeritems {
-    font-size:38px;
-    color:white;
-    font-weight: bold;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-
+.clearBoth { 
+    clear:both; 
 }
 
 .imgSize{
-    width: 40px
-
+    width: 50px
 }
 
 .cartImgSize{
     width: 50px;
-
 }
 
-#cart{
-    margin-top: 50px;
+#container_back_help_home {
+    float: left;
+    width: 30%;
+}
 
+#container_login_cart {
+    float: right;
+    width:30%;
+}
+
+#container_flags {
+    display: inline-block;
+    margin: 0 auto;
+    width: 30%;
 }
