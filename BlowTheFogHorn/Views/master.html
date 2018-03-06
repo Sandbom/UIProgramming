@@ -70,6 +70,13 @@
             });
 
             $(function() {
+                $("#home").on("click", function(){
+                    window.location.href = "../Views/searchbeer.html"
+
+                });
+            });
+
+            $(function() {
                 $("#swedishFlag").on("click", function(){
                     translateCustomerBeerInfoTo(swedish);
                     translateCustomerPageTo(swedish);
@@ -207,7 +214,7 @@
         </div>
 
         <!-- login/logout/cart buttons on the right -->
-        <div id="container_login_cart">
+        <div id="container_login_cart" >
             <div class="inline_buttons">
                 <button  id ="vipBtn" class="curved_btn" ></button>
             </div>
@@ -216,7 +223,7 @@
                 <button id ="logoutBtn" class="curved_btn"  href="#"></button>
             </div>
 
-            <div id="cart" class="inline_buttons">
+            <div hidden id="cart" class="inline_buttons">
                 <button id ="cartBtn" class="curved_btn"></button>
                 <label id ="cartLabel"></label>
             </div>

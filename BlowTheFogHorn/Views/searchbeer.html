@@ -4,8 +4,17 @@
       <meta charset="UTF-8">
       <title>Blow The Fog Horn </title>
       <link rel="stylesheet" href="../Styles/Simon.css">
+	  <script src="../Scripts/jquery.js"></script>
+	  <script src="../Scripts/translateMasterPage.js"></script>
+	  <script src="../Database/Dutchman Files/translations.js"></script>
+
   </head>
   <script>
+	  $(function(){
+          $("#masterContent").load("master.html",null,function(){
+
+          });
+      });
 	function myFunction() {
     // Declare variables
     var input, filter, ul, li, a, i;
@@ -26,6 +35,7 @@
 }
   </script>
 	<body>
+	<div id="masterContent"></div>
 		 <!-- Button to open the modal login form -->
     <div>
     <button onclick="document.getElementById('id01').style.display='block'" class="loginb">Login</button>
