@@ -36,15 +36,21 @@
                 if ( i != 0 && i % 3 === 0){
                     iterator++;
                 }
-                $("#item" + iterator).append(beer[i]).append(" ");
 
+                /*
+                A solution to print ',' after the first and second variable
+                 (not the third)
+                 */
+                if(iterator>1 || i != 2){
+                    $("#item" + iterator).append(beer[i]).append(", ");
+                }else{
+                    $("#item" + iterator).append(beer[i]).append(" ");
+                }
             }
-
-
         });
 
         /*
-        Input: a spririt name
+        Input: a spirit name
         Output: An array of beers of the specific "varugrupp" and length == const MAX
         */
         function findBeer(spiritName) {
@@ -58,14 +64,68 @@
             /* Maximum amount of beers of each type*/
 
             for (var i = 0; i < DB2.spirits.length; i++) {
-                console.log(i);
-
                 if (DB2.spirits[i].varugrupp === spiritName && info.length < MAX) {
                     info.push(DB2.spirits[i].namn, DB2.spirits[i].prisinklmoms, DB2.spirits[i].nr);
                 }
             }
             return info;
         }
+
+        /*
+        On click, stores the beer name i a session storage
+        and redirects to the customerBeerInfo.html
+         */
+        $(document).ready(function () {
+
+            $("#item1").on("click", function () {
+                var infoItem1 = $("#item1").text();
+                var arrayItem1 = infoItem1.split(",");
+                alert("Oskar: " + arrayItem1);
+
+                /*
+                Extract the name of the drink
+                 */
+                var name1 = arrayItem1[0];
+
+                /*
+                Removes the space before the name to get the beerName
+                 */
+                var beerName1 = name1.substring(1);
+
+                /*
+                Stores the beerName in the local storage.
+                To give customerBeerInfo access to the specific beer
+                 */
+                localStorage.setItem("beerName", beerName1);
+                //window.location.href = "customerBeerInfo.html";
+
+            });
+            $("#item2").on("click", function () {
+                var info2 = $("#item2").text();
+
+                var arrayItem2 = info2.split(",");
+                alert("andra: " + arrayItem2);
+                /*
+                Extract the name of the drink
+                 */
+                var name = arrayItem2[0];
+
+                /*
+                Removes the space before the name to get the beerName
+                 */
+                var beerName = name.substring(1);
+
+                /*
+                Stores the beerName in the local storage.
+                To give customerBeerInfo access to the specific beer
+                 */
+                localStorage.setItem("beerName", beerName);
+//                window.location.href = "customerBeerInfo.html";
+
+            });
+
+
+        });
 
     </script>
   </head>

@@ -33,9 +33,6 @@
             });
         });
 
-        $().click(function(){
-            alert("The paragraph was clicked.");
-        });
         /*
         Print Beer information into the two divs
         */
@@ -43,7 +40,7 @@
             /*
             Variables for each beer
              */
-            var beer = findBeer("Highland Park");
+            var beer = findBeer(localStorage.getItem("beerName"));
             var name = beer[0];
             var nr = beer[1];
             var varugrupp = beer[2];
