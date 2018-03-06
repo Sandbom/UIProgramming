@@ -25,60 +25,46 @@
         Print Beer information into the two divs
         */
         $(function displayToDivs(){
+
             /*
-            Variables for each beer
+            beer is an array of beers with the length == const MAX
              */
             var beer = findBeer("\u00c3\u2013l, Ale");
-            var name = beer[0];
-            var nr = beer[1];
-            var varugrupp = beer[2];
+            var iterator = 1;
 
-            /*
-            Append some info to the left div
-             */
+            for(var i = 0; i<beer.length;i++){
+                if ( i != 0 && i % 3 === 0){
+                    iterator++;
+                }
+                $("#item" + iterator).append(beer[i]).append(" ");
 
+            }
 
-            /*
-            Append some info the right div
-             */
-            $("#item2").append(varugrupp);
-            $("#item3").append(name);
-            $("#item4").append(name);
 
         });
 
         /*
-          Returns information (nr,varugrupp,ursprung,leverantor,pris) for the last beer from the DB with
-          a particular name
+        Input: a spririt name
+        Output: An array of beers of the specific "varugrupp" and length == const MAX
         */
-        function findBeer(spiritName){
+        function findBeer(spiritName) {
             var info = [];
-            var nr =  findBeerNr(spiritName);
 
-            for (i = 0; i<DB2.spirits.length;i++){
-                if (DB2.spirits[i].nr == nr){
+            /*
+            Constant = 30 because of we want to display 10 beers of each category
+            since we extract 3 variables from each beer the total is 10*3 = 30
+            */
+            const MAX = 30;
+            /* Maximum amount of beers of each type*/
 
-                    info.push(DB2.spirits.namn);
-                    info.push(DB2.spirits[i].nr);
-                    info.push(DB2.spirits[i].varugrupp);
+            for (var i = 0; i < DB2.spirits.length; i++) {
+                console.log(i);
 
+                if (DB2.spirits[i].varugrupp === spiritName && info.length < MAX) {
+                    info.push(DB2.spirits[i].namn, DB2.spirits[i].prisinklmoms, DB2.spirits[i].nr);
                 }
             }
             return info;
-        }
-
-        /*
-        Returns the last nr of a specific spirit
-         */
-        function findBeerNr(beerName){
-            var nr;
-
-            for (i=0; i<DB2.spirits.length;i++){
-                if (DB2.spirits[i].varugrupp == beerName){
-                    nr = DB2.spirits[i].nr;
-                }
-            }
-            return nr;
         }
 
     </script>
@@ -156,6 +142,7 @@
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </form>
+
     </div>
     <article>
       <header>
@@ -165,10 +152,17 @@
     <div class="beerlist">
       <ul>
         <div class="beeritems">
-            <li id="item1"><span id="nr">test</span> </li>
-            <li id="item2"><span id="classOfGoods"></span> </li>
-            <li id="item3"><span id="alcoholPercentage"></span> </li>
-            <li id="item4"><span id="packaging"></span> </li>
+            <li id="item1"> </li>
+            <li id="item2"> </li>
+            <li id="item3"> </li>
+            <li id="item4"> </li>
+            <li id="item5"> </li>
+            <li id="item6"> </li>
+            <li id="item7"> </li>
+            <li id="item8"> </li>
+            <li id="item9"> </li>
+            <li id="item10"> </li>
+
         </div>
       </ul>
     </div>
