@@ -2,13 +2,29 @@
   <html lang="en">
   <head>
       <meta charset="UTF-8">
-      <title>Blow The Fog Horn </title>
+      <title>Welcome to the Flying Dutchman!</title>
       <link rel="stylesheet" href="../Styles/Simon.css">
-  </head>
-  <body>
+      <script src="../Scripts/jquery.js"></script>
+	    
+	  <!--  Import translations -->
+	  <script src="../Scripts/translateMasterPage.js"></script>
+	  <script src="../Database/Dutchman Files/translations.js"></script>
+
+	  <script>
+	    /* Loads the master.html into the page */
+	        $(function(){
+	            $("#masterContent").load("master.html",null,function(){
+	                // $(document).ready(function(){
+	            });
+	        });
+	    </script>
+	  </head>
+
+	  <body>
+	  <div id="masterContent"></div>
 
     <!-- Button to open the modal login form -->
-    <div>
+    <!-- <div>
     <button onclick="document.getElementById('id01').style.display='block'" class="loginb">Login</button>
     </div>
 
@@ -16,12 +32,12 @@
     <button onclick="document.getElementById('id02').style.display='block'" class="regb">Register</button>
     </div>
     <!-- The Modal -->
-    <div id="id01" class="modal">
+    <!-- <div id="id01" class="modal">
       <span onclick="document.getElementById('id01').style.display='none'" 
-    class="close" title="Close Modal">&times;</span>
+    class="close" title="Close Modal">&times;</span> -->
 
   <!-- Modal Content Login -->
-      <form class="modal-content animate" action="/action_page.php">
+     <!--  <form class="modal-content animate" action="/action_page.php">
         <div class="imgcontainer">
           <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
         </div>
@@ -45,10 +61,10 @@
 
     <div id="id02" class="modal">
       <span onclick="document.getElementById('id02').style.display='none'"
-    class="close" title="Close Modal">&times;</span>
+    class="close" title="Close Modal">&times;</span> -->
 
       <!-- Modal Content Register -->
-      <form class="modal-content animate" action"/action_page.php">
+      <!-- <form class="modal-content animate" action"/action_page.php">
         <div class="imgcontainer">
           <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
         </div>
@@ -72,18 +88,17 @@
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
       </form>
-    </div>
-
-    <article>
-      <header>
-        <h1>Welcome to the Flying Dutchman</h1>
-      </header>
-    </article>
+    </div> -->
 
     <div>
-      <a href="searchbeer.html"</a>
-      <button class="ourbeers">Our Beers</button>
+        <h1 id="welcome">Welcome to the Flying Dutchman</h1>
+      </div>
+
+    <div id="our_beer_container">
+      <a href="searchbeer.html">
+      <button id="ourbeers">Our Beers</button></a>
     </div>
+  
   </body>
 
   </html>
