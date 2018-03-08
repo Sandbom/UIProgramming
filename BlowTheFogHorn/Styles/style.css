@@ -19,9 +19,8 @@ div.inline_flags {
     margin: 0 auto;
 }
 
-div.inline_buttons{
+div.inline_buttons {
     float:right;
-    clear: both;
     margin-bottom: 5%;
     cursor: pointer;
 }
@@ -80,4 +79,13 @@ button.checkout_btn {
     display: inline-block;
     margin: 0 auto;
     width: 30%;
+}
+
+div#login {
+    float:left;
+    padding-left: 15%;
+}
+
+div#cart {
+    clear: both;
 }
