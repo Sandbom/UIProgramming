@@ -447,6 +447,7 @@ input[type=text], input[type=password] {
     width: 100%;
 }
 
-.exampleclass:hover {
+.hoverable:hover {
     color: red;
 }
+

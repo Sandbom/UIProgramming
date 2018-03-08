@@ -24,29 +24,26 @@
         /*
         Print Beer information into the two divs
         */
-        
-        $(function displayToDivs(){
 
+        $(function displayToDivs(){
             /*
             beer is an array of beers with the length == const MAX
              */
             var beer = findBeer("\u00c3\u2013l, Ale");
             var iterator = 1;
-
             for(var i = 0; i<beer.length;i++){
-                if ( i != 0 && i % 3 === 0){
-                    iterator++;
-                }
-
                 /*
                 A solution to print ',' after the first and second variable
                  (not the third)
                  */
-                if(iterator>1 || i != 2){
-                    $("#item" + iterator).append(beer[i]).append(", ");
-                }else{
-                    $("#item" + iterator).append(beer[i]).append(" ");
-                }
+                //var abeer = beer[i].split(", ");
+                // var abeer2 = beer[i].split("/n");
+                // console.log(beer[i].prisinklmoms);
+                var toAppend = beer[i].namn+":         "+beer[i].prisinklmoms+" SEK \n";
+                console.log(beer[i]);
+                // console.log(toAppend);
+                $("#item" + iterator).append(beer[i]).append(toAppend);
+                iterator++;
             }
         });
 
@@ -66,7 +63,7 @@
 
             for (var i = 0; i < DB2.spirits.length; i++) {
                 if (DB2.spirits[i].varugrupp === spiritName && info.length < MAX) {
-                    info.push(DB2.spirits[i].namn, DB2.spirits[i].prisinklmoms, DB2.spirits[i].nr);
+                    info.push(DB2.spirits[i]);
                 }
             }
             return info;
@@ -79,56 +76,28 @@
         $(document).ready(function () {
 
             $(".beeritems").click(function (event) {
-               // var infoItem1 = $(".beeritems").get($(this.id));
+                // var infoItem1 = $(".beeritems").get($(this.id));
                 //alert(event.target.id);
-
-
-              var info  = $("#"+event.target.id).text();
-              //alert(info);
-
-                var arrayItem1 = info.split(",");
-
+                var info  = $("#"+event.target.id).text();
+                //alert(info);
+                var arrayItem1 = info.split(":");
                 /*
                 Extract the name of the drink
                  */
-               var name1 = arrayItem1[0];
-
+                var name1 = arrayItem1[0];
                 /*
                 Removes the space before the name to get the beerName
                  */
                 var beerName1 = name1.substring(1);
-
+                //alert(name1);
                 /*
                 Stores the beerName in the local storage.
                 To give customerBeerInfo access to the specific beer
                  */
-               localStorage.setItem("beerName", beerName1);
+                localStorage.setItem("beerName", beerName1);
                 window.location.href = "customerBeerInfo.html";
-
             });
-            $("#item2").on("click", function () {
-                var info2 = $("#item2").text();
 
-                var arrayItem2 = info2.split(",");
-                alert("andra: " + arrayItem2);
-                /*
-                Extract the name of the drink
-                 */
-                var name = arrayItem2[0];
-
-                /*
-                Removes the space before the name to get the beerName
-                 */
-                var beerName = name.substring(1);
-
-                /*
-                Stores the beerName in the local storage.
-                To give customerBeerInfo access to the specific beer
-                 */
-                localStorage.setItem("beerName", beerName);
-//                window.location.href = "customerBeerInfo.html";
-
-            });
 
 
         });
@@ -218,16 +187,19 @@
     <div class="beerlist">
       <ul>
         <div class="beeritems">
-            <li id="item1"> </li>
-            <li id="item2"> </li>
-            <li id="item3"> </li>
-            <li id="item4"> </li>
-            <li id="item5"> </li>
-            <li id="item6"> </li>
-            <li id="item7"> </li>
-            <li id="item8"> </li>
-            <li id="item9"> </li>
-            <li id="item10"> </li>
+
+
+            <li id="item1" class ="hoverable"> </li>
+            <li id="item2" class ="hoverable"> </li>
+            <li id="item3" class ="hoverable"> </li>
+            <li id="item4" class ="hoverable"> </li>
+            <li id="item5" class ="hoverable"> </li>
+            <li id="item6" class ="hoverable"> </li>
+            <li id="item7" class ="hoverable"> </li>
+            <li id="item8" class ="hoverable"> </li>
+            <li id="item9" class ="hoverable"> </li>
+            <li id="item10" class ="hoverable"> </li>
+
 
         </div>
       </ul>
