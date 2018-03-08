@@ -43,6 +43,7 @@
             var beer = findBeer(localStorage.getItem("beerName"));
             alert(beer);
             var name = beer[0];
+            alert(name);
             var nr = beer[1];
             var varugrupp = beer[2];
             var ursprung = beer[3];
@@ -54,18 +55,18 @@
             /*
             Append some info to the left div
              */
-            $("#item6").append(beer.ursprung);
-            $("#item7").append(beer.leverantor);
+            $("#item6").append(ursprung);
+            $("#item7").append(leverantor);
 
             /*
             Append some info the right div
              */
-            $("#item1").append(beer.nr);
-            $("#item2").append(beer.varugrupp);
-            $("#item3").append(beer.alkholhalt);
-            $("#item4").append(beer.forpackning);
+            $("#item1").append(nr);
+            $("#item2").append(varugrupp);
+            $("#item3").append(alkholhalt);
+            $("#item4").append(forpackning);
 
-            $("#beerName").append(beer.name);
+            $("#beerName").append(name);
 
         });
 
