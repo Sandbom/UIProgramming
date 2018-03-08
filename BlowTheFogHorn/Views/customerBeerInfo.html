@@ -41,9 +41,7 @@
             Variables for each beer
              */
             var beer = findBeer(localStorage.getItem("beerName"));
-            alert(beer);
             var name = beer[0];
-            alert(name);
             var nr = beer[1];
             var varugrupp = beer[2];
             var ursprung = beer[3];
@@ -74,8 +72,19 @@
         $(document).ready(function(){
             var counter = 0;
             $(".payButton").click(function(){
-                alert("The item is now in the cart");
+                //alert("The item is now in the cart");
+                var buyBeer = $("#beerName").text();
+                var cart = JSON.parse(localStorage.getItem("cart"));
+                cart.push(buyBeer);
+                localStorage.setItem("cart",JSON.stringify(cart));
+                var cart2 = JSON.parse(localStorage.getItem("cart"));
 
+                alert(cart2);
+
+
+                /*
+                NOTIS: starts at 0
+                 */
                 $("#cartLabel").text(counter++);
             });
         });
