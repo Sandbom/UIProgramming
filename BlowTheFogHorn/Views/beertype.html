@@ -80,7 +80,6 @@
             $("#item1").on("click", function () {
                 var infoItem1 = $("#item1").text();
                 var arrayItem1 = infoItem1.split(",");
-                alert("Oskar: " + arrayItem1);
 
                 /*
                 Extract the name of the drink
@@ -97,7 +96,7 @@
                 To give customerBeerInfo access to the specific beer
                  */
                 localStorage.setItem("beerName", beerName1);
-                //window.location.href = "customerBeerInfo.html";
+                window.location.href = "customerBeerInfo.html";
 
             });
             $("#item2").on("click", function () {
