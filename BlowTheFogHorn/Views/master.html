@@ -153,8 +153,7 @@
                     $( "#vipBtn" ).hide();
                     $("#settingsIcon").show();
                     $("#vipLabel").show();
-                    $("#loginIcon").show();
-                    $("#loginLabel").show();
+                    $("#login").show();
 
                 });
             });
@@ -166,8 +165,7 @@
                     $( "#vipBtn" ).show();
                     $("#settingsIcon").hide();
                     $("#vipLabel").hide();
-                    $("#loginIcon").hide();
-                    $("#loginLabel").hide();
+                    $("#login").hide();
 
                 });
             });
@@ -210,10 +208,11 @@
 
         <!-- login/logout/cart buttons on the right -->
         <div id="container_login_cart" >
-            <div class="inline_buttons" id="login">
-                <img hidden id = "loginIcon" class="imgSize" src="../img/login.png">
-                <label hidden id="loginLabel"><em>Johan</em></label>
-            </div> 
+            <div class="inline_buttons" id="login" style="display:none">
+                <img id = "loginIcon" class="imgSize" src="../img/login.png">
+                <label id="loginLabel"><em>Johan</em></label>
+            </div>
+
             <div class="inline_buttons">
                 <button  id ="vipBtn" class="curved_btn" ></button>
             </div>
