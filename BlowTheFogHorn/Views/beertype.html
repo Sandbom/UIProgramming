@@ -77,14 +77,20 @@
          */
         $(document).ready(function () {
 
-            $("#item1").on("click", function () {
-                var infoItem1 = $("#item1").text();
-                var arrayItem1 = infoItem1.split(",");
+            $(".beeritems").click(function (event) {
+               // var infoItem1 = $(".beeritems").get($(this.id));
+                //alert(event.target.id);
+
+
+              var info  = $("#"+event.target.id).text();
+              //alert(info);
+
+                var arrayItem1 = info.split(",");
 
                 /*
                 Extract the name of the drink
                  */
-                var name1 = arrayItem1[0];
+               var name1 = arrayItem1[0];
 
                 /*
                 Removes the space before the name to get the beerName
@@ -95,7 +101,7 @@
                 Stores the beerName in the local storage.
                 To give customerBeerInfo access to the specific beer
                  */
-                localStorage.setItem("beerName", beerName1);
+               localStorage.setItem("beerName", beerName1);
                 window.location.href = "customerBeerInfo.html";
 
             });
