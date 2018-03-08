@@ -5,11 +5,12 @@
 html {
 	height: 100%;
     margin: 0;
-	 /* background: url(../img/paper_texture_v5_by_bashcorpo.jpg) no-repeat center center fixed;
+	background: url(../img/paper_texture_v5_by_bashcorpo.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; */
+    background-size: cover;
+
 }
 
 /* the body of the welcome page */
@@ -48,9 +49,15 @@ h1 {
 }
 
 /* the big heading */ 
-#welcome {
+.header {
   font-family: Garamond, Times, serif;
   color: grey;
+  margin-top: 6%;
+}
+
+/* the big heading on the search beer page*/
+#search_beer_heading {
+    text-align: center;
 }
 
 #ourbeers {
@@ -413,5 +420,33 @@ input[type=text], input[type=password] {
     color:black;
     font-weight: bold;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
 
+/* box for six beer type boxes on searchbeer page*/
+#container_beer_types {
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-gap: 5%;
+    color: #444;
+    align-items: center;
+    justify-content: center;
+}
+
+/* smaller beer boxes on searchbeer page */
+.beerbox {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5%;
+    font-size: 20%;
+    align-self: center;
+    justify-content: center;
+}
+
+.beer_img {
+    width: 100%;
+}
+
+.exampleclass:hover {
+    color: red;
 }
