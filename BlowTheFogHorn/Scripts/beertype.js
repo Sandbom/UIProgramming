@@ -75,4 +75,7 @@ $(document).ready(function () {
         localStorage.setItem("beerName", beerName1);
         window.location.href = "customerBeerInfo.html";
     });
+
+
+
 });

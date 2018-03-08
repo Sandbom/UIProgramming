@@ -17,12 +17,57 @@
         /*
                 Loads the master.html into the page
          */
+        // Global user variable
+        var user = "Johan";
+        //Cart Counter Variable
+        var counter=0;
 
         $(function(){
             $("#masterContent").load("master.html",null,function(){
 
             });
         });
+        // Implement Drag
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+        // implement Drop
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var info = $("#" +data).text();
+            alert(info);
+            var arrayItem1 = info.split(":");
+            /*
+            Extract the name of the drink
+             */
+            var name1 = arrayItem1[0];
+            /*
+            Removes the space before the name to get the beerName
+             */
+            var beerName1 = name1.substring(1);
+            //alert(name1);
+            /*
+            Stores the beerName in the local storage.
+            To give customerBeerInfo access to the specific beer
+             */
+
+
+                // Example  johan_beerName_0
+                sessionStorage.setItem(user+"_beerName_"+counter, beerName1);
+                counter++;
+                console.log(counter);
+
+
+
+        }
+
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+
+
 
     </script>
   </head>
@@ -113,16 +158,16 @@
         <div class="beeritems">
 
 
-            <li id="item1" class ="hoverable"> </li>
-            <li id="item2" class ="hoverable"> </li>
-            <li id="item3" class ="hoverable"> </li>
-            <li id="item4" class ="hoverable"> </li>
-            <li id="item5" class ="hoverable"> </li>
-            <li id="item6" class ="hoverable"> </li>
-            <li id="item7" class ="hoverable"> </li>
-            <li id="item8" class ="hoverable"> </li>
-            <li id="item9" class ="hoverable"> </li>
-            <li id="item10" class ="hoverable"> </li>
+            <li id="item1"  draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item2"  draggable="true"class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item3" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item4" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item5"  draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item6" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item7" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item8" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item9" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item10" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
 
 
         </div>
