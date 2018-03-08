@@ -58,7 +58,7 @@ button.checkout_btn {
 }
 
 .imgSize{
-    width: 50px
+    width: 46px
 }
 
 .cartImgSize{
@@ -67,18 +67,21 @@ button.checkout_btn {
 
 #container_back_help_home {
     float: left;
-    width: 30%;
+    width: 28%;
+    padding: 0.5%;
 }
 
 #container_login_cart {
     float: right;
-    width:30%;
+    width:28%;
+    padding:0.5%;
 }
 
 #container_flags {
     display: inline-block;
     margin: 0 auto;
-    width: 30%;
+    width: 28%;
+    padding:0.5%;
 }
 
 div#login {

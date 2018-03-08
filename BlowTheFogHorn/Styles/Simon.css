@@ -3,18 +3,25 @@
 
 /* putting the two background images on top of each other */
 html {
-	 background: url(../img/paper_texture_v5_by_bashcorpo.jpg) no-repeat center center fixed;
+	height: 100%;
+    margin: 0;
+	 /* background: url(../img/paper_texture_v5_by_bashcorpo.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; */
 }
 
+/* the body of the welcome page */
 #index {
+    height: 100%;
+    margin: 0;
+    padding: 0;
     background-image: url(../img/ghostship.png), url(../img/paper_texture_v5_by_bashcorpo.jpg);
     background-size: 25%, cover;
     background-repeat: no-repeat, no-repeat;
     background-position: bottom left, center;
+
 }
 
 form {
@@ -132,7 +139,6 @@ h1 {
 
 #our_beer_container {
   text-align: center;
-  padding-bottom: 15%;
 }
 
 /* Our beers button */
