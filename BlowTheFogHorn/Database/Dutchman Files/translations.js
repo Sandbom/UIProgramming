@@ -11,7 +11,7 @@ var swedish = {
             "classOfGoods" : "Varugrupp: ",
             "alcoholPercentage" : "Alkoholhalt: ",
             "packaging" : "Förpackning: ",
-            "payButton" : "Tryck för att betala"
+            "payButton" : "Lägg till in i varukorgen"
         }
     ],
     "placeNewOrder" : [

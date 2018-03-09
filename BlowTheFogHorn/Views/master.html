@@ -28,6 +28,12 @@
         <script src="../Scripts/translateMasterPage.js"></script>
         <script src="../Scripts/translateCompleteOrder.js"></script>
 
+        <!--
+        Load cart script
+        -->
+        <script src="../Scripts/cart.js"></script>
+
+
         <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
         <script src="../Database/Dutchman%20Files/Beverages.js"></script>
         <script src="../Database/Dutchman%20Files/DBLoaded.js"></script>
@@ -155,6 +161,8 @@
                     $("#vipLabel").show();
                     $("#login").show();
 
+                    createCart();
+
                 });
             });
             <!-- Logout Function -->
@@ -176,6 +184,13 @@
                         window.history.back();
                         alert("went back"); });
                 });
+
+            $(function goToCart() {
+                $("#cart").on("click", function () {
+                    window.location.href = "shoppingBasketNew.html";
+                });
+
+            });
 
         </script>
 
@@ -221,7 +236,7 @@
                 <button id ="logoutBtn" class="curved_btn"  href="#"></button>
             </div>
 
-            <div hidden id="cart" class="inline_buttons">
+            <div hidden id="cart" class="inline_buttons" ondragover="allowDrop(event)" ondrop="drop(event)">
                 <button id ="cartBtn" class="curved_btn"></button>
                 <label id ="cartLabel"></label>
             </div>
