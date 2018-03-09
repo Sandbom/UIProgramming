@@ -25,6 +25,19 @@ html {
 
 }
 
+/* don't show the back/help/home buttons on welcome page */
+#index #back {
+    visibility: hidden;
+}
+
+#index #help {
+    visibility: hidden;
+}
+
+#index #home {
+    visibility: hidden;
+}
+
 form {
     border: 3px solid #f1f1f1;
 }
@@ -308,8 +321,7 @@ span.psw {
 }
 
 
-.Product_description
-{
+.Product_description {
  background:rgba(0,0,0,0.7);
  position: absolute;
  width: 300px;
@@ -447,6 +459,6 @@ input[type=text], input[type=password] {
     width: 100%;
 }
 
-.exampleclass:hover {
-    color: red;
-}
+.hoverable:hover {
+     color: red;
+ }
