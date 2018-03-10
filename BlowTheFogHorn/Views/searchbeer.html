@@ -8,60 +8,63 @@
 	  <script src="../Scripts/translateMasterPage.js"></script>
 	  <script src="../Database/Dutchman Files/translations.js"></script>
 
+	  <script>
+		  $(function(){
+	          $("#masterContent").load("master.html",null,function(){
+
+	          });
+	      });
+
+
+		/* Simon's original function
+
+	  function myFunction() {
+	    // Declare variables
+	    var input, filter, ul, li, a, i;
+	    input = document.getElementById('myInput');
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById("myUL");
+	    li = ul.getElementsByTagName('li');
+
+	    // Loop through all list items, and hide those who don't match the search query
+	    for (i = 0; i < li.length; i++) {
+	        a = li[i].getElementsByTagName("a")[0];
+	        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	            li[i].style.display = "";
+	        } else {
+	            li[i].style.display = "none";
+	        }
+	    }
+	} */
+
+
+	/* tried to adapt funtion to new layout but it's not working yet
+
+	function myFunction() {
+	    // Declare variables
+	    var input, filter, ul, li, a, i;
+	    input = document.getElementById('myInput');
+	    filter = input.value.toUpperCase();
+	    ul = document.getElementById("container_beer_types");
+	    li = ul.getElementsByClassName('div');
+
+	    // Loop through all list items, and hide those who don't match the search query
+	    for (i = 0; i < li.length; i++) {
+	        a = li[i].getElementsByTagName("a")[0];
+	        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+	            li[i].style.display = "";
+	        } else {
+	            li[i].style.display = "none";
+	        }
+	    }
+	} */
+
+	  </script>
   </head>
-  <script>
-	  $(function(){
-          $("#masterContent").load("master.html",null,function(){
 
-          });
-      });
+  <body>
 
-
-	/* Simon's original function
-
-  function myFunction() {
-    // Declare variables
-    var input, filter, ul, li, a, i;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    li = ul.getElementsByTagName('li');
-
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-} */
-
-
-/* tried to adapt funtion to new layout but it's not working yet
-
-function myFunction() {
-    // Declare variables
-    var input, filter, ul, li, a, i;
-    input = document.getElementById('myInput');
-    filter = input.value.toUpperCase();
-    ul = document.getElementById("container_beer_types");
-    li = ul.getElementsByClassName('div');
-
-    // Loop through all list items, and hide those who don't match the search query
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-} */
-
-  </script>
-	<body>
+  	<!-- load the master page -->
 	<div id="masterContent"></div>
 
 		 <!-- Button to open the modal login form
@@ -140,7 +143,7 @@ function myFunction() {
 		<div id="container_beer_types">
 
 		  <!-- <ul class ="Product_gallery" id="myUL"> --> 
-			   <div class="beerbox" id="Lagers">
+			    <div class="beerbox" id="Lagers">
 				    <img class="beer_img" src="https://www.publicdomainpictures.net/pictures/250000/velka/beer-in-pint-glass.jpg" />
 
 				      <div class="Product_information">
@@ -148,13 +151,13 @@ function myFunction() {
 				      </div>
 
 				      <div class="Product_description">
-					       <p>A lager, which can range from sweet to bitter and pale to black, is usually used to describe bottom-fermented brews of Dutch, German, and Czech styles. Most, however, are a pale to medium colour, have high carbonation, and a medium to high hop flavour.	</p>
+					       <p>A lager, which can range from sweet to bitter and pale to black, is usually used to describe bottom-fermented brews of Dutch, German, and Czech styles. Most, however, are a pale to medium colour, have high carbonation, and a medium to high hop flavour.</p>
 					       <a href="#" class="See_Inventory">See Inventory</a>
 				      </div>
 
-			   </div>
+			    </div>
 
-         <div class="beerbox" id="Porters_Stouts">
+         		<div class="beerbox" id="Porters_Stouts">
 				    <img class="beer_img" src="https://www.bbcgoodfood.com/sites/default/files/stout-lead.jpg" />
 
 				      <div class="Product_information">
@@ -165,7 +168,7 @@ function myFunction() {
 					       <p>There’s very little distinction between a Porter and a Stout, but they do have their differences. Porter is a dark, almost black, fruity-dry, top fermenting style. An ale, porter is brewed with a combination of roasted malt to impart flavour, colour and aroma. Stout is also a black, roast brew made by top fermentation. </p>
 					       <a href="#" class="See_Inventory">See Inventory</a>
 				      </div>
-			   </div>
+			    </div>
 
 				<div class="beerbox" id="Ales">
 				    <img class="beer_img" src="https://fthmb.tqn.com/JuD95GFh-napbJ3CehFuuuOUSYQ=/3382x2333/filters:no_upscale():fill(transparent,1)/124337728-56a090355f9b58eba4b19625.jpg" />
@@ -178,7 +181,7 @@ function myFunction() {
 					       <p>Ales are often darker than lagers, ranging from rich gold to reddish amber. Top fermenting, and more hops in the wort gives these beers a distinctive fruitfulness, acidity and pleasantly bitter seasoning. Ales have a more assertive, individual personality than lager, though their alcoholic strength is the same.</p>
 				        	<a href="#" class="See_Inventory">See Inventory</a>
 				      </div>
-			   </div>
+			    </div>
 
 				<div class="beerbox" id="IPA">
 				    <img class="beer_img" src="http://alltomolfestivalen.se/wp-content/uploads/sites/182/2017/01/John_Sleeman_India_Pale_Ale-300x207.jpg	" />
@@ -191,7 +194,7 @@ function myFunction() {
 					     <p>You want a hoppy beer? Here you are. This style more than any other has become synonymous with craft brewing in the United States due to the current wave of breweries reveling in IPAs and APAs. India Pale Ales started off in England as “Pale Export” to be shipped to British troops in India in the 1700s.</p>
 					     <a href="#" class="See_Inventory">See Inventory</a>
 				    </div>
-			   </div>
+			    </div>
 
 				<div class="beerbox" id="Scottish_ale">
 				    <img class="beer_img" src="https://learn.kegerator.com/wp-content/uploads/2016/07/wee-heavy-scotch-ale.jpg" />
@@ -201,10 +204,11 @@ function myFunction() {
 				    </div>
 
 				    <div class="Product_description">
-					     <p>Scottish ales are typically full-bodied and malty, with some of the classic examples being dark brown in color. They are more lowly hopped than the English counterparts and often have a slightly viscous and sweet caramel malt character due to incomplete fermentation. </p>
+					     <p>Scottish ales are typically full-bodied and malty, with some of the classic examples being dark brown in color. They are more lowly hopped than the English counterparts and often have a slightly viscous and sweet caramel malt character due to incomplete fermentation.
+					     </p>
 					     <a href="#" class="See_Inventory">See Inventory</a>
 				    </div>
-			   </div>
+			    </div>
 
 				<div class="beerbox" id="Belgian_style">
 				    <img class="beer_img" src="http://www.muntonshomebrew.com/wp-content/uploads/2015/01/muntonshandcrafted-belgianstyle1.jpg" />
@@ -213,13 +217,11 @@ function myFunction() {
 					     <h4>Belgian Style Beer</h4>
 				    </div>
 
-				    <div class="beerbox" id="Product_description">
+				    <div class="Product_description">
 					     <p> If you're put off by intensely bitter IPAs or bland canned lagers, the Belgian beer section at the flying dutchman may be a good place to start your love affair with beer. </p>
 					     <a href="#" class="See_Inventory">See Inventory</a>
 				    </div>
 			  </div>
-
 		  </div>
-
-	 </div>
-</body>
+	</body>
+</html>
