@@ -13,16 +13,17 @@ html {
 
 }
 
-/* the body of the welcome page */
-#index {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-image: url(../img/ghostship.png), url(../img/paper_texture_v5_by_bashcorpo.jpg);
-    background-size: 25%, cover;
-    background-repeat: no-repeat, no-repeat;
-    background-position: bottom left, center;
-
+/* the body of the welcome page, don't display the image of the ship if the page becomes too small */
+@media (min-width: 601px) {
+    #index {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-image: url(../img/ghostship.png), url(../img/paper_texture_v5_by_bashcorpo.jpg);
+        background-size: 25%, cover;
+        background-repeat: no-repeat, no-repeat;
+        background-position: bottom left, center;
+    }
 }
 
 /* don't show the back/help/home buttons on welcome page */
