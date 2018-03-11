@@ -4,9 +4,12 @@
       <meta charset="UTF-8">
       <title>Blow The Fog Horn </title>
       <link rel="stylesheet" href="../Styles/Simon.css">
+      <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	  <script src="../Scripts/jquery.js"></script>
 	  <script src="../Scripts/translateMasterPage.js"></script>
 	  <script src="../Database/Dutchman Files/translations.js"></script>
+	  <script src="../Database/Dutchman Files/Selectedbeers.js"></script>
+	  <script src="../Database/Dutchman Files/Beverages.js"></script>
 
 	  <script>
 		  $(function(){
@@ -14,6 +17,74 @@
 
 	          });
 	      });
+
+	      function allBeers(){
+	      	var listofbeer = [];
+
+	      	for(i=0; i<DB3.spirits.length;i++) {
+	      		listofbeer.push([DB3.spirits[i].namn]);
+	      		if (length.listofbeer != 0){
+	      			$("")
+	      		}
+
+	      		}
+	      	}
+
+	      	return listofbeer;
+	      	console.log(listofbeer);
+	      }
+
+	     function displaybeerindiv_simon(){
+	     	v
+	     }
+
+	      $(function displaybeerindiv_alex(){
+			var beer = allBeers();
+			console.log(beer);
+			var name = beer[0];
+	      	var type = beer[1];
+	      	var name1 = beer[2];
+	      	var type1 = beer[3];
+
+	      	console.log()
+	      	$("#item1").append(name);
+	      	$("#item2").append(type);
+	      	$("#item3").append(name1);
+	      	$("#item4").append(type1);
+	      });
+
+	        function findBeer(spiritName){
+            var info = [];
+            var nr =  findBeerNr(spiritName);
+
+            for (i = 0; i<DB2.spirits.length;i++){
+                if (DB2.spirits[i].nr == nr){
+                    info.push(DB2.spirits[i].namn);
+                    info.push(DB2.spirits[i].nr);
+                    info.push(DB2.spirits[i].varugrupp);
+                    info.push(DB2.spirits[i].ursprung);
+                    info.push(DB2.spirits[i].leverantor);
+                    info.push(DB2.spirits[i].pris);
+                    info.push(DB2.spirits[i].alkoholhalt);
+                    info.push(DB2.spirits[i].forpackning);
+                }
+            }
+            return info;
+        }
+
+        /*
+        Returns the last nr of a specific spirit
+         */
+        function findBeerNr(beerName){
+            var nr;
+
+            for (i=0; i<DB2.spirits.length;i++){
+                if (DB2.spirits[i].namn == beerName){
+                    nr = DB2.spirits[i].nr;
+                }
+            }
+            return nr;
+        }
 
 
 		/* Simon's original function
@@ -63,6 +134,10 @@
   </head>
 
   <body>
+
+  	<!-- trigger the mPopup -->
+
+
 
   	<!-- load the master page -->
 	<div id="masterContent"></div>
@@ -135,38 +210,121 @@
         </div>
       </form>
     </div> -->
+    <body>
+
+
+
+<!-- Trigger/Open The Modal -->
     
     <div>
         <h1 class="header" id="search_beer_heading">Browse our beers!</h1>
     </div>
-
 		<div id="container_beer_types">
 
 		  <!-- <ul class ="Product_gallery" id="myUL"> --> 
-			    <div class="beerbox" id="Lagers">
+			    <div class="beerbox" id="Light Lagers">
 				    <img class="beer_img" src="https://www.publicdomainpictures.net/pictures/250000/velka/beer-in-pint-glass.jpg" />
-
+				      <!-- trigger the mPopup -->
 				      <div class="Product_information">
-					       <h4>Lagers</h4>
-				      </div>
+						<a href="javascript:void(0);" id="mpopupLink">Open Popup</a>
 
-				      <div class="Product_description">
-					       <p>A lager, which can range from sweet to bitter and pale to black, is usually used to describe bottom-fermented brews of Dutch, German, and Czech styles. Most, however, are a pale to medium colour, have high carbonation, and a medium to high hop flavour.</p>
-					       <a href="#" class="See_Inventory">See Inventory</a>
-				      </div>
+						<!-- mPopup box -->
+						<div id="mpopupBox" class="mpopup">
+						    <!-- mPopup content -->
+						    <div class="mpopup-content">
+						        <div class="mpopup-head">
+						            <span class="close">×</span>
+						            <h2>Simple Modal Popup</h2>
+						        </div>
+						        <div class="mpopup-main">
+						            <p>This is a simple modal popup using JavaScript and CSS</p>
+						            <p>Please the content...</p>
+						        </div>
+						        <div class="mpopup-foot">
+						            <p>created by CodexWorld</p>
+						        </div>
+						    </div>
+						</div>
+						<script>
+						// get the mPopup
+							var mpopup = document.getElementById('mpopupBox');
 
+							// get the link that opens the mPopup
+							var mpLink = document.getElementById("mpopupLink");
+
+							// get the close action element
+							var close = document.getElementsByClassName("close")[0];
+
+							// open the mPopup once the link is clicked
+							mpLink.onclick = function() {
+							    mpopup.style.display = "block";
+							}
+
+							// close the mPopup once close element is clicked
+							close.onclick = function() {
+							    mpopup.style.display = "none";
+							}
+
+							// close the mPopup when user clicks outside of the box
+							window.onclick = function(event) {
+							    if (event.target == mpopup) {
+							        mpopup.style.display = "none";
+							    }
+							}
+						</script>
+					</div>
 			    </div>
 
          		<div class="beerbox" id="Porters_Stouts">
 				    <img class="beer_img" src="https://www.bbcgoodfood.com/sites/default/files/stout-lead.jpg" />
 
 				      <div class="Product_information">
-					       <h4>Porters & Stouts</h4>
-				      </div>
+					    <a href="javascript:void(0);" id="mpopupLink2">Open Popup</a>
 
-				      <div class="Product_description">
-					       <p>There’s very little distinction between a Porter and a Stout, but they do have their differences. Porter is a dark, almost black, fruity-dry, top fermenting style. An ale, porter is brewed with a combination of roasted malt to impart flavour, colour and aroma. Stout is also a black, roast brew made by top fermentation. </p>
-					       <a href="#" class="See_Inventory">See Inventory</a>
+						<!-- mPopup box -->
+						<div id="mpopupBox2" class="mpopup">
+						    <!-- mPopup content -->
+						    <div class="mpopup-content">
+						        <div class="mpopup-head">
+						            <span class="close">×</span>
+						            <h2>Simple Modal Popup</h2>
+						        </div>
+						        <div class="mpopup-main">
+						            <p>This is a simple modal popup using JavaScript and CSS</p>
+						            <p>Please the content...</p>
+						        </div>
+						        <div class="mpopup-foot">
+						            <p>created by CodexWorld</p>
+						        </div>
+						    </div>
+						</div>
+						<script>
+						// get the mPopup
+							var mpopup = document.getElementById('mpopupBox2');
+
+							// get the link that opens the mPopup
+							var mpLink = document.getElementById("mpopupLink2");
+
+							// get the close action element
+							var close = document.getElementsByClassName("close")[0];
+
+							// open the mPopup once the link is clicked
+							mpLink.onclick = function() {
+							    mpopup.style.display = "block";
+							}
+
+							// close the mPopup once close element is clicked
+							close.onclick = function() {
+							    mpopup.style.display = "none";
+							}
+
+							// close the mPopup when user clicks outside of the box
+							window.onclick = function(event) {
+							    if (event.target == mpopup) {
+							        mpopup.style.display = "none";
+							    }
+							}
+						</script>
 				      </div>
 			    </div>
 
@@ -174,54 +332,108 @@
 				    <img class="beer_img" src="https://fthmb.tqn.com/JuD95GFh-napbJ3CehFuuuOUSYQ=/3382x2333/filters:no_upscale():fill(transparent,1)/124337728-56a090355f9b58eba4b19625.jpg" />
 
 				      <div class="Product_information">
-					       <h4>Ales</h4>
+					    <a href="javascript:void(0);" id="mpopupLink3">Open Popup</a>
+
+						<!-- mPopup box -->
+						<div id="mpopupBox3" class="mpopup">
+						    <!-- mPopup content -->
+						    <div class="mpopup-content">
+						        <div class="mpopup-head">
+						            <span class="close">×</span>
+						            <h2>Simple Modal Popup</h2>
+						        </div>
+						        <div class="mpopup-main">
+						            <p>This is a simple modal popup using JavaScript and CSS</p>
+						            <p>Please the content...</p>
+						        </div>
+						        <div class="mpopup-foot">
+						            <p>created by CodexWorld</p>
+						        </div>
+						    </div>
+						</div>
+						<script>
+						// get the mPopup
+							var mpopup = document.getElementById('mpopupBox3');
+
+							// get the link that opens the mPopup
+							var mpLink = document.getElementById("mpopupLink3");
+
+							// get the close action element
+							var close = document.getElementsByClassName("close")[0];
+
+							// open the mPopup once the link is clicked
+							mpLink.onclick = function() {
+							    mpopup.style.display = "block";
+							}
+
+							// close the mPopup once close element is clicked
+							close.onclick = function() {
+							    mpopup.style.display = "none";
+							}
+
+							// close the mPopup when user clicks outside of the box
+							window.onclick = function(event) {
+							    if (event.target == mpopup) {
+							        mpopup.style.display = "none";
+							    }
+							}
+						</script>
 				        </div>
 
-				      <div class="Product_description">
-					       <p>Ales are often darker than lagers, ranging from rich gold to reddish amber. Top fermenting, and more hops in the wort gives these beers a distinctive fruitfulness, acidity and pleasantly bitter seasoning. Ales have a more assertive, individual personality than lager, though their alcoholic strength is the same.</p>
-				        	<a href="#" class="See_Inventory">See Inventory</a>
-				      </div>
 			    </div>
-
-				<div class="beerbox" id="IPA">
-				    <img class="beer_img" src="http://alltomolfestivalen.se/wp-content/uploads/sites/182/2017/01/John_Sleeman_India_Pale_Ale-300x207.jpg	" />
-
-				    <div class="Product_information">
-					     <h4>Indian Pale Ale</h4>
-				    </div>
-
-				    <div class="Product_description">
-					     <p>You want a hoppy beer? Here you are. This style more than any other has become synonymous with craft brewing in the United States due to the current wave of breweries reveling in IPAs and APAs. India Pale Ales started off in England as “Pale Export” to be shipped to British troops in India in the 1700s.</p>
-					     <a href="#" class="See_Inventory">See Inventory</a>
-				    </div>
-			    </div>
-
 				<div class="beerbox" id="Scottish_ale">
 				    <img class="beer_img" src="https://learn.kegerator.com/wp-content/uploads/2016/07/wee-heavy-scotch-ale.jpg" />
 
 				    <div class="Product_information">
-					     <h4>Scottish Ale</h4>
-				    </div>
+					    <a href="javascript:void(0);" id="mpopupLink4">Open Popup</a>
 
-				    <div class="Product_description">
-					     <p>Scottish ales are typically full-bodied and malty, with some of the classic examples being dark brown in color. They are more lowly hopped than the English counterparts and often have a slightly viscous and sweet caramel malt character due to incomplete fermentation.
-					     </p>
-					     <a href="#" class="See_Inventory">See Inventory</a>
+						<!-- mPopup box -->
+						<div id="mpopupBox4" class="mpopup">
+						    <!-- mPopup content -->
+						    <div class="mpopup-content">
+						        <div class="mpopup-head">
+						            <span class="close">×</span>
+						            <h2>Simple Modal Popup</h2>
+						        </div>
+						        <div class="mpopup-main">
+						            <p>This is a simple modal popup using JavaScript and CSS</p>
+						            <p>Please the content...</p>
+						        </div>
+						        <div class="mpopup-foot">
+						            <p>created by CodexWorld</p>
+						        </div>
+						    </div>
+						</div>
+						<script>
+						// get the mPopup
+							var mpopup = document.getElementById('mpopupBox4');
+
+							// get the link that opens the mPopup
+							var mpLink = document.getElementById("mpopupLink4");
+
+							// get the close action element
+							var close = document.getElementsByClassName("close")[0];
+
+							// open the mPopup once the link is clicked
+							mpLink.onclick = function() {
+							    mpopup.style.display = "block";
+							}
+
+							// close the mPopup once close element is clicked
+							close.onclick = function() {
+							    mpopup.style.display = "none";
+							}
+
+							// close the mPopup when user clicks outside of the box
+							window.onclick = function(event) {
+							    if (event.target == mpopup) {
+							        mpopup.style.display = "none";
+							    }
+							}
+						</script>
 				    </div>
 			    </div>
 
-				<div class="beerbox" id="Belgian_style">
-				    <img class="beer_img" src="http://www.muntonshomebrew.com/wp-content/uploads/2015/01/muntonshandcrafted-belgianstyle1.jpg" />
-
-				    <div class="Product_information">
-					     <h4>Belgian Style Beer</h4>
-				    </div>
-
-				    <div class="Product_description">
-					     <p> If you're put off by intensely bitter IPAs or bland canned lagers, the Belgian beer section at the flying dutchman may be a good place to start your love affair with beer. </p>
-					     <a href="#" class="See_Inventory">See Inventory</a>
-				    </div>
-			  </div>
 		  </div>
 	</body>
 </html>
