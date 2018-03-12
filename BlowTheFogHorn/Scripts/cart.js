@@ -14,7 +14,7 @@ function createCart() {
 function displayCart(){
     var cart = JSON.parse(localStorage.getItem("cart"));
     var beer;
-    console.log("Display cart ");
+    alert("Display cart");
     console.log(cart);
 
     for (var i = 0; i < cart.length;i++){
