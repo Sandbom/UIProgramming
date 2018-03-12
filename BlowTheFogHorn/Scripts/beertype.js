@@ -3,11 +3,38 @@
 Print Beer information into the two divs
 */
 
+/* Kind of ugly solution but it did not work having if else statements based on the id's of the links clicked so
+this will have to */
+/* These functions are triggered when clicking any of the four categories in searchbeer.html */
+function lagerclicked(){
+        var lightlager = "\u00c3\u2013l, Ljus lager"
+        localStorage.setItem("beertype", lightlager);
+        window.location.href="beertype.html"
+}
+
+function psclicked(){
+        var pands = "\u00c3\u2013l, Porter och Stout"
+        localStorage.setItem("beertype", pands);
+        window.location.href="beertype.html"
+}
+
+function aleclicked(){
+        var ale = "\u00c3\u2013l, Ale"
+        localStorage.setItem("beertype", ale);
+        window.location.href="beertype.html"
+}
+
+function dlclicked(){
+        var darklager = "\u00c3\u2013l, M\u00c3\u00b6rk lager"
+        localStorage.setItem("beertype", darklager);
+        window.location.href="beertype.html"
+}
+
 $(function displayToDivs(){
     /*
     beer is an array of beers with the length == const MAX
      */
-    var beer = findBeer("\u00c3\u2013l, Ale");
+    var beer = findBeer(localStorage.getItem("beertype"));
     var iterator = 1;
     for(var i = 0; i<beer.length;i++){
         /*
@@ -23,7 +50,11 @@ $(function displayToDivs(){
         $("#item" + iterator).append(beer[i]).append(toAppend);
         iterator++;
     }
+    $("#beertypeheader").append(localStorage.getItem("beertype"));
 });
+
+var clickedType = 0;
+var beercat = "";
 
 /*
 Input: a spirit name
@@ -36,7 +67,7 @@ function findBeer(spiritName) {
     Constant = 30 because of we want to display 10 beers of each category
     since we extract 3 variables from each beer the total is 10*3 = 30
     */
-    const MAX = 30;
+    const MAX = 39;
     /* Maximum amount of beers of each type*/
 
     for (var i = 0; i < DB2.spirits.length; i++) {
@@ -52,7 +83,6 @@ On click, stores the beer name i a session storage
 and redirects to the customerBeerInfo.html
  */
 $(document).ready(function () {
-
     $(".beeritems").click(function (event) {
         // var infoItem1 = $(".beeritems").get($(this.id));
         //alert(event.target.id);
@@ -75,7 +105,6 @@ $(document).ready(function () {
         localStorage.setItem("beerName", beerName1);
         window.location.href = "customerBeerInfo.html";
     });
-
-
-
 });
+
+
