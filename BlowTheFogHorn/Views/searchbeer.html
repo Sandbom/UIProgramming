@@ -10,6 +10,7 @@
 	  <script src="../Database/Dutchman Files/translations.js"></script>
 	  <script src="../Database/Dutchman Files/Selectedbeers.js"></script>
 	  <script src="../Database/Dutchman Files/Beverages.js"></script>
+	  <script src="../Scripts/beertype.js"></script>
 
 	  <script>
 		  $(function(){
@@ -17,261 +18,24 @@
 
 	          });
 	      });
-
-	      function allBeers(){
-	      	var listofbeer = [];
-
-	      	for(i=0; i<DB3.spirits.length;i++) {
-	      		listofbeer.push([DB3.spirits[i].namn]);
-	      		if (length.listofbeer != 0){
-	      			$("")
-	      		}
-
-	      		}
-	      	}
-
-	      	return listofbeer;
-	      	console.log(listofbeer);
-	      }
-
-	     function displaybeerindiv_simon(){
-	     	v
-	     }
-
-	      $(function displaybeerindiv_alex(){
-			var beer = allBeers();
-			console.log(beer);
-			var name = beer[0];
-	      	var type = beer[1];
-	      	var name1 = beer[2];
-	      	var type1 = beer[3];
-
-	      	console.log()
-	      	$("#item1").append(name);
-	      	$("#item2").append(type);
-	      	$("#item3").append(name1);
-	      	$("#item4").append(type1);
-	      });
-
-	        function findBeer(spiritName){
-            var info = [];
-            var nr =  findBeerNr(spiritName);
-
-            for (i = 0; i<DB2.spirits.length;i++){
-                if (DB2.spirits[i].nr == nr){
-                    info.push(DB2.spirits[i].namn);
-                    info.push(DB2.spirits[i].nr);
-                    info.push(DB2.spirits[i].varugrupp);
-                    info.push(DB2.spirits[i].ursprung);
-                    info.push(DB2.spirits[i].leverantor);
-                    info.push(DB2.spirits[i].pris);
-                    info.push(DB2.spirits[i].alkoholhalt);
-                    info.push(DB2.spirits[i].forpackning);
-                }
-            }
-            return info;
-        }
-
-        /*
-        Returns the last nr of a specific spirit
-         */
-        function findBeerNr(beerName){
-            var nr;
-
-            for (i=0; i<DB2.spirits.length;i++){
-                if (DB2.spirits[i].namn == beerName){
-                    nr = DB2.spirits[i].nr;
-                }
-            }
-            return nr;
-        }
-
-
-		/* Simon's original function
-
-	  function myFunction() {
-	    // Declare variables
-	    var input, filter, ul, li, a, i;
-	    input = document.getElementById('myInput');
-	    filter = input.value.toUpperCase();
-	    ul = document.getElementById("myUL");
-	    li = ul.getElementsByTagName('li');
-
-	    // Loop through all list items, and hide those who don't match the search query
-	    for (i = 0; i < li.length; i++) {
-	        a = li[i].getElementsByTagName("a")[0];
-	        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-	            li[i].style.display = "";
-	        } else {
-	            li[i].style.display = "none";
-	        }
-	    }
-	} */
-
-
-	/* tried to adapt funtion to new layout but it's not working yet
-
-	function myFunction() {
-	    // Declare variables
-	    var input, filter, ul, li, a, i;
-	    input = document.getElementById('myInput');
-	    filter = input.value.toUpperCase();
-	    ul = document.getElementById("container_beer_types");
-	    li = ul.getElementsByClassName('div');
-
-	    // Loop through all list items, and hide those who don't match the search query
-	    for (i = 0; i < li.length; i++) {
-	        a = li[i].getElementsByTagName("a")[0];
-	        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
-	            li[i].style.display = "";
-	        } else {
-	            li[i].style.display = "none";
-	        }
-	    }
-	} */
-
 	  </script>
   </head>
 
   <body>
-
-  	<!-- trigger the mPopup -->
-
-
-
-  	<!-- load the master page -->
 	<div id="masterContent"></div>
-
-		 <!-- Button to open the modal login form
-    <div>
-    <button onclick="document.getElementById('id01').style.display='block'" class="loginb">Login</button>
-    </div>
-
-    <div>
-    <button onclick="document.getElementById('id02').style.display='block'" class="regb">Register</button>
-    </div>
-
-    <!-- The Modal 
-    <div id="id01" class="modal">
-      <span onclick="document.getElementById('id01').style.display='none'" 
-    class="close" title="Close Modal">&times;</span> -->
-
-  <!-- Modal Content Login 
-      <form class="modal-content animate" action="/action_page.php">
-        <div class="imgcontainer">
-          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <button type="submit" class="loginbutton">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-      </form>
-    </div> 
-
-    <div id="id02" class="modal">
-      <span onclick="document.getElementById('id02').style.display='none'"
-    class="close" title="Close Modal">&times;</span>
-
-      <!-- Modal Content Register 
-      <form class="modal-content animate" action"/action_page.php">
-        <div class="imgcontainer">
-          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-          <label for="uname"><b>Name</b></label>
-          <input type="text" placeholder="Enter Full Name" name="name" required>
-
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <button type="submit" class="registerbutton">Register</button>
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        </div>
-      </form>
-    </div> -->
     <body>
 
-
-
-<!-- Trigger/Open The Modal -->
-    
     <div>
         <h1 class="header" id="search_beer_heading">Browse our beers!</h1>
     </div>
-		<div id="container_beer_types">
+		<div id="container_beer_types" class="beertypes">
 
 		  <!-- <ul class ="Product_gallery" id="myUL"> --> 
 			    <div class="beerbox" id="Light Lagers">
 				    <img class="beer_img" src="https://www.publicdomainpictures.net/pictures/250000/velka/beer-in-pint-glass.jpg" />
 				      <!-- trigger the mPopup -->
 				      <div class="Product_information">
-						<a href="javascript:void(0);" id="mpopupLink">Open Popup</a>
-
-						<!-- mPopup box -->
-						<div id="mpopupBox" class="mpopup">
-						    <!-- mPopup content -->
-						    <div class="mpopup-content">
-						        <div class="mpopup-head">
-						            <span class="close">×</span>
-						            <h2>Simple Modal Popup</h2>
-						        </div>
-						        <div class="mpopup-main">
-						            <p>This is a simple modal popup using JavaScript and CSS</p>
-						            <p>Please the content...</p>
-						        </div>
-						        <div class="mpopup-foot">
-						            <p>created by CodexWorld</p>
-						        </div>
-						    </div>
-						</div>
-						<script>
-						// get the mPopup
-							var mpopup = document.getElementById('mpopupBox');
-
-							// get the link that opens the mPopup
-							var mpLink = document.getElementById("mpopupLink");
-
-							// get the close action element
-							var close = document.getElementsByClassName("close")[0];
-
-							// open the mPopup once the link is clicked
-							mpLink.onclick = function() {
-							    mpopup.style.display = "block";
-							}
-
-							// close the mPopup once close element is clicked
-							close.onclick = function() {
-							    mpopup.style.display = "none";
-							}
-
-							// close the mPopup when user clicks outside of the box
-							window.onclick = function(event) {
-							    if (event.target == mpopup) {
-							        mpopup.style.display = "none";
-							    }
-							}
-						</script>
+						<a id="LLlink" href="#" onclick="lagerclicked();return false;">Light Lagers</a>
 					</div>
 			    </div>
 
@@ -279,52 +43,7 @@
 				    <img class="beer_img" src="https://www.bbcgoodfood.com/sites/default/files/stout-lead.jpg" />
 
 				      <div class="Product_information">
-					    <a href="javascript:void(0);" id="mpopupLink2">Open Popup</a>
-
-						<!-- mPopup box -->
-						<div id="mpopupBox2" class="mpopup">
-						    <!-- mPopup content -->
-						    <div class="mpopup-content">
-						        <div class="mpopup-head">
-						            <span class="close">×</span>
-						            <h2>Simple Modal Popup</h2>
-						        </div>
-						        <div class="mpopup-main">
-						            <p>This is a simple modal popup using JavaScript and CSS</p>
-						            <p>Please the content...</p>
-						        </div>
-						        <div class="mpopup-foot">
-						            <p>created by CodexWorld</p>
-						        </div>
-						    </div>
-						</div>
-						<script>
-						// get the mPopup
-							var mpopup = document.getElementById('mpopupBox2');
-
-							// get the link that opens the mPopup
-							var mpLink = document.getElementById("mpopupLink2");
-
-							// get the close action element
-							var close = document.getElementsByClassName("close")[0];
-
-							// open the mPopup once the link is clicked
-							mpLink.onclick = function() {
-							    mpopup.style.display = "block";
-							}
-
-							// close the mPopup once close element is clicked
-							close.onclick = function() {
-							    mpopup.style.display = "none";
-							}
-
-							// close the mPopup when user clicks outside of the box
-							window.onclick = function(event) {
-							    if (event.target == mpopup) {
-							        mpopup.style.display = "none";
-							    }
-							}
-						</script>
+					    <a id="PSlink" href="#" onclick="psclicked();return false;">Porters & Stouts</a>
 				      </div>
 			    </div>
 
@@ -332,105 +51,15 @@
 				    <img class="beer_img" src="https://fthmb.tqn.com/JuD95GFh-napbJ3CehFuuuOUSYQ=/3382x2333/filters:no_upscale():fill(transparent,1)/124337728-56a090355f9b58eba4b19625.jpg" />
 
 				      <div class="Product_information">
-					    <a href="javascript:void(0);" id="mpopupLink3">Open Popup</a>
-
-						<!-- mPopup box -->
-						<div id="mpopupBox3" class="mpopup">
-						    <!-- mPopup content -->
-						    <div class="mpopup-content">
-						        <div class="mpopup-head">
-						            <span class="close">×</span>
-						            <h2>Simple Modal Popup</h2>
-						        </div>
-						        <div class="mpopup-main">
-						            <p>This is a simple modal popup using JavaScript and CSS</p>
-						            <p>Please the content...</p>
-						        </div>
-						        <div class="mpopup-foot">
-						            <p>created by CodexWorld</p>
-						        </div>
-						    </div>
-						</div>
-						<script>
-						// get the mPopup
-							var mpopup = document.getElementById('mpopupBox3');
-
-							// get the link that opens the mPopup
-							var mpLink = document.getElementById("mpopupLink3");
-
-							// get the close action element
-							var close = document.getElementsByClassName("close")[0];
-
-							// open the mPopup once the link is clicked
-							mpLink.onclick = function() {
-							    mpopup.style.display = "block";
-							}
-
-							// close the mPopup once close element is clicked
-							close.onclick = function() {
-							    mpopup.style.display = "none";
-							}
-
-							// close the mPopup when user clicks outside of the box
-							window.onclick = function(event) {
-							    if (event.target == mpopup) {
-							        mpopup.style.display = "none";
-							    }
-							}
-						</script>
+					    <a id="Alelink" href="#" onclick="aleclicked();return false;">Ales</a>
 				        </div>
 
 			    </div>
-				<div class="beerbox" id="Scottish_ale">
+				<div class="beerbox" id="Dark_lager">
 				    <img class="beer_img" src="https://learn.kegerator.com/wp-content/uploads/2016/07/wee-heavy-scotch-ale.jpg" />
 
 				    <div class="Product_information">
-					    <a href="javascript:void(0);" id="mpopupLink4">Open Popup</a>
-
-						<!-- mPopup box -->
-						<div id="mpopupBox4" class="mpopup">
-						    <!-- mPopup content -->
-						    <div class="mpopup-content">
-						        <div class="mpopup-head">
-						            <span class="close">×</span>
-						            <h2>Simple Modal Popup</h2>
-						        </div>
-						        <div class="mpopup-main">
-						            <p>This is a simple modal popup using JavaScript and CSS</p>
-						            <p>Please the content...</p>
-						        </div>
-						        <div class="mpopup-foot">
-						            <p>created by CodexWorld</p>
-						        </div>
-						    </div>
-						</div>
-						<script>
-						// get the mPopup
-							var mpopup = document.getElementById('mpopupBox4');
-
-							// get the link that opens the mPopup
-							var mpLink = document.getElementById("mpopupLink4");
-
-							// get the close action element
-							var close = document.getElementsByClassName("close")[0];
-
-							// open the mPopup once the link is clicked
-							mpLink.onclick = function() {
-							    mpopup.style.display = "block";
-							}
-
-							// close the mPopup once close element is clicked
-							close.onclick = function() {
-							    mpopup.style.display = "none";
-							}
-
-							// close the mPopup when user clicks outside of the box
-							window.onclick = function(event) {
-							    if (event.target == mpopup) {
-							        mpopup.style.display = "none";
-							    }
-							}
-						</script>
+					    <a id="DLlink" href="#" onclick="dlclicked();return false;">Dark Lager</a>
 				    </div>
 			    </div>
 
