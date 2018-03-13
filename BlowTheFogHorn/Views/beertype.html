@@ -23,11 +23,11 @@
         //Cart Counter Variable
         var counter=0;
 
-        $(function(){
+       /* $(function(){
             $("#masterContent").load("master.html",null,function(){
 
             });
-        });
+        });*/
         // Implement Drag
         function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
@@ -43,7 +43,7 @@
             // save state before nodecopy in function
 
             ev.target.appendChild(nodeCopy);
-            addtostack(nodeCopy.id);
+            addtostack(nodeCopy);
             // Saves nodecopy in function
 
 
@@ -83,8 +83,9 @@
   <!--
   master div
   -->
-  <div class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
-      TestCart
+  <div><p class="carttext">Cart</p></div>
+  <div
+      class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
   </div>
   <div>
     <button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>

@@ -3,7 +3,7 @@ var DB3 = {
 	    [{
 	    	/* This Database is inteded to be used as a smaller version of beverages.js with selected beverages 
 	    	from the categories Ljusa Lagers, Porters & Stouts, Ales och Mörka Lagers*/
-	    	//LAGERS
+	    	//LIGHT LAGERS
 	    	"nr": "1177703",
             "artikelid": "676236",
             "varnummer": "11777",
