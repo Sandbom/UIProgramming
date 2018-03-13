@@ -10,10 +10,11 @@
 
       <script src="../Database/Dutchman Files/Beverages.js"></script>
       <script src="../Scripts/translateMasterPage.js"></script>
-     <script src="../Database/Dutchman Files/translations.js"></script>
+      <script src="../Scripts/undoredo.js"></script>
+      <script src="../Scripts/undomanager.js"></script>
+      <script src="../Database/Dutchman Files/translations.js"></script>
 
     <script>
-
         /*
                 Loads the master.html into the page
          */
@@ -31,21 +32,33 @@
         function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
         }
+
         // implement Drop
         function drop(ev) {
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
-            var info = $("#" +data).text();
-            alert(info);
-            var arrayItem1 = info.split(":");
+            var nodeCopy = document.getElementById(data).cloneNode(true);
+            nodeCopy.draggable ="false";
+            nodeCopy.id = Math.random();
+            // save state before nodecopy in function
+
+            ev.target.appendChild(nodeCopy);
+            addtostack(nodeCopy.id);
+            // Saves nodecopy in function
+
+
+           // Outcommented the pop up to test undo redo better
+           // var info = $("#" +data).text();
+           // alert(info);
+           // var arrayItem1 = info.split(":");
             /*
             Extract the name of the drink
              */
-            var name1 = arrayItem1[0];
+            //var name1 = arrayItem1[0];
             /*
             Removes the space before the name to get the beerName
              */
-            var beerName1 = name1.substring(1);
+            //var beerName1 = name1.substring(1);
             //alert(name1);
             /*
             Stores the beerName in the local storage.
@@ -54,11 +67,9 @@
 
 
                 // Example  johan_beerName_0
-                sessionStorage.setItem(user+"_beerName_"+counter, beerName1);
-                counter++;
-                console.log(counter);
-
-
+               // sessionStorage.setItem(user+"_beerName_"+counter, beerName1);
+               // counter++;
+               // console.log(counter);
 
         }
 
@@ -66,87 +77,23 @@
             ev.preventDefault();
         }
 
-
-
-
     </script>
   </head>
 
   <!--
   master div
   -->
+  <div class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
+      TestCart
+  </div>
+  <div>
+    <button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
+
+    <button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
+  </div>
+
 
   <div id="masterContent"></div>
-
- <!-- Button to open the modal login form -->
-    <div>
-    <button onclick="document.getElementById('id01').style.display='block'" class="loginb">Login</button>
-    </div>
-
-    <div>
-    <button onclick="document.getElementById('id02').style.display='block'" class="regb">Register</button>
-    </div>
-
-
-    <!-- The Modal -->
-    <div id="id01" class="modal">
-      <span onclick="document.getElementById('id01').style.display='none'"
-    class="close" title="Close Modal">&times;</span>
-
-  <!-- Modal Content Login -->
-      <form class="modal-content animate" action="/action_page.php">
-        <div class="imgcontainer">
-          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-          <button type="submit" class="loginbutton">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
-        </div>
-      </form>
-    </div>
-
-    <div id="id02" class="modal">
-      <span onclick="document.getElementById('id02').style.display='none'"
-    class="close" title="Close Modal">&times;</span>
-
-      <!-- Modal Content Register -->
-      <form class="modal-content animate" action"/action_page.php">
-        <div class="imgcontainer">
-          <img src="https://c1.staticflickr.com/8/7405/16446487722_48ebe347c0_b.jpg" alt="Avatar" class="avatar">
-        </div>
-
-        <div class="container">
-          <label for="uname"><b>Name</b></label>
-          <input type="text" placeholder="Enter Full Name" name="name" required>
-
-          <label for="email"><b>Email</b></label>
-          <input type="text" placeholder="Enter Email" name="email" required>
-
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-
-          <button type="submit" class="registerbutton">Register</button>
-        </div>
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-        </div>
-      </form>
-    </div>
 
     <article>
       <header>
