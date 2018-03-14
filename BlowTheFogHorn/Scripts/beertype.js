@@ -50,7 +50,8 @@ $(function displayToDivs(){
         $("#item" + iterator).append(beer[i]).append(toAppend);
         iterator++;
     }
-    $("#beertypeheader").append(localStorage.getItem("beertype"));
+    var slr = localStorage.getItem("beertype").slice(4,30);
+    $("#beertypeheader").append(slr);
 });
 
 var clickedType = 0;
