@@ -83,6 +83,13 @@
             });
 
             $(function() {
+                $("#login").on("click", function(){
+                    window.location.href = "../Views/customerPage.html"
+
+                });
+            });
+
+            $(function() {
                 $("#swedishFlag").on("click", function(){
                     translateCustomerBeerInfoTo(swedish);
                     translateCustomerPageTo(swedish);
@@ -91,7 +98,6 @@
                     translateStaffBasketTo(swedish);
                     translatePlaceNewOrderTo(swedish);
                     translateCompleteOrderTo(swedish)
-
                 });
             });
 

@@ -60,7 +60,6 @@ h1 {
     color:black;
     text-align:center;
     font-size:400%;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /* the big heading */ 
@@ -438,10 +437,8 @@ input[type=text], input[type=password] {
 }
 
 .beeritems {
-    font-size:38px;
+    font-size:30px;
     color:black;
-    font-weight: bold;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 /* box for six beer type boxes on searchbeer page*/
@@ -472,34 +469,40 @@ input[type=text], input[type=password] {
 }
 
 #o1 {
-    position: absolute;
+    /* position: absolute;  
     top: 50px;
-    left: 50px;
+    left: 50px; */
     font-size: 18px;
 }
 
 .order {
-    position: fixed;
+    /* position: fixed; */ 
     width: 300px;
     min-height: 200px;
     background-color: white;
     border: black 2px double;
-    padding: 4px;
-    padding-top: 50px;
+    padding: 10px;
 }
 
 .undoredo {
-    position: relative;
     width:70px;
     height:30px;
     border: black 2px double;
     padding: 4px;
-    top:10px;
-    left: 80px;
+    margin-bottom: 5px;
 }
 
 .carttext {
-    position: relative;
     color: black;
-    font-size: 20px;
+    font-size: 30px;
+    font-weight: bold;
 }
+
+/* the heading */
+#beertypeheader {
+    color: black;
+}
+
+
+
+

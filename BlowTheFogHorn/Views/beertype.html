@@ -14,20 +14,22 @@
       <script src="../Scripts/undomanager.js"></script>
       <script src="../Database/Dutchman Files/translations.js"></script>
 
-    <script>
+      <script>
         /*
                 Loads the master.html into the page
          */
+
+       $(function(){
+            $("#masterContent").load("master.html",null,function(){
+
+            });
+        });
+
         // Global user variable
         var user = "Johan";
         //Cart Counter Variable
         var counter=0;
 
-       /* $(function(){
-            $("#masterContent").load("master.html",null,function(){
-
-            });
-        });*/
         // Implement Drag
         function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
@@ -77,30 +79,31 @@
             ev.preventDefault();
         }
 
-    </script>
-  </head>
+      </script>
+  	</head>
 
-  <!--
-  master div
-  -->
-  <div><p class="carttext">Cart</p></div>
-  <div
-      class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
-  </div>
+  <body> 
+   
+   <div id="masterContent"></div>
+
+   <!-- Simons cart-->
+  	<div>
+   		<p class="carttext">Cart</p> 
+   		  	<div>
+    			<button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
+    			<button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
+  			</div>
+
+  			<div
+      			class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
+ 		 	</div>
+
+ 	</div>
+
   <div>
-    <button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
-
-    <button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
-  </div>
-
-
-  <div id="masterContent"></div>
-
-    <article>
-      <header>
+    <div>
         <h1 id="beertypeheader"></h1>
-      </header>
-    </article>
+    </div>
     <div class="beerlist">
       <ul>
         <div class="beeritems">
@@ -131,12 +134,10 @@
             <li id="item24" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
             <li id="item25" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
 
-
         </div>
       </ul>
     </div>
-      </body>
-
-  </html>
+	</div>
+   </body>
 
   </html>
