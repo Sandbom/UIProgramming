@@ -14,7 +14,7 @@ html {
 }
 
 /* the body of the welcome page, don't display the image of the ship if the page becomes too small */
-@media (min-width: 601px) {
+@media (min-width: 801px) {
     #index {
         height: 100%;
         margin: 0;
@@ -389,16 +389,18 @@ span.psw {
   background-image: -o-linear-gradient(top, #c7d6e0, #aed4eb);
   background-image: linear-gradient(to bottom, #c7d6e0, #aed4eb);
   font-family: Georgia;
-  color: #ffffff;
+  color: black; /* #ffffff; */
   font-size: 20px;
-    height:40px;
-    width: 100%;
-    float:left;
-    text-align: center;
-    font-size: 22px;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    border-radius: 10px;
+  height:40px;
+  width: 100%;
+  float:left;
+  text-align: center;
+  font-size: 22px;
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;*/
+  border-radius: 10px; 
+  padding-top: 5px;
 }
+color: black;
 .Product_information h4{
     margin:10px;
 }
@@ -408,6 +410,12 @@ span.psw {
    color:#fff;
    margin: 5px;
    font-size:20px;
+   text-decoration:none;
+}
+
+a {
+    text-decoration:none;
+    color: black;
 }
 
 /* The Modal (background) */
@@ -451,17 +459,16 @@ input[type=text], input[type=password] {
     background-color: #444;
     color: #fff;
     border-radius: 5px;
-    padding: 5%;
-    margin-bottom:20px;
-    font-size: 20%;
+    padding: 2%;
     align-self: center;
     justify-content: center;
+    margin: 4%;
 }
 
 /* make all beer images the same size */
 .beer_img {
     width: 100%;
-    height: 150px;
+    height: 50%;
 }
 
 #o1 {

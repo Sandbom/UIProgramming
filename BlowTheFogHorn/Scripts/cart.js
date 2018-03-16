@@ -1,5 +1,5 @@
 $.getScript("../Database/Dutchman Files/beverages.js", function() {
-    alert("Script loaded but not necessarily executed.");
+    alert("Just a test.");
 });
 
 /*
