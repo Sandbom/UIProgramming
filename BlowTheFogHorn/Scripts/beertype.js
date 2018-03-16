@@ -1,4 +1,3 @@
-
 /*
 Print Beer information into the two divs
 */
@@ -68,7 +67,7 @@ function findBeer(spiritName) {
     Constant = 30 because of we want to display 10 beers of each category
     since we extract 3 variables from each beer the total is 10*3 = 30
     */
-    const MAX = 39;
+    const MAX = 75;
     /* Maximum amount of beers of each type*/
 
     for (var i = 0; i < DB2.spirits.length; i++) {
