@@ -18,6 +18,12 @@
         /*
                 Loads the master.html into the page
          */
+        $(function(){
+            $("#masterContent").load("master.html",null,function(){
+            });
+        });
+
+
         // Global user variable
         var user = "Johan";
         //Cart Counter Variable
@@ -87,32 +93,32 @@
   </head>
 
   <!--
-  master div
-  -->
-<div class ="redonecart" id="cart2">
-  <div class="buttonsandtext">
-    <div>
-        <p class="carttext">Cart</p>
-    </div>
-    <div class="totalsum" id="totalid">
-    </div>
-    <div>
-      <button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
-      <button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
-    </div>
-  </div>
-  <div
-      class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
-  </div>
-</div>
+ </head>
 
-  <div id="masterContent"></div>
+  <body> 
+   
+   <div id="masterContent"></div>
 
-    <article>
-      <header>
+   <!-- Simons cart-->
+    <div>
+      <p class="carttext">Cart</p> 
+        <div class="totalsum" id="totalid">
+          </div>
+          <div>
+          <button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
+          <button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
+        </div>
+
+        <div
+            class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+
+  </div>
+
+  <div>
+    <div>
         <h1 id="beertypeheader"></h1>
-      </header>
-    </article>
+    </div>
     <div class="beerlist">
       <ul>
         <div class="beeritems">
@@ -143,12 +149,10 @@
             <li id="item24" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
             <li id="item25" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
 
-
         </div>
       </ul>
     </div>
-      </body>
-
-  </html>
+  </div>
+   </body>
 
   </html>
