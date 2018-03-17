@@ -3,6 +3,8 @@
 //Current starts at -1 since index 0 is first element
 var stack = [];
 var current = -1;
+var sumlist = [];
+var totalsum = 0;
 
 // This function is triggered when pressing the undo button and it removes the last child
 // from the div with id "cartview"
@@ -40,3 +42,25 @@ function popfromstack(){
 		//popped = stack[current];
 		return popped;
 }
+
+
+function addsum(object){
+	sumlist.push(object);
+}
+
+function returnsum(){
+	rs = sumlist.pop();
+	return rs;
+}
+
+function calculatetotal(){
+	var sumid = document.getElementById("totalid");
+    sumid.appendChild(totalsum);
+}
+
+function getprice(str) {
+return str.split(':')[1];
+    }
+
+
+
