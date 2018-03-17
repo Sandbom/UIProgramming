@@ -14,22 +14,20 @@
       <script src="../Scripts/undomanager.js"></script>
       <script src="../Database/Dutchman Files/translations.js"></script>
 
-      <script>
+    <script>
         /*
                 Loads the master.html into the page
          */
-
-       $(function(){
-            $("#masterContent").load("master.html",null,function(){
-
-            });
-        });
-
         // Global user variable
         var user = "Johan";
         //Cart Counter Variable
         var counter=0;
 
+       /* $(function(){
+            $("#masterContent").load("master.html",null,function(){
+
+            });
+        });*/
         // Implement Drag
         function drag(ev) {
             ev.dataTransfer.setData("text", ev.target.id);
@@ -40,19 +38,21 @@
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
             var nodeCopy = document.getElementById(data).cloneNode(true);
+            var nodeCopy1 = nodeCopy.cloneNode(true);
             nodeCopy.draggable ="false";
             nodeCopy.id = Math.random();
-            // save state before nodecopy in function
-
+            var info1 = $("#"+data).text();
             ev.target.appendChild(nodeCopy);
-            addtostack(nodeCopy);
-            // Saves nodecopy in function
 
-
-           // Outcommented the pop up to test undo redo better
-           // var info = $("#" +data).text();
+            var elementdragged = $("#" +data).text();
            // alert(info);
-           // var arrayItem1 = info.split(":");
+            var priceofelement = elementdragged.split(":")[1];
+            var removesek = priceofelement.substring(0, priceofelement.length - 6);
+            var desiredint = removesek.substring(1);
+            //alert(name2);
+            var finalint = parseFloat((desiredint),10);
+            totalsum = totalsum + finalint;
+            $("#totalid").text("Totalsumma: " + totalsum + "kr.");
             /*
             Extract the name of the drink
              */
@@ -66,12 +66,16 @@
             Stores the beerName in the local storage.
             To give customerBeerInfo access to the specific beer
              */
-
-
                 // Example  johan_beerName_0
                // sessionStorage.setItem(user+"_beerName_"+counter, beerName1);
                // counter++;
                // console.log(counter);
+
+            //var info1 = $("#"+data).text();
+            addtostack(nodeCopy);
+            //addsum(info1);
+
+            //calculatetotal();
 
         }
 
@@ -79,31 +83,36 @@
             ev.preventDefault();
         }
 
-      </script>
-  	</head>
+    </script>
+  </head>
 
-  <body> 
-   
-   <div id="masterContent"></div>
-
-   <!-- Simons cart-->
-  	<div>
-   		<p class="carttext">Cart</p> 
-   		  	<div>
-    			<button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
-    			<button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
-  			</div>
-
-  			<div
-      			class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
- 		 	</div>
-
- 	</div>
-
-  <div>
+  <!--
+  master div
+  -->
+<div class ="redonecart" id="cart2">
+  <div class="buttonsandtext">
     <div>
-        <h1 id="beertypeheader"></h1>
+        <p class="carttext">Cart</p>
     </div>
+    <div class="totalsum" id="totalid">
+    </div>
+    <div>
+      <button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
+      <button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
+    </div>
+  </div>
+  <div
+      class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
+  </div>
+</div>
+
+  <div id="masterContent"></div>
+
+    <article>
+      <header>
+        <h1 id="beertypeheader"></h1>
+      </header>
+    </article>
     <div class="beerlist">
       <ul>
         <div class="beeritems">
@@ -134,10 +143,12 @@
             <li id="item24" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
             <li id="item25" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
 
+
         </div>
       </ul>
     </div>
-	</div>
-   </body>
+      </body>
+
+  </html>
 
   </html>
