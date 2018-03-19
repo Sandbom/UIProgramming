@@ -117,24 +117,11 @@
 
   <body> 
    
-   <div id="masterContent"></div><
-   <!-- Simons cart-->
-    <div>
-      <p class="carttext">Cart</p> 
-        <div class="totalsum" id="totalid">
-          </div>
-          <div>
-          <button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
-          <button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
-        </div>
-
-        <div
-            class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
-      </div>
-
-  </div>
-
-  <div>
+  <div id="masterContent"></div><
+   
+ <div id="beerTypeWrapper"
+  <!-- List with beers -->
+  <div id="beerListWrapper">
     <div>
         <h1 id="beertypeheader"></h1>
     </div>
@@ -143,7 +130,7 @@
         <div class="beeritems">
 
             <li id="item1"  draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
-            <li id="item2"  draggable="true"class ="hoverable" ondragstart="drag(event)"> </li>
+            <li id="item2"  draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
             <li id="item3" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
             <li id="item4" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
             <li id="item5"  draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
@@ -172,6 +159,25 @@
       </ul>
     </div>
   </div>
+
+
+     <!-- Simons cart-->
+    <div id="cartWrapper">
+      <img  class="imgSize" src="../img/cart.png">
+      <p class="carttext">Cart</p> 
+
+          <div>
+          <button class="undoredo" id="undo" onclick="undoclick();return false;">Undo</button>
+          <button class="undoredo" id="redo" onclick="redoclick();return false;">Redo</button>
+        </div>
+        <div
+            class="order" id="cartview" ondrop="drop(event)" ondragover="allowDrop(event)">
+      </div>
+      <div class="totalsum" id="totalid">
+    </div>
+  </div> 
+ </div>
+
    </body>
 
   </html>

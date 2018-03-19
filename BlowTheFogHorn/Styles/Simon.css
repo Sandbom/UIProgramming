@@ -72,6 +72,7 @@ h1 {
 /* the big heading on the search beer page*/
 #search_beer_heading {
     text-align: center;
+    margin-bottom: 2%;
 }
 
 #ourbeers {
@@ -432,13 +433,18 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
+/* 
 .beerlist {
     margin-left:400px;
-}
+} */
 
 .beeritems {
     font-size:30px;
     color:black;
+}
+
+.beeritems li {
+  cursor: pointer;
 }
 
 /* box for six beer type boxes on searchbeer page*/
@@ -477,7 +483,7 @@ input[type=text], input[type=password] {
 
 .order {
     /* position: fixed; */ 
-    width: 300px;
+    width: 250px;
     min-height: 200px;
     background-color: white;
     border: black 2px double;
@@ -490,12 +496,14 @@ input[type=text], input[type=password] {
     border: black 2px double;
     padding: 4px;
     margin-bottom: 5px;
+    cursor: pointer;
 }
 
 .carttext {
     color: black;
     font-size: 30px;
     font-weight: bold;
+    display: inline-block;
 }
 
 /* the heading */
@@ -505,4 +513,36 @@ input[type=text], input[type=password] {
 
 .totalsum {
     font-size: 20px
+}
+
+#beerSearch {
+    width: 30%;
+}
+
+#beerWrapper {
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+/* box for cart */
+#cartWrapper {
+  float: right;
+  display: inline-block;
+  text-align:right;
+  padding-right: 1%;
+}
+
+#beerListWrapper {
+  float:left;
+  display: inline-block;
+  text-align: left;
+  padding-left: 20%;
+}
+
+#beerTypeWrapper {
+  text-align:center;
+}
+
+#cartview {
+  text-align: left;
 }
