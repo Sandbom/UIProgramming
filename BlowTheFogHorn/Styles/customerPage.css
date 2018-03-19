@@ -10,7 +10,7 @@
 }
 
 
-button {
+.settingButton {
     background-color: white;
     color: black;
     font-size: 20px;
@@ -20,7 +20,7 @@ button {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 2px 50px 25px 40px;
+    margin: 2px 50px 25px 0px;
     border-radius: 4px;
 }
 
@@ -58,4 +58,23 @@ div.wrapper {
 
 .settingButton {
     width: 95%;
+}
+
+h1 {
+    color:black;
+    text-align:center;
+    font-size:400%;
+}
+
+#browsebeerheading {
+  font-family: Garamond, Times, serif;
+  color: grey;
+  margin-top: 6%;
+  text-align: center;
+  margin-bottom: 2%;
+}
+
+#beerWrapper {
+    text-align: center;
+    padding-bottom: 2%;
 }
