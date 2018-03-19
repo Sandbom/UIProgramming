@@ -92,7 +92,7 @@
         function saveCart(){
             var text = $("#cartview").text();
             alert("text innan= " + text);
-            text.replace(/\n/g, ':').split(':');
+            text = text.replace(/\n/g, ':').split(':');
             alert("text efter= " + text);
             var cartList = text.split(":");
             //alert(cartList);
