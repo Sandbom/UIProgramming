@@ -30,9 +30,10 @@ td, th {
 
 button.tableButton{
     margin: 5px;
-    background-color: #C80000; /* red */
+    background-color: #FF4136; /* red */
     padding: 12px;
-    border-radius: 50%;
+    border-radius: 30%;
+    color: white;
 }
 
 .tablebutton, .paybutton {
@@ -52,7 +53,7 @@ button.tableButton{
 .payButton {
     background-color: green;
     width: 12%;
-    padding: 6px 40px;
+    height: 5%;
 }
 
 div.wrapper {
@@ -108,18 +109,15 @@ h1 {
 }
 
 #pay_under_cart {
-    padding: 5px 10px;
-    display: inline-block;
-    background-color: green;
+    padding: 10px 5px;
+    background-color: #2ECC40; /* green */
     border: none;
     color: white;
     border: none;
-    font-size: 35px;
-    padding: 10px 20px;
+    font-size: 20px;
     cursor: pointer;
     border-radius: 5px;
     -moz-border-radius: 5px;
     -webkit-border-radius: 10px;
     text-shadow: 1px 1px #666;
-    }
 }

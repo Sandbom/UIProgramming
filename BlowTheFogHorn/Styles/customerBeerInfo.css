@@ -1,8 +1,6 @@
 
 div.main{
     height: 400px;
-    position: relative;
-    top: 200px;
     display: flex;
     justify-content: center;
 }
@@ -51,9 +49,7 @@ h1#beerName{
     color: black;
     font-size: 45px;
     margin: 10px;
-    position: relative;
-    top: 200px;
-
+    margin-top: 3%;
 }
 
 /*
@@ -63,9 +59,6 @@ button.payButton{
     /*
     Position of the button
      */
-    position: absolute;
-    top: 80%;
-    left: 29.5%;
     height: 50px;
     width: 200px;
     border-radius: 4px;
@@ -107,4 +100,10 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+#nameWrapper {
+    text-align: center;
+    padding-bottom: 2%;
+    margin-top: 8%;
 }
