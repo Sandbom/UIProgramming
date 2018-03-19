@@ -58,7 +58,7 @@
             //alert(name2);
             var finalint = parseFloat((desiredint),10);
             totalsum = totalsum + finalint;
-            $("#totalid").text("Totalsumma: " + totalsum + "kr.");
+            $("#totalid").text("Totalsumma: " + totalsum + " kr.");
             /*
             Extract the name of the drink
              */
@@ -78,8 +78,10 @@
                // console.log(counter);
 
             //var info1 = $("#"+data).text();
+            var before = totalsum - finalint;
             addtostack(nodeCopy);
-            //addsum(info1);
+            addsum(before);
+            addredosum(finalint);
 
             //calculatetotal();
 
@@ -88,6 +90,7 @@
         function allowDrop(ev) {
             ev.preventDefault();
         }
+
 
     </script>
   </head>

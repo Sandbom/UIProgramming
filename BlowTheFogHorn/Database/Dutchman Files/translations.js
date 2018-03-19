@@ -75,7 +75,14 @@ var swedish = {
 	        "cost" : "Kostnad",
 	        "payButton" : "Betala"
 	    }
-	]
+	],   
+     "welcome" : [
+        {
+            "welcomeheader" : "Välkommen till den Flygande Holländaren",
+            "beerbutton" : "Vår öl"
+        }
+
+    ]
 
 };
 
@@ -155,6 +162,13 @@ var greek = {
             "cost" : "Κόστος",
             "payButton" : "Πληρωμή"
         }
+    ],
+     "welcome" : [
+        {
+            "welcomeheader" : "Καλώς ήρθατε στον ιπτάμενο ολλανδό",
+            "beerbutton" : "Η μπύρα μας"
+        }
+
     ]
 };
 
@@ -236,6 +250,13 @@ var english = {
             "cost" : "Cost",
             "payButton" : "Press to pay"
         }
+    ],
+     "welcome" : [
+        {
+            "welcomeheader" : "Welcome to the Flying Dutchman",
+            "beerbutton" : "Our beer"
+        }
+
     ]
 };
 
@@ -315,5 +336,16 @@ var german = {
 	        "cost" : "Preis",
 	        "payButton" : "Bezahlen"
 	    }
-	]
+	],
+
+     "welcome" : [
+        {
+            "welcomeheader" : "Willkommen beim fliegenden Holländer",
+            "beerbutton" : "Unser Bier"
+        }
+
+    ]
+
+};
+
 };

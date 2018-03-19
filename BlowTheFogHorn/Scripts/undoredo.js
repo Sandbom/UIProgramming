@@ -1,10 +1,11 @@
-
 //Despite it being a poor mans solution we keep the stack and current variables global for simpleness
 //Current starts at -1 since index 0 is first element
 var stack = [];
 var current = -1;
 var sumlist = [];
+var redosumlist = [];
 var totalsum = 0;
+var tempsum = 0;
 
 // This function is triggered when pressing the undo button and it removes the last child
 // from the div with id "cartview"
@@ -12,8 +13,12 @@ function undoclick(){
 	if(current>= 0){
 		var list = document.getElementById("cartview");
 		list.removeChild(list.lastChild);
+		nysum = returnsum();
+		tempsum = nysum;
+		$("#totalid").text("Totalsumma: " + nysum + " kr.");
 		current--;
 		addtostack(list.lastChild);
+		totalsum = totalsum - (totalsum - nysum);
 	}
 }
 
@@ -21,11 +26,19 @@ function undoclick(){
 // and re-adds it to the div element with id "cartview"
 function redoclick(){
 	//if ((stack.length)>0)){ // I dont know why this does not work and it is kind of needed
+		//nyaresum = popredosum();
 		itemtoredo = popfromstack();
 		var cartlist = document.getElementById("cartview");
 		cartlist.appendChild(itemtoredo);
 		current++;
+		addsum(tempsum);
 //	}
+}
+
+function redototalamount(){
+	sumundone = popredosum();
+	totalsum = totalsum + sumundone;
+	$("#totalid").text("Totalsumma: " + totalsum + " kr.");
 }
 
 // Here we push to the stack so that we know what to extract later when extracting,
@@ -48,19 +61,19 @@ function addsum(object){
 	sumlist.push(object);
 }
 
+function addredosum(object){
+	redosumlist.push(object);
+}
+
+function popredosum(){
+	ra = redosumlist.pop();
+	return ra;
+}
+
 function returnsum(){
 	rs = sumlist.pop();
 	return rs;
 }
-
-function calculatetotal(){
-	var sumid = document.getElementById("totalid");
-    sumid.appendChild(totalsum);
-}
-
-function getprice(str) {
-return str.split(':')[1];
-    }
 
 
 
