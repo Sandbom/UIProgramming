@@ -91,6 +91,25 @@
             ev.preventDefault();
         }
 
+        function saveCart(){
+            var text = $("#cartview").text();
+            alert("text innan= " + text);
+            text = text.replace(/\n/g, ':').split(':');
+            alert("text efter= " + text);
+            var cartList = text.split(":");
+            //alert(cartList);
+
+           // alert(sessionStorage.getItem("cartList"));
+            /*
+            var i = 0;
+            for(i; i < splittedList.length;i++){
+                alert(splittedList[i]);
+            }
+*/
+
+
+
+        }
 
     </script>
   </head>
