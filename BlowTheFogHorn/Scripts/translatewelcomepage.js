@@ -4,7 +4,7 @@ function translateWelcomeTo(language) {
     var translation = translationBeerInfo(language);
 
     $("#welcomeheader").text(translation[0]);
-    $(".beerbutton").text(translation[1]);
+    $("#beerbutton").text(translation[1]);
 }
 
 /*

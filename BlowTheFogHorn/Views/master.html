@@ -27,6 +27,7 @@
         <script src="../Scripts/translatePlaceNewOrder.js"></script>
         <script src="../Scripts/translateMasterPage.js"></script>
         <script src="../Scripts/translateCompleteOrder.js"></script>
+        <script src="../Scripts/translatewelcomepage.js"></script>
 
         <!--
         Load cart script
@@ -58,6 +59,7 @@
                     $(window).on("load", translatePlaceNewOrderTo(english));
                     $(window).on("load", translateCompleteOrderTo(english));
                     $(window).on("load", translateMasterPageTo(english));
+                    $(window).on("load", translatewelcomeTo(english));
                 }
 
             else{
@@ -70,7 +72,7 @@
                 $(window).on("load", translateStaffBasketTo(language));
                 $(window).on("load", translatePlaceNewOrderTo(language));
                 $(window).on("load", translateCompleteOrderTo(language));
-                $(window).on("load", translateMasterPageTo(language));
+                $(window).on("load", translatewelcomeTo(english));
 
             }
             });
@@ -97,7 +99,8 @@
                     translateStaffSettingsTo(swedish);
                     translateStaffBasketTo(swedish);
                     translatePlaceNewOrderTo(swedish);
-                    translateCompleteOrderTo(swedish)
+                    translateCompleteOrderTo(swedish);
+                    translatewelcomeTo(swedish);
                 });
             });
 
@@ -111,6 +114,7 @@
                     translatePlaceNewOrderTo(english);
                     translateCompleteOrderTo(english);
                     translateMasterPageTo(english)
+                    translatewelcomeTo(english);
 
 
                 });
@@ -128,6 +132,7 @@
                     translateStaffBasketTo(greek);
                     translateCompleteOrderTo(greek);
                     translateMasterPageTo(greek);
+                    translatewelcomeTo(greek);
 
                 });
             });
@@ -142,6 +147,7 @@
                     translateStaffBasketTo(german);
                     translateCompleteOrderTo(german);
                     translateMasterPageTo(german);
+                    translatewelcomeTo(german);
                 });
             });
 
@@ -155,6 +161,7 @@
                     translateStaffBasketTo(swedish);
                     translateCompleteOrderTo(swedish);
                     translateMasterPageTo(swedish);
+                    translatewelcomeTo(swedish);
                 });
             });
             <!-- Login Function -->
