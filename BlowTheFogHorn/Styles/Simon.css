@@ -57,7 +57,7 @@ input[type=text], input[type=password] {
 /*Buttons for the front page*/
 
 h1 {
-    color:black;
+    color:#606060; /* grey; */
     text-align:center;
     font-size:400%;
 }
@@ -65,7 +65,7 @@ h1 {
 /* the big heading */ 
 .header {
   font-family: Garamond, Times, serif;
-  color: grey;
+  color: #606060; /* grey; */
   margin-top: 6%;
 }
 
@@ -89,17 +89,6 @@ h1 {
     -moz-border-radius: 5px;
     -webkit-border-radius: 10px;
     text-shadow: 1px 1px #666;
-    }
-
-#beerbutton:hover {
-    background-position: 0 -48px;
-    }
-
-#beerbutton:active {
-    background-position: 0 top;
-    position: relative;
-    top: 1px;
-    padding: 6px 10px 4px;
     }
 
 .loginb {
@@ -179,10 +168,6 @@ h1 {
     text-shadow: 1px 1px #666;
     }
 
-#ourbeers:hover {
-    background-position: 0 -48px;
-    }
-
 /*.ourbeers {
     background-color: #4CAF50;
     color: white;
@@ -197,7 +182,7 @@ h1 {
 
 /* Add a hover effect for buttons */
 button:hover {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 /* Extra style for the cancel button (red) */
@@ -400,7 +385,7 @@ span.psw {
   border-radius: 10px; 
   padding-top: 5px;
 }
-color: black;
+
 .Product_information h4{
     margin:10px;
 }
@@ -411,6 +396,10 @@ color: black;
    margin: 5px;
    font-size:20px;
    text-decoration:none;
+}
+
+.Product_information:hover {
+    opacity: 0.7;
 }
 
 a {
@@ -508,7 +497,7 @@ input[type=text], input[type=password] {
 
 /* the heading */
 #beertypeheader {
-    color: black;
+    color: #606060; /* grey; */
 }
 
 .totalsum {
@@ -536,7 +525,6 @@ input[type=text], input[type=password] {
   float:left;
   display: inline-block;
   text-align: left;
-  padding-left: 20%;
 }
 
 #beerTypeWrapper {
@@ -545,4 +533,12 @@ input[type=text], input[type=password] {
 
 #cartview {
   text-align: left;
+}
+
+.hoverable:hover {
+    opacity: 0.7;
+}
+
+.hoverable {
+  padding-bottom: 10px;
 }

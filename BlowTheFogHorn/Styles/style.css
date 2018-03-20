@@ -15,6 +15,10 @@ div.inline {
     cursor: pointer;
 }
 
+.inline:hover {
+    opacity: 0.7;
+}
+
 div.inline_flags {
     margin: 0 auto;
 }
@@ -23,6 +27,10 @@ div.inline_buttons {
     float:right;
     margin-bottom: 5%;
     cursor: pointer;
+}
+
+.inline_buttons:hover {
+    opacity: 0.7;
 }
 
 div.flag {
@@ -35,6 +43,10 @@ img.flag_img{
     height: 50%;
     width:80%;
     cursor: pointer;
+}
+
+.flag_img:hover {
+    opacity: 0.7;
 }
 
 button.curved_btn {
@@ -57,8 +69,8 @@ button.checkout_btn {
     clear:both; 
 }
 
-.imgSize{
-    width: 46px
+.imgSize {
+    width: 46px;
 }
 
 .cartImgSize{

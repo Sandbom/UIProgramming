@@ -120,4 +120,12 @@ h1 {
     -moz-border-radius: 5px;
     -webkit-border-radius: 10px;
     text-shadow: 1px 1px #666;
+
+    /*
+    Settings for the tick
+     */
+    background-image: url("../img/tick.png");
+    background-size: 20% 80%;
+    background-repeat: no-repeat;
+    background-position: left;
 }

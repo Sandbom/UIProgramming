@@ -198,15 +198,19 @@
 
             $(function goToCart() {
                 $("#cart").on("click", function () {
-
-                    const beerTypeURL = "http://localhost/Views/beertype.html";
                     /*
                     Calls the function saveCart which is located in the beerType.html
                      */
-                    if(window.location.href === beerTypeURL){
-                        saveCart();
+
+                    var location = window.location.href;
+                    // Checking if a substring exists on the location
+                    if(location.indexOf("beertype.html") !== -1){
+                    saveCart();
+
+
                     }
-                    window.location.href = "shoppingBasketNew.html";
+                    window.location.href = "shoppingBasketNew.html"
+
                 });
 
             });

@@ -89,9 +89,9 @@ Button so the user can pay for the items
     background-color: #2ECC40; /* green */
 }
 
-.payButton:hover{
+.paybutton:hover {
+    opacity: 0.8;
     cursor: pointer;
-    background-color: #d9d7d9;
 }
 
 html {
