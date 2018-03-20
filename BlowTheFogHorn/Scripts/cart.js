@@ -4,6 +4,7 @@ $.getScript("../Database/Dutchman Files/beverages.js", function() {
 
 
 function displayCart(){
+
     var cart = JSON.parse(sessionStorage.getItem("cart"));
     var beer;
     alert("inne i displayCart");
