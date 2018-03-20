@@ -174,8 +174,6 @@
                     $("#vipLabel").show();
                     $("#login").show();
 
-                    createCart();
-
                 });
             });
             <!-- Logout Function -->
@@ -200,7 +198,11 @@
 
             $(function goToCart() {
                 $("#cart").on("click", function () {
+                    /*
+                    Calls the function saveCart which is located in the beerType.html
+                     */
                     saveCart();
+                    alert("Going to shoppingBasketNew");
                     window.location.href = "shoppingBasketNew.html";
                 });
 
