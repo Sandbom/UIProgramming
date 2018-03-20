@@ -23,14 +23,19 @@
             });
         });
 
+        $(function (){
+            /*
+            Displays the cart once the page loaded
+             */
+           displayCart();
+        });
+
         $(function() {
             $("#pay_under_cart").on("click", function(){
                 window.location.href = "../Views/orderConfirmation.html"
 
                 });
             });
-
-
     </script>
 
 </head>
