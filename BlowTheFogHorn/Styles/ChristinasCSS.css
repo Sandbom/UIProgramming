@@ -18,9 +18,9 @@ div.wrapper {
 div.text {
     font-size: 40px;
     color: black;
-    display: inline-block;
     width: 70%;
     height:50%;
+    margin:0 auto;
 }
 
 div.buttonbox {
@@ -35,7 +35,7 @@ div.buttonboxinner {
     height:70%;
 }
 
-button {
+/* button {
 	background-color: white;
     color: black;
     font-size: 20px;
@@ -47,19 +47,7 @@ button {
     display: inline-block;
     margin: 2px 50px 25px 40px;
     border-radius: 4px;
-
-
-    	/* old green buttons
-    background-color: #4CAF50; 
-    border: none;
-    color: white;
-    padding: 18px 40px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 2px 50px 50px 40px; */
-} 
+} */
 
 button:hover{
     opacity: 0.8;
@@ -101,4 +89,18 @@ td, th {
 
 .settingButton {
 	width: 95%;
+}
+
+p {
+    margin-top: 8%;
+}
+
+/* don't show the back/help buttons on welcome page */
+
+#index #back {
+    visibility: hidden;
+}
+
+#index #help {
+    visibility: hidden;
 }

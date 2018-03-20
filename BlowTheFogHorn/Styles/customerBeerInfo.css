@@ -1,10 +1,9 @@
 
 div.main{
-    height: 400px;
-    position: relative;
-    top: 200px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 1%;
 }
 
 /*
@@ -13,13 +12,14 @@ The left div with background information
 div.beerBackgroundInfo{
     background-color: white;
     opacity: 0.8;
-    height: 300px;
-    width: 20%;
+    min-width: 20%
     display: inline-block;
     border-right: 5px black solid;
     border-left: 1px black solid;
     border-top: 1px black solid ;
     border-bottom: 1px black solid;
+    text-align: left;
+    padding-right: 20px;
 }
 
 /*
@@ -28,13 +28,14 @@ The right div with information about the beer's cost
 div.beerCostInfo{
     background-color: white;
     opacity: 0.8;
-    height: 300px;
-    width: 20%;
+    min-width: 20%;
     display: inline-block;
     border-left: 5px black solid;
     border-right: 1px black solid ;
     border-top: 1px black solid ;
     border-bottom: 1px black solid;
+    text-align: left;
+    padding-right: 20px;
 }
 
 ul{
@@ -51,24 +52,18 @@ h1#beerName{
     color: black;
     font-size: 45px;
     margin: 10px;
-    position: relative;
-    top: 200px;
-
+    margin-top: 3%;
 }
 
 /*
 Button so the user can pay for the items
  */
-button.payButton{
-    /*
-    Position of the button
-     */
-    position: absolute;
-    top: 80%;
-    left: 29.5%;
+.payButton{
+
     height: 50px;
     width: 200px;
     border-radius: 4px;
+    cursor: pointer;
 
     /*
     Color of the button
@@ -90,15 +85,13 @@ button.payButton{
     background-size: 20% 80%;
     background-repeat: no-repeat;
     background-position: left;
+
+    background-color: #2ECC40; /* green */
 }
 
-/*
-
- */
 .payButton:hover{
     cursor: pointer;
     background-color: #d9d7d9;
-
 }
 
 html {
@@ -107,4 +100,14 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+#nameWrapper {
+    text-align: center;
+    padding-bottom: 2%;
+    margin-top: 8%;
+}
+
+.wrapper {
+    text-align: center;
 }
