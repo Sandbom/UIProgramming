@@ -23,6 +23,7 @@
 
         <script src="../Scripts/translateStaffSettings.js"></script>
 
+
         <script src="../Scripts/translateStaffBasket.js"></script>
         <script src="../Scripts/translatePlaceNewOrder.js"></script>
         <script src="../Scripts/translateMasterPage.js"></script>
@@ -33,6 +34,7 @@
         Load cart script
         -->
         <script src="../Scripts/cart.js"></script>
+        <script src="../Scripts/beertype.js"></script>
 
 
         <script src="../Database/Dutchman%20Files/BeerDB.js"></script>
@@ -60,7 +62,17 @@
                     $(window).on("load", translateCompleteOrderTo(english));
                     $(window).on("load", translateMasterPageTo(english));
                     $(window).on("load", translateWelcomeTo(english));
+
+                    if(sessionStorage.getItem("login") === "true") {
+                        $("#logout").show();
+                        $("#cart").show();
+                        $("#vipBtn").hide();
+                        $("#settingsIcon").show();
+                        $("#vipLabel").show();
+                        $("#login").show();
+                    }
                 }
+
 
             else{
 
@@ -73,6 +85,15 @@
                 $(window).on("load", translatePlaceNewOrderTo(language));
                 $(window).on("load", translateCompleteOrderTo(language));
                 $(window).on("load", translateWelcomeTo(english));
+
+                    if(sessionStorage.getItem("login") === "true") {
+                        $("#logout").show();
+                        $("#cart").show();
+                        $("#vipBtn").hide();
+                        $("#settingsIcon").show();
+                        $("#vipLabel").show();
+                        $("#login").show();
+                    }
 
             }
             });
@@ -165,7 +186,7 @@
                 });
             });
             <!-- Login Function -->
-            $(function() {
+            $(function () {
                 $("#vipBtn").on("click", function(){
                     $( "#logout" ).toggle();
                     $( "#cart" ).show();
@@ -173,6 +194,7 @@
                     $("#settingsIcon").show();
                     $("#vipLabel").show();
                     $("#login").show();
+                    sessionStorage.setItem("login", "true");
 
                 });
             });
@@ -185,6 +207,7 @@
                     $("#settingsIcon").hide();
                     $("#vipLabel").hide();
                     $("#login").hide();
+                    sessionStorage.setItem("login", "false");
 
                 });
             });

@@ -5,6 +5,7 @@ Print Beer information into the two divs
 /* Kind of ugly solution but it did not work having if else statements based on the id's of the links clicked so
 this will have to */
 /* These functions are triggered when clicking any of the four categories in searchbeer.html */
+
 function lagerclicked(){
         var lightlager = "\u00c3\u2013l, Ljus lager"
         localStorage.setItem("beertype", lightlager);
