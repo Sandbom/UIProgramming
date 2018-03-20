@@ -92,21 +92,34 @@
         }
 
         function saveCart(){
-            var text = $("#cartview").text();
-            alert("text innan= " + text);
-            text = text.replace(/\n/g, ':').split(':');
-            alert("text efter= " + text);
-            var cartList = text.split(":");
-            //alert(cartList);
-
-           // alert(sessionStorage.getItem("cartList"));
             /*
-            var i = 0;
-            for(i; i < splittedList.length;i++){
-                alert(splittedList[i]);
-            }
-*/
+            Read the text from the cart div and convert it to a string
+            */
+            var textFromDiv = $("#cartview").text();
+            textFromDiv = JSON.stringify(textFromDiv);
 
+            /*
+            Manipulates the string, removes white spaces and '\n'
+            Split it to an array.
+            */
+            textFromDiv = textFromDiv.replace(/\s+/g, '');
+            textFromDiv = textFromDiv.replace(/\\n/g, ":");
+            var textArray = textFromDiv.split(":");
+
+            /*
+            Removes the first and last element in the array
+            since it was a '\n'.
+            */
+            textArray.shift();
+            textArray.pop();
+
+            var saveToStorage = [];
+
+            for(var i = 0; i < textArray.length; i +=2){
+                saveToStorage.push(textArray[i]);
+            }
+
+            sessionStorage.setItem("cart", JSON.stringify(saveToStorage));
 
 
         }

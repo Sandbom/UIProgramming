@@ -2,18 +2,11 @@ $.getScript("../Database/Dutchman Files/beverages.js", function() {
     alert("Just a test.");
 });
 
-/*
-        We need to create cart once a user logs into the system.
-         */
-function createCart() {
-    var cart = [];
-    localStorage.setItem("cart",JSON.stringify(cart));
-}
 
 function displayCart(){
-    var cart = JSON.parse(localStorage.getItem("cart"));
+    var cart = JSON.parse(sessionStorage.getItem("cart"));
     var beer;
-    console.log(cart);
+    alert("inne i displayCart");
 
     for (var i = 0; i < cart.length;i++){
         beer = findBeer(cart[i]);
