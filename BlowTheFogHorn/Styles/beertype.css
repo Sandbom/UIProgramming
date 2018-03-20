@@ -215,3 +215,7 @@ span.psw {
     from {transform: scale(0)} 
     to {transform: scale(1)}
 }
+
+li:hover {
+    opacity: 0.8;
+}
