@@ -35,7 +35,12 @@
         }
 
         // implement Drop
+        // This function first copies the item that is being
+        // dragged and then adds it to the element it is dragged to
+        // The copied string is also manipulated to remove the first part before the ":" to get the price of the product to be able to alter the total sum variable.
         function drop(ev) {
+          // This part is for the drag n' drop and how the element is copied to the new location
+          // without removing it from the location it was dragged from
             ev.preventDefault();
             var data = ev.dataTransfer.getData("text");
             var nodeCopy = document.getElementById(data).cloneNode(true);
@@ -45,39 +50,22 @@
             var info1 = $("#"+data).text();
             ev.target.appendChild(nodeCopy);
 
+            // This part is for the total sum variable and its manipulation
             var elementdragged = $("#" +data).text();
-           // alert(info);
+           
             var priceofelement = elementdragged.split(":")[1];
             var removesek = priceofelement.substring(0, priceofelement.length - 6);
             var desiredint = removesek.substring(1);
-            //alert(name2);
+            
             var finalint = parseFloat((desiredint),10);
             totalsum = totalsum + finalint;
             $("#totalid").text("Totalsumma: " + totalsum + " kr.");
-            /*
-            Extract the name of the drink
-             */
-            //var name1 = arrayItem1[0];
-            /*
-            Removes the space before the name to get the beerName
-             */
-            //var beerName1 = name1.substring(1);
-            //alert(name1);
-            /*
-            Stores the beerName in the local storage.
-            To give customerBeerInfo access to the specific beer
-             */
-                // Example  johan_beerName_0
-               // sessionStorage.setItem(user+"_beerName_"+counter, beerName1);
-               // counter++;
-               // console.log(counter);
-
-            //var info1 = $("#"+data).text();
             var before = totalsum - finalint;
+
+            // Adds the different variables to the stacks to keep track of what has been added
             addtostack(nodeCopy);
             addsum(before);
             addredosum(finalint);
-            //calculatetotal();
 
         }
 
@@ -135,6 +123,8 @@
       <ul>
         <div class="beeritems">
 
+          <!--These are the elements used to display the beers, 13 of each type which can be drag n' dropped -->
+
             <li id="item1"  draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
             <li id="item2"  draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
             <li id="item3" draggable="true" class ="hoverable" ondragstart="drag(event)"> </li>
@@ -167,7 +157,7 @@
   </div>
 
 
-     <!-- Simons cart-->
+     <!-- This is for the cart where items can be drag and dropped and also where the totalsum is displayed-->
     <div id="cartWrapper">
       <img  class="imgSize" src="../img/cart.png">
       <p class="carttext">Cart</p> 
