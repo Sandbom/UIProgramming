@@ -9,7 +9,11 @@
     <script src="../Scripts/cart.js"></script>
 
     <script src="../Scripts/translateShoppingBasket.js"></script>
+    <script src="../Scripts/undoredo.js"></script>
     <script src="../Database/Dutchman Files/translations.js"></script>
+    <script src="../Database/Dutchman Files/Beverages.js"></script>
+
+
 
     <script>
         $(function(){
@@ -23,12 +27,12 @@
             });
         });
 
-        $(function (){
+        //$(function (){
             /*
             Displays the cart once the page loaded
              */
-           displayCart();
-        });
+        //  displayCart();
+        //});
 
         $(function() {
             $("#pay_under_cart").on("click", function(){
@@ -53,7 +57,7 @@
     </div>
         <!--All the cells in the table -->
         <div class="wrapper">
-            <table>
+            <table id="tableid">
                 <tr>
                     <th class="nolines"></th>
                     <th class="items" id="article"> </th>
@@ -63,21 +67,21 @@
 
                 <tr>
                     <td class="nolines"><button type="button" class="tableButton">X</button> </td>
-                    <td class="items">Article1</td>
+                    <td class="items" id="article1"></td>
                     <td class="items">Amount1</td>
                     <td class="items">Cost1</td>
                 </tr>
 
                 <tr>
                     <th class="nolines"><button type="button" class="tableButton">X</button> </th>
-                    <td class="items">Article2</td>
+                    <td class="items" id="article2"></td>
                     <td class="items">Amount2</td>
                     <td class="items">Cost2</td>
                 </tr>
 
                 <tr>
                     <th class="nolines"><button type="button" class="tableButton">X</button> </th>
-                    <td class="items">Article3</td>
+                    <td class="items" id="article3"></td>
                     <td class="items">Amount3</td>
                     <td class="items">Cost3</td>
                 </tr>
