@@ -1,5 +1,5 @@
 /*
-Print Beer information into the two divs
+Print Beer information into the list
 */
 
 /* Kind of ugly solution but it did not work having if else statements based on the id's of the links clicked so
@@ -7,25 +7,25 @@ this will have to */
 /* These functions are triggered when clicking any of the four categories in searchbeer.html */
 
 function lagerclicked(){
-        var lightlager = "\u00c3\u2013l, Ljus lager"
+        var lightlager = "\u00c3\u2013l, Ljus lager";
         localStorage.setItem("beertype", lightlager);
         window.location.href="beertype.html"
 }
 
 function psclicked(){
-        var pands = "\u00c3\u2013l, Porter och Stout"
+        var pands = "\u00c3\u2013l, Porter och Stout";
         localStorage.setItem("beertype", pands);
         window.location.href="beertype.html"
 }
 
 function aleclicked(){
-        var ale = "\u00c3\u2013l, Ale"
+        var ale = "\u00c3\u2013l, Ale";
         localStorage.setItem("beertype", ale);
         window.location.href="beertype.html"
 }
 
 function dlclicked(){
-        var darklager = "\u00c3\u2013l, M\u00c3\u00b6rk lager"
+        var darklager = "\u00c3\u2013l, M\u00c3\u00b6rk lager";
         localStorage.setItem("beertype", darklager);
         window.location.href="beertype.html"
 }
@@ -41,12 +41,7 @@ $(function displayToDivs(){
         A solution to print ',' after the first and second variable
          (not the third)
          */
-        //var abeer = beer[i].split(", ");
-        // var abeer2 = beer[i].split("/n");
-        // console.log(beer[i].prisinklmoms);
         var toAppend = beer[i].namn+":         "+beer[i].prisinklmoms+" SEK \n";
-        console.log(beer[i]);
-        // console.log(toAppend);
         $("#item" + iterator).append(beer[i]).append(toAppend);
         iterator++;
     }
@@ -65,8 +60,8 @@ function findBeer(spiritName) {
     var info = [];
 
     /*
-    Constant = 30 because of we want to display 10 beers of each category
-    since we extract 3 variables from each beer the total is 10*3 = 30
+    Constant = 75 because of we want to display 25 beers of each category
+    since we extract 3 variables from each beer the total is 25*3 = 75
     */
     const MAX = 75;
     /* Maximum amount of beers of each type*/

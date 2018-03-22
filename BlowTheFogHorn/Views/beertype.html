@@ -102,13 +102,17 @@
 
             /*
             Removes the first and last element in the array
-            since it was a '\n'.
+            The first and last element was \n because that was how
+            the beer was saved in the db.
             */
             textArray.shift();
             textArray.pop();
 
             var saveToStorage = [];
 
+            /*
+            Pushes every second element to the array saveToStorage
+             */
             for(var i = 0; i < textArray.length; i +=2){
                 saveToStorage.push(textArray[i]);
             }

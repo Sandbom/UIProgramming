@@ -1,5 +1,4 @@
-$.getScript("../Database/Dutchman Files/beverages.js", function() {
-    //alert("Just a test.");
+$.getScript("../Database/Dutchman Files/Beverages.js", function() {
 });
 
 
@@ -7,20 +6,19 @@ function displayCart(){
 
     var cart = JSON.parse(sessionStorage.getItem("cart"));
     var beer;
-    alert("inne i displayCart");
 
     for (var i = 0; i < cart.length;i++){
         beer = findBeer(cart[i]);
-        alert(beer);
-    }
 
+    }
 }
 
 function findBeer(beerName) {
     var info = [];
 
-    for (var i = 0;DB2.spirits.length;i++){
-        if (DB2.spirits[i].namn ===beerName){
+    for (var i = 0;i < DB2.spirits.length;i++){
+        if (DB2.spirits[i].namn === beerName){
+            alert("träff");
             info.push(DB2.spirits[i]);
         }
 
