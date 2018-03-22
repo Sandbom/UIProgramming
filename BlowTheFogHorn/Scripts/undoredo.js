@@ -1,5 +1,5 @@
 //Despite it being a poor mans solution we keep the stack and current variables global for simpleness
-//Current starts at -1 since index 0 is first element
+//Current and undocount starts at -1 since index 0 is first element
 var undostack = [];
 var undocount = -1;
 var stack = [];
@@ -42,6 +42,8 @@ function redoclick(){
 //	}
 }
 
+// This function is for redoing the total sum amount by popping last element added from redosumlist []
+// It then changes the totalsum global variable by adding the previously undone or subtracted value.
 function redototalamount(){
 	sumundone = popredosum();
 	totalsum = totalsum + sumundone;
@@ -68,19 +70,20 @@ function popfromstack(){
 }
 
 
+// This function simply pushes to the sumlist []
 function addsum(object){
 	sumlist.push(object);
 }
-
+// This function simply pushes to the redosumlist []
 function addredosum(object){
 	redosumlist.push(object);
 }
-
+// This function simply pops from the redosumlist []
 function popredosum(){
 	ra = redosumlist.pop();
 	return ra;
 }
-
+// This function simply pops from the sumlist []
 function returnsum(){
 	rs = sumlist.pop();
 	return rs;
