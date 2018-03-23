@@ -9,7 +9,7 @@ $(document).ready((function (){
 
     /* Adds the total sum from the previously stored variable in sessionstorage*/
     var totalsumvar = sessionStorage.getItem("totalsum");
-    $("#totalamount").text("Totalsumma: " + totalsumvar + " kr.");
+    $("#totalamount").text("\t\u03A3 = " + totalsumvar + " kr.");
         for (var i = 0; i < cart.length; i++){
             var beer = findBeer(cart[i]);
             var beerprice = findBeerprice(cart[i]);

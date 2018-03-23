@@ -52,7 +52,7 @@ function drop(ev) {
     var finalint = parseFloat(desiredint);
     totalsum = totalsum + finalint;
     totalsum = Number((totalsum).toFixed(2));
-    $("#totalid").text("Totalsumma: " + totalsum + " kr.");
+    $("#totalid").text("\t\u03A3 = " + totalsum + " kr.");
     var calc = totalsum - finalint;
     var before = Number((calc).toFixed(2));
 

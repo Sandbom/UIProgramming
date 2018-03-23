@@ -17,7 +17,7 @@ function undoclick(){
 		list.removeChild(list.lastChild);
 		nysum = returnsum();
 		tempsum = nysum;
-		$("#totalid").text("Totalsumma: " + nysum + " kr.");
+		$("#totalid").text("\t\u03A3 = " + nysum + " kr.");
 		current--;
 		//addtostack(list.lastChild);
 		undostack.push(undoitem);
@@ -47,7 +47,7 @@ function redoclick(){
 function redototalamount(){
 	sumundone = popredosum();
 	totalsum = totalsum + sumundone;
-	$("#totalid").text("Totalsumma: " + totalsum + " kr.");
+	$("#totalid").text("\t\u03A3 = \" " + totalsum + " kr.");
 }
 
 // Here we push to the stack so that we know what to extract later when extracting,
