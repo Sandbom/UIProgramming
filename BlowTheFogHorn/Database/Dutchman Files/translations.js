@@ -14,6 +14,7 @@ var swedish = {
             "payButton" : "Lägg till i varukorgen"
         }
     ],
+
     "placeNewOrder" : [
         {
             "newOrder" : "Lägg En Ny Order ",
@@ -37,7 +38,6 @@ var swedish = {
             "result" : "Resultat",
             "addToBasket" : "Lägg I korgen",
             "beersToOrder" : "Tryck för att betala "
-
         }
 
     ],
@@ -60,15 +60,14 @@ var swedish = {
             "payButton" : "Betala",
             "headingShoppingCart" : "Varukorg"
         }
-
     ],
+
     "staffSettings" : [
         {
             "vipOrders" : "Se VIP beställningar",
             "updateBeerDB" : "Uppdatera Öl-databasen",
             "updateVIPDB" : "Uppdatera VIP-databasen"
         }
-
     ],
 
     "staffBasket" : [
@@ -92,8 +91,6 @@ var swedish = {
             "thankmsg" : "Tack för att du handlade hos den Flygande Holländaren, på återseende!"
 
         }
-
-
     ]
 
 };
@@ -106,8 +103,6 @@ var greek = {
         {
             "thankmsg" : "Ευχαριστούμε για τη προτίμηση σας στον Ιπτάμενο Ολλανδό!! Θα χαρούμε να σας ξαναδούμε!"
         }
-
-
     ],
 
     "customerBeerInfo": [
@@ -121,13 +116,13 @@ var greek = {
             "payButton" : "Προσθήκη"
         }
     ],
+
     "completeOrder" : [
         {
             "info" : "Πληροφορίες: ",
             "result" : "Αποτελέσματα",
             "addToBasket" : "Προσθήκη",
             "beersToOrder" : "Προς Πληρωμή "
-
         }
 
     ],
@@ -136,7 +131,7 @@ var greek = {
         {
             "vipBtn" : "V.I.P Σύνδεση",
             "cartBtn" : "Καλάθι",
-            "logoutBtn":"Αποσύνδεση"
+            "logoutBtn" : "Αποσύνδεση"
         }
     ],
 
@@ -162,11 +157,10 @@ var greek = {
 
     "staffSettings" : [
         {
-            "vipOrders" : " Παραγγελίες VIP ",
+            "vipOrders" : "Παραγγελίες VIP",
             "updateBeerDB" : "Ενημέρωση Βάσης Δ",
             "updateVIPDB" : "Ενημέρωση VIP-Βάσης Δ"
         }
-
     ],
 
     "placeNewOrder" : [
@@ -184,14 +178,19 @@ var greek = {
             "payStaff" : "Πληρωμή"
         }
     ],
+
      "welcome" : [
         {
             "welcomeheader" : "Καλώς ήρθατε στον ιπτάμενο ολλανδό",
             "beerbutton" : "Η μπύρες μας"
         }
-
     ],
 
+    "orderConfirmation" : [
+        {
+            "thankmsg" : "Ευχαριστούμε για την παραγγελία σας! Change!!"
+        }
+    ]
 };
 
 /* ENGLISH */
@@ -287,8 +286,6 @@ var english = {
         {
             "thankmsg" : "Thank you for buying beer at the Flying Dutchman. Welcome back!"
         }
-
-
     ]
 
 };
