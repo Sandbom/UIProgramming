@@ -36,7 +36,7 @@ $(document).ready((function (){
 
 }));
 
-
+//Search a beer by name in the database and return it
 function findBeer(beerName) {
     var info = [];
     for (var i = 0; i < DB2.spirits.length; i++){

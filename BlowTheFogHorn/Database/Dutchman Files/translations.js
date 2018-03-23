@@ -144,7 +144,7 @@ var greek = {
             "topUpCredit" : "Ανανέωση Μονάδων",
             "seeOrderHistory" : "Ιστορικό",
             "changePassword" : "Αλλαγή Συνθηματικού",
-            "user" : "Johan"
+            "user" : "Ιωάννης"
         }
     ],
 
@@ -153,8 +153,8 @@ var greek = {
             "article" : "Άρθρο",
             "amount" : "Ποσότητα",
             "cost" : "Κόστος",
-            "payButton" : "Fill in greek",
-            "headingShoppingCart" : "Fill in greek"
+            "payButton" : "Πληρωμή",
+            "headingShoppingCart" : "Καλάθι"
         }
 
     ],
@@ -198,7 +198,7 @@ var greek = {
 
     "searchBeer" : [
         {
-            "searchBeerh1" : "Fill in greek"
+            "searchBeerh1" : "Περιηγειθείτε στις μπύρες μας"
 
         }
     ]
