@@ -102,6 +102,14 @@ var swedish = {
 
 var greek = {
 
+    "orderConfirmation" : [
+        {
+            "thankmsg" : "Ευχαριστούμε για τη προτίμηση σας στον Ιπτάμενο Ολλανδό!! Θα χαρούμε να σας ξαναδούμε!"
+        }
+
+
+    ],
+
     "customerBeerInfo": [
         {
             "origin" : "Προέλευση: ",
@@ -179,7 +187,7 @@ var greek = {
      "welcome" : [
         {
             "welcomeheader" : "Καλώς ήρθατε στον ιπτάμενο ολλανδό",
-            "beerbutton" : "Η μπύρα μας"
+            "beerbutton" : "Η μπύρες μας"
         }
 
     ],
