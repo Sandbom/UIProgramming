@@ -89,10 +89,6 @@
             textFromDiv = textFromDiv.replace(/\\n/g, ":");
             var textArray = textFromDiv.split(":");
             var finalArray = textFromDiv.split("SEK ,");
-
-
-
-
             /*
             Removes the first and last element in the array
             The first and last element was \n because that was how
@@ -102,15 +98,17 @@
             textArray.pop();
 
             var saveToStorage = [];
-            alert(textArray[2]);
             /*
             Pushes every second element to the array saveToStorage
              */
             for(var i = 0; i < textArray.length; i +=2){
                 console.log(textArray[i]);
-                saveToStorage.push(textArray[i]);
+                saveToStorage.push(textArray[i].trim());
             }
+            
 
+
+            sessionStorage.setItem("totalsum", totalsum);
             sessionStorage.setItem("cart", JSON.stringify(saveToStorage));
 
 
