@@ -11,7 +11,7 @@ var swedish = {
             "classOfGoods" : "Varugrupp: ",
             "alcoholPercentage" : "Alkoholhalt: ",
             "packaging" : "Förpackning: ",
-            "payButton" : "Lägg till in i varukorgen"
+            "payButton" : "Lägg till i varukorgen"
         }
     ],
     "placeNewOrder" : [
@@ -55,7 +55,9 @@ var swedish = {
         {
             "article" : "Artikel",
             "amount" : "Antal",
-            "cost" : "Kostnad"
+            "cost" : "Kostnad",
+            "payButton" : "Betala",
+            "headingShoppingCart" : "Varukorg"
         }
 
     ],
@@ -73,7 +75,7 @@ var swedish = {
 	        "article" : "Artikel",
 	        "amount" : "Antal",
 	        "cost" : "Kostnad",
-	        "payButton" : "Betala"
+	        "payStaff" : "Betala"
 	    }
 	],   
      "welcome" : [
@@ -169,7 +171,7 @@ var greek = {
             "article" : "Άρθρο",
             "amount" : "Ποσότητα",
             "cost" : "Κόστος",
-            "payButton" : "Πληρωμή"
+            "payStaff" : "Πληρωμή"
         }
     ],
      "welcome" : [
@@ -240,7 +242,8 @@ var english = {
             "article" : "Article",
             "amount" : "Amount",
             "cost" : "Cost",
-            "payButton" : "Press to pay"
+            "payButton" : "Press to pay",
+            "headingShoppingCart" : "Cart"
         }
     ],
 
@@ -258,7 +261,7 @@ var english = {
             "article" : "Article",
             "amount" : "Amount",
             "cost" : "Cost",
-            "payButton" : "Press to pay"
+            "payStaff" : "Press to pay"
         }
     ],
      "welcome" : [
@@ -328,7 +331,9 @@ var german = {
         {
             "article" : "Artikel",
             "amount" : "Anzahl",
-            "cost" : "Preis"
+            "cost" : "Preis",
+            "payButton" : "In den Warenkorb",
+            "headingShoppingCart" : "Warenkorb"
         }
     ],
 
@@ -353,7 +358,7 @@ var german = {
 	        "article" : "Artikel",
 	        "amount" : "Anzahl",
 	        "cost" : "Preis",
-	        "payButton" : "Bezahlen"
+	        "payStaff" : "Bezahlen"
 	    }
 	],
 
