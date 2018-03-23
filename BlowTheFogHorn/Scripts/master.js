@@ -15,7 +15,8 @@ $( document ).ready(function() {
         $(window).on("load", translateMasterPageTo(english));
         $(window).on("load", translateWelcomeTo(english));
         $(window).on("load", translateOrderConfirmationTo(english));
-           // Checks if somebody is logge in session and return the corresponding interface
+        $(window).on("load", translateSearchBeerTo(english));
+           // Checks if somebody is logged in session and return the corresponding interface
         if(sessionStorage.getItem("login") === "true") {
             $("#logout").show();
             $("#cart").show();
@@ -39,6 +40,7 @@ $( document ).ready(function() {
         $(window).on("load", translateCompleteOrderTo(language));
         $(window).on("load", translateWelcomeTo(language));
         $(window).on("load", translateOrderConfirmationTo(language));
+        $(window).on("load", translateSearchBeerTo(language));
 
         if(sessionStorage.getItem("login") === "true") {
             $("#logout").show();
@@ -78,6 +80,7 @@ $(function() {
         translateCompleteOrderTo(swedish);
         translateWelcomeTo(swedish);
         translateOrderConfirmationTo(swedish);
+        translateSearchBeerTo(swedish);
     });
 });
 // translate into english
@@ -94,6 +97,7 @@ $(function() {
         translateMasterPageTo(english);
         translateWelcomeTo(english);
         translateOrderConfirmationTo(english);
+        translateSearchBeerTo(english);
 
     });
 });
@@ -112,6 +116,7 @@ $(function() {
         translateMasterPageTo(greek);
         translateWelcomeTo(greek);
         translateOrderConfirmationTo(greek);
+        translateSearchBeerTo(greek);
 
     });
 });
@@ -128,6 +133,7 @@ $(function() {
         translateMasterPageTo(german);
         translateWelcomeTo(german);
         translateOrderConfirmationTo(german);
+        translateSearchBeerTo(german);
     });
 });
 

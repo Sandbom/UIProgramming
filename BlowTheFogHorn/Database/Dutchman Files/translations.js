@@ -98,7 +98,6 @@ var swedish = {
     "searchBeer" : [
         {
             "searchBeerh1" : "Upptäck vår öl"
-
         }
     ]
 
