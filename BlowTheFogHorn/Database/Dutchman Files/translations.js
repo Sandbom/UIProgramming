@@ -1,5 +1,6 @@
 
-/* SWEDISH */
+/* This variable is used to translate items to swedish, on the left hand side of every "item" : "item" is the id of the item
+that is supposed be changed and on the right side is the translation we want to add to that id */
 
 var swedish = {
 
@@ -47,7 +48,8 @@ var swedish = {
             "checkBalance" : "Kolla saldo",
             "topUpCredit" : "Fyll på saldo",
             "seeOrderHistory" : "Se order historiken",
-            "changePassword" : "Byt lösenord"
+            "changePassword" : "Byt lösenord",
+            "browsebeerheading" : "Johan"
         }
     ],
 
@@ -104,9 +106,17 @@ var swedish = {
 
 };
 
-/* GREEK */ 
 
+/* This variable is used to translate items to greek*/
 var greek = {
+
+    "orderConfirmation" : [
+        {
+            "thankmsg" : "Ευχαριστούμε για τη προτίμηση σας στον Ιπτάμενο Ολλανδό!! Θα χαρούμε να σας ξαναδούμε!"
+        }
+
+
+    ],
 
     "customerBeerInfo": [
         {
@@ -143,7 +153,8 @@ var greek = {
             "checkBalance" : "Υπόλοιπο",
             "topUpCredit" : "Ανανέωση Μονάδων",
             "seeOrderHistory" : "Ιστορικό",
-            "changePassword" : "Αλλαγή Συνθηματικού"
+            "changePassword" : "Αλλαγή Συνθηματικού",
+            "browsebeerheading" : "Johan"
         }
     ],
 
@@ -184,7 +195,7 @@ var greek = {
      "welcome" : [
         {
             "welcomeheader" : "Καλώς ήρθατε στον ιπτάμενο ολλανδό",
-            "beerbutton" : "Η μπύρα μας"
+            "beerbutton" : "Η μπύρες μας"
         }
 
     ],
@@ -198,8 +209,7 @@ var greek = {
 
 };
 
-/* ENGLISH */
-
+/* This variable is used to translate items to English*/
 var english = {
 
     "customerBeerInfo" : [
@@ -247,7 +257,8 @@ var english = {
             "checkBalance" : "Check Balance",
             "topUpCredit" : "Top up credit",
             "seeOrderHistory" : "See order history",
-            "changePassword" : "Change password"
+            "changePassword" : "Change password",
+            "browsebeerheading" : "Johan"
         }
     ],
 
@@ -303,8 +314,7 @@ var english = {
 
 };
 
-/* GERMAN */
-
+/* This variable is used to translate items to German*/
 var german = {
 
 
@@ -344,7 +354,8 @@ var german = {
             "checkBalance" : "Guthaben überprüfen",
             "topUpCredit" : "Guthaben aufladen",
             "seeOrderHistory" : "Meine Bestellungen",
-            "changePassword" : "Passwort ändern"
+            "changePassword" : "Passwort ändern",
+            "browsebeerheading" : "Johan"
         }
     ],
 

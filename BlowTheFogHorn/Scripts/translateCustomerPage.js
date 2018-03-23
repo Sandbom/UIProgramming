@@ -10,7 +10,7 @@ function translateCustomerPageTo(language) {
     $("#TopUp").text(translation[1]);
     $("#SeeOrder").text(translation[2]);
     $("#ChangePassword").text(translation[3]);
-
+    $("#browsebeerheading").text(translation[4]);
 }
 
 
@@ -27,7 +27,7 @@ function TranslationCustomerPage(language){
         translations.push(language.customerPage[i].topUpCredit);
         translations.push(language.customerPage[i].seeOrderHistory);
         translations.push(language.customerPage[i].changePassword);
-
+        translations.push(language.customerPage[i].browsebeerheading);
     }
 
     return translations;
