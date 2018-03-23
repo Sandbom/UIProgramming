@@ -58,16 +58,17 @@
             var removesek = priceofelement.substring(0, priceofelement.length - 6);
             var desiredint = removesek.substring(1);
             
-            var finalint = parseFloat((desiredint),10);
+            var finalint = parseFloat(desiredint);
             totalsum = totalsum + finalint;
+            totalsum = Number((totalsum).toFixed(2));
             $("#totalid").text("Totalsumma: " + totalsum + " kr.");
-            var before = totalsum - finalint;
+            var calc = totalsum - finalint;
+            var before = Number((calc).toFixed(2));
 
             // Adds the different variables to the stacks to keep track of what has been added
             addtostack(nodeCopy);
             addsum(before);
             addredosum(finalint);
-
         }
 
         function allowDrop(ev) {
