@@ -13,11 +13,7 @@ $(document).ready((function (){
         for (var i = 0; i < cart.length; i++){
             var beer = findBeer(cart[i]);
             var beerprice = findBeerprice(cart[i]);
-           //var row = myTable.insertRow(myTable.rows.length);
-           //var cell1 = row.insertCell(0);
-           //cell1.innerHTML = beer;
-           //myTable.rows[i+1].cells[0].innerHTML = beer;
-          // myTable.rows[i+1].cells[1].innerHTML = beerprice;
+            
             toAppendName[i] = beer;
             toAppendPrice[i] = beerprice;
 

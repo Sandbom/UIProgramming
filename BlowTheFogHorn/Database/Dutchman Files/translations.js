@@ -1,5 +1,6 @@
 
-/* SWEDISH */
+/* This variable is used to translate items to swedish, on the left hand side of every "item" : "item" is the id of the item
+that is supposed be changed and on the right side is the translation we want to add to that id */
 
 var swedish = {
 
@@ -91,19 +92,21 @@ var swedish = {
             "thankmsg" : "Tack för att du handlade hos den Flygande Holländaren, på återseende!"
 
         }
+
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Upptäck vår öl"
+
+        }
     ]
 
 };
 
-/* GREEK */ 
 
+/* This variable is used to translate items to greek*/
 var greek = {
-
-    "orderConfirmation" : [
-        {
-            "thankmsg" : "Ευχαριστούμε για τη προτίμηση σας στον Ιπτάμενο Ολλανδό!! Θα χαρούμε να σας ξαναδούμε!"
-        }
-    ],
 
     "customerBeerInfo": [
         {
@@ -188,13 +191,20 @@ var greek = {
 
     "orderConfirmation" : [
         {
-            "thankmsg" : "Ευχαριστούμε για την παραγγελία σας! Change!!"
+            "thankmsg" : "Ευχαριστούμε για τη προτίμηση σας στον Ιπτάμενο Ολλανδό!! Θα χαρούμε να σας ξαναδούμε!"
+        }
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Fill in greek"
+
         }
     ]
+
 };
 
-/* ENGLISH */
-
+/* This variable is used to translate items to English*/
 var english = {
 
     "customerBeerInfo" : [
@@ -274,6 +284,7 @@ var english = {
             "payStaff" : "Press to pay"
         }
     ],
+
      "welcome" : [
         {
             "welcomeheader" : "Welcome to the Flying Dutchman",
@@ -286,12 +297,19 @@ var english = {
         {
             "thankmsg" : "Thank you for buying beer at the Flying Dutchman. Welcome back!"
         }
+
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Browse our beer"
+
+        }
     ]
 
 };
 
-/* GERMAN */
-
+/* This variable is used to translate items to German*/
 var german = {
 
 
@@ -377,6 +395,12 @@ var german = {
             "beerbutton" : "Unser Bier"
         }
 
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Fill in german"
+        }
     ]
 
 };
