@@ -11,7 +11,9 @@ function translateStaffSettingsTo(language){
 
 }
 
-
+/*
+Fetches translations from translations.js
+ */
 function translationStaffingSetting(language) {
     var translation = [];
 

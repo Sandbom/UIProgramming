@@ -13,6 +13,9 @@ function translateShoppingBasketTo(language) {
 }
 
 
+/*
+Fetches translations from translations.js
+ */
 function translationShoppingBasket(language){
     var translation = [];
 

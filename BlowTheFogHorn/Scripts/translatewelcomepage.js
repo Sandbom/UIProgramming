@@ -1,3 +1,7 @@
+
+/*
+Scripts for translations
+*/
 function translateWelcomeTo(language) {
     var translation = translateWelcomepage(language);
 
