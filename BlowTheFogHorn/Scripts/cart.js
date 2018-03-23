@@ -8,7 +8,6 @@ $(document).ready((function (){
     /* Adds the total sum from the previously stored variable in sessionstorage*/
     var totalsumvar = sessionStorage.getItem("totalsum");
     $("#totalamount").text("Totalsumma: " + totalsumvar + " kr.");
-
         for (var i = 0; i < cart.length; i++){
             var beer = findBeer(cart[i]);
             var beerprice = findBeerprice(cart[i]);
@@ -41,12 +40,10 @@ function findBeerprice(beerName) {
     for (var i = 0; i < DB2.spirits.length; i++){
         if(DB2.spirits[i].namn === beerName){
             beerprices.push(DB2.spirits[i].prisinklmoms);
-            break;
+
+          }
         }
-
-    }
     return beerprices;
-
 }
 
 
