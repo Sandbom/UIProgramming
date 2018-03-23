@@ -47,3 +47,10 @@ function findBeerprice(beerName) {
 }
 
 
+/*
+Translations
+ */
+
+
+
+

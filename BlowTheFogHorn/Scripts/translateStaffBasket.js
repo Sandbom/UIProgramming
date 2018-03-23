@@ -8,7 +8,7 @@ function translateStaffBasketTo(language) {
     $("#article").text(translation[0]);
     $("#amount").text(translation[1]);
     $("#cost").text(translation[2]);
-    $(".payButton").text(translation[3]);
+    $("#payStaff").text(translation[3]);
 
 }
 
@@ -21,7 +21,7 @@ function translateStaffBasket(language) {
         translations.push(language.staffBasket[i].article);
         translations.push(language.staffBasket[i].amount);
         translations.push(language.staffBasket[i].cost);
-        translations.push(language.staffBasket[i].payButton);
+        translations.push(language.staffBasket[i].payStaff);
 
     }
 

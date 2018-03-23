@@ -12,9 +12,7 @@ function translateCustomerBeerInfoTo(language) {
     $("#classOfGoods").text(translation[3]);
     $("#alcoholPercentage").text(translation[4]);
     $("#packaging").text(translation[5]);
-    $(".payButton").text(translation[6]);
-
-
+    $("#addToBasket").text(translation[6]);
 
 }
 
@@ -34,8 +32,6 @@ function translationBeerInfo(language){
         translations.push(language.customerBeerInfo[i].payButton);
 
     }
-
-
     return translations;
 }
 
