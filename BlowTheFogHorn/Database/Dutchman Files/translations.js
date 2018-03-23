@@ -49,7 +49,7 @@ var swedish = {
             "topUpCredit" : "Fyll på saldo",
             "seeOrderHistory" : "Se order historiken",
             "changePassword" : "Byt lösenord",
-            "browsebeerheading" : "Johan"
+            "user" : "Johan"
         }
     ],
 
@@ -144,16 +144,17 @@ var greek = {
             "topUpCredit" : "Ανανέωση Μονάδων",
             "seeOrderHistory" : "Ιστορικό",
             "changePassword" : "Αλλαγή Συνθηματικού",
-            "browsebeerheading" : "Johan"
+            "user" : "Johan"
         }
     ],
-
 
     "shoppingBasket" : [
         {
             "article" : "Άρθρο",
             "amount" : "Ποσότητα",
-            "cost" : "Κόστος"
+            "cost" : "Κόστος",
+            "payButton" : "Fill in greek",
+            "headingShoppingCart" : "Fill in greek"
         }
 
     ],
@@ -253,7 +254,7 @@ var english = {
             "topUpCredit" : "Top up credit",
             "seeOrderHistory" : "See order history",
             "changePassword" : "Change password",
-            "browsebeerheading" : "Johan"
+            "user" : "Johan"
         }
     ],
 
@@ -350,7 +351,7 @@ var german = {
             "topUpCredit" : "Guthaben aufladen",
             "seeOrderHistory" : "Meine Bestellungen",
             "changePassword" : "Passwort ändern",
-            "browsebeerheading" : "Johan"
+            "user" : "Johan"
         }
     ],
 
