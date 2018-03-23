@@ -92,6 +92,13 @@ var swedish = {
 
         }
 
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Upptäck vår öl"
+
+        }
 
     ]
 
@@ -181,6 +188,13 @@ var greek = {
         }
 
     ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Fill in greek"
+
+        }
+    ]
 
 };
 
@@ -278,6 +292,13 @@ var english = {
         }
 
 
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Browse our beer"
+
+        }
     ]
 
 };
@@ -368,6 +389,12 @@ var german = {
             "beerbutton" : "Unser Bier"
         }
 
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Fill in german"
+        }
     ]
 
 };

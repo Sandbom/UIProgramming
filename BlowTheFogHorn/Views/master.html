@@ -31,6 +31,7 @@
         <script src="../Scripts/translateMasterPage.js"></script>
         <script src="../Scripts/translateCompleteOrder.js"></script>
         <script src="../Scripts/translatewelcomepage.js"></script>
+        <script src="../Scripts/translateSearchBeer.js"></script>
 
         <!--
         Load cart script
@@ -67,6 +68,7 @@
                     $(window).on("load", translateMasterPageTo(english));
                     $(window).on("load", translateWelcomeTo(english));
                     $(window).on("load", translateOrderConfirmationTo(english));
+                    $(window).on("load", translateSearchBeerTo(english));
 
                     if(sessionStorage.getItem("login") === "true") {
                         $("#logout").show();
@@ -91,6 +93,7 @@
                 $(window).on("load", translateCompleteOrderTo(language));
                 $(window).on("load", translateWelcomeTo(language));
                 $(window).on("load", translateOrderConfirmationTo(language));
+                $(window).on("load", translateSearchBeerTo(language));
 
                     if(sessionStorage.getItem("login") === "true") {
                         $("#logout").show();
@@ -130,6 +133,7 @@
                     translateCompleteOrderTo(swedish);
                     translateWelcomeTo(swedish);
                     translateOrderConfirmationTo(swedish);
+                    translateSearchBeerTo(swedish);
                 });
             });
 
@@ -146,6 +150,7 @@
                     translateMasterPageTo(english);
                     translateWelcomeTo(english);
                     translateOrderConfirmationTo(english);
+                    translateSearchBeerTo(english);
 
                 });
             });
@@ -164,6 +169,7 @@
                     translateMasterPageTo(greek);
                     translateWelcomeTo(greek);
                     translateOrderConfirmationTo(greek);
+                    translateSearchBeerTo(greek);
 
                 });
             });
@@ -180,6 +186,7 @@
                     translateMasterPageTo(german);
                     translateWelcomeTo(german);
                     translateOrderConfirmationTo(german);
+                    translateSearchBeerTo(german);
                 });
             });
 
