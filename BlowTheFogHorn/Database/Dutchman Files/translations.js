@@ -407,8 +407,7 @@ var german = {
 
     "searchBeer" : [
         {
-            "searchBeerh1" : "Fill in german"
+            "searchBeerh1" : "Stöbere durch unsere Biersorten"
         }
     ]
-
 };
