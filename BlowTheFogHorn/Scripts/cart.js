@@ -56,7 +56,7 @@ function findBeer(beerName) {
 
 /* Does the same as findBeer except it pushes to price of a beer to a list, can be done better than this*/
 function findBeerprice(beerName) {
-    var beerprices = []
+    var beerprices = [];
     for (var i = 0; i < DB2.spirits.length; i++){
         if(DB2.spirits[i].namn === beerName){
             beerprices.push(DB2.spirits[i].prisinklmoms);
