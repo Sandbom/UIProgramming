@@ -6,6 +6,105 @@ Print Beer information into the list
 this will have to */
 /* These functions are triggered when clicking any of the four categories in searchbeer.html */
 
+/*
+        Loads the master.html into the page
+ */
+$(function(){
+    $("#masterContent").load("master.html",null,function(){
+    });
+});
+
+
+// Global user variable
+var user = "Johan";
+//Cart Counter Variable
+var counter=0;
+
+// Implement Drag
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+// implement Drop
+// This function first copies the item that is being
+// dragged and then adds it to the element it is dragged to
+// The copied string is also manipulated to remove the first part before the ":" to get the price of the product to be able to alter the total sum variable.
+function drop(ev) {
+    // This part is for the drag n' drop and how the element is copied to the new location
+    // without removing it from the location it was dragged from
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    var nodeCopy = document.getElementById(data).cloneNode(true);
+    var nodeCopy1 = nodeCopy.cloneNode(true);
+    nodeCopy.draggable ="false";
+    nodeCopy.id = Math.random();
+    var info1 = $("#"+data).text();
+
+    ev.target.appendChild(nodeCopy);
+
+    // This part is for the total sum variable and its manipulation
+    var elementdragged = $("#" +data).text();
+
+    var priceofelement = elementdragged.split(":")[1];
+    var removesek = priceofelement.substring(0, priceofelement.length - 6);
+    var desiredint = removesek.substring(1);
+
+    var finalint = parseFloat(desiredint);
+    totalsum = totalsum + finalint;
+    totalsum = Number((totalsum).toFixed(2));
+    $("#totalid").text("Totalsumma: " + totalsum + " kr.");
+    var calc = totalsum - finalint;
+    var before = Number((calc).toFixed(2));
+
+    // Adds the different variables to the stacks to keep track of what has been added
+    addtostack(nodeCopy);
+    addsum(before);
+    addredosum(finalint);
+}
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function saveCart(){
+    /*
+    Read the text from the cart div and convert it to a string
+    */
+    var textFromDiv = $("#cartview").text();
+    textFromDiv = JSON.stringify(textFromDiv);
+
+    /*
+    Manipulates the string, removes white spaces and '\n'
+    Split it to an array.
+    */
+    textFromDiv = textFromDiv.replace(/\s+/, '');
+    textFromDiv = textFromDiv.replace(/\\n/g, ":");
+    var textArray = textFromDiv.split(":");
+    var finalArray = textFromDiv.split("SEK ,");
+    /*
+    Removes the first and last element in the array
+    The first and last element was \n because that was how
+    the beer was saved in the db.
+    */
+    textArray.shift();
+    textArray.pop();
+
+    var saveToStorage = [];
+    /*
+    Pushes every second element to the array saveToStorage
+     */
+    for(var i = 0; i < textArray.length; i +=2){
+        console.log(textArray[i]);
+        saveToStorage.push(textArray[i].trim());
+    }
+
+    sessionStorage.setItem("totalsum", totalsum);
+    sessionStorage.setItem("cart", JSON.stringify(saveToStorage));
+
+
+}
+
+
 function lagerclicked(){
         var lightlager = "\u00c3\u2013l, Ljus lager";
         localStorage.setItem("beertype", lightlager);
