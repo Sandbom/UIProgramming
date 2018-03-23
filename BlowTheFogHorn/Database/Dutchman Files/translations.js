@@ -1,5 +1,6 @@
 
-/* SWEDISH */
+/* This variable is used to translate items to swedish, on the left hand side of every "item" : "item" is the id of the item
+that is supposed be changed and on the right side is the translation we want to add to that id */
 
 var swedish = {
 
@@ -98,8 +99,8 @@ var swedish = {
 
 };
 
-/* GREEK */ 
 
+/* This variable is used to translate items to greek*/
 var greek = {
 
     "orderConfirmation" : [
@@ -194,8 +195,7 @@ var greek = {
 
 };
 
-/* ENGLISH */
-
+/* This variable is used to translate items to English*/
 var english = {
 
     "customerBeerInfo" : [
@@ -293,8 +293,7 @@ var english = {
 
 };
 
-/* GERMAN */
-
+/* This variable is used to translate items to German*/
 var german = {
 
 
