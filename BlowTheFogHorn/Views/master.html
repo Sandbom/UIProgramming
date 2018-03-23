@@ -163,6 +163,7 @@
                     translateCompleteOrderTo(greek);
                     translateMasterPageTo(greek);
                     translateWelcomeTo(greek);
+                    translateOrderConfirmationTo(greek);
 
                 });
             });
@@ -178,22 +179,10 @@
                     translateCompleteOrderTo(german);
                     translateMasterPageTo(german);
                     translateWelcomeTo(german);
+                    translateOrderConfirmationTo(german);
                 });
             });
 
-            $(function() {
-                $("#swedishFlag").on("click", function(){
-                    localStorage.setItem("language", "swedish");
-                    translateCustomerBeerInfoTo(swedish);
-                    translateCustomerPageTo(swedish);
-                    translateShoppingBasketTo(swedish);
-                    translateStaffSettingsTo(swedish);
-                    translateStaffBasketTo(swedish);
-                    translateCompleteOrderTo(swedish);
-                    translateMasterPageTo(swedish);
-                    translateWelcomeTo(swedish);
-                });
-            });
             <!-- Login Function -->
             $(function () {
                 $("#vipBtn").on("click", function(){

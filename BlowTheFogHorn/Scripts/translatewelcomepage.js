@@ -1,7 +1,5 @@
-
-
 function translateWelcomeTo(language) {
-    var translation = translationBeerInfo(language);
+    var translation = translateWelcomepage(language);
 
     $("#welcomeheader").text(translation[0]);
     $("#beerbutton").text(translation[1]);
@@ -10,7 +8,7 @@ function translateWelcomeTo(language) {
 /*
 Fetches translations from translations.js
  */
-function translationBeerInfo(language){
+function translateWelcomepage(language){
     var translations = [];
 
     for(i=0;i<language.welcome.length;i++){

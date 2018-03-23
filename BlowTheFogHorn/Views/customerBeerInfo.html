@@ -69,7 +69,9 @@
 
         });
 
-
+        /*
+        This function is called when the user press the payButton for a specific beer
+         */
         $(document).ready(function(){
             var counter = 0;
             $(".payButton").click(function(){
@@ -79,9 +81,6 @@
                 cart.push(buyBeer);
                 localStorage.setItem("cart",JSON.stringify(cart));
                 var cart2 = JSON.parse(localStorage.getItem("cart"));
-
-                alert(cart2);
-
 
                 /*
                 NOTIS: starts at 0

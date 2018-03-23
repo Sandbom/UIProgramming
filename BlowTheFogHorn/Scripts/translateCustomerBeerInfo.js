@@ -35,6 +35,7 @@ function translationBeerInfo(language){
 
     }
 
+
     return translations;
 }
 
