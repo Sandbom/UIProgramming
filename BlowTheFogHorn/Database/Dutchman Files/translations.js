@@ -47,7 +47,8 @@ var swedish = {
             "checkBalance" : "Kolla saldo",
             "topUpCredit" : "Fyll på saldo",
             "seeOrderHistory" : "Se order historiken",
-            "changePassword" : "Byt lösenord"
+            "changePassword" : "Byt lösenord",
+            "browsebeerheading" : "Johan"
         }
     ],
 
@@ -136,7 +137,8 @@ var greek = {
             "checkBalance" : "Υπόλοιπο",
             "topUpCredit" : "Ανανέωση Μονάδων",
             "seeOrderHistory" : "Ιστορικό",
-            "changePassword" : "Αλλαγή Συνθηματικού"
+            "changePassword" : "Αλλαγή Συνθηματικού",
+            "browsebeerheading" : "Johan"
         }
     ],
 
@@ -233,7 +235,8 @@ var english = {
             "checkBalance" : "Check Balance",
             "topUpCredit" : "Top up credit",
             "seeOrderHistory" : "See order history",
-            "changePassword" : "Change password"
+            "changePassword" : "Change password",
+            "browsebeerheading" : "Johan"
         }
     ],
 
@@ -323,7 +326,8 @@ var german = {
             "checkBalance" : "Guthaben überprüfen",
             "topUpCredit" : "Guthaben aufladen",
             "seeOrderHistory" : "Meine Bestellungen",
-            "changePassword" : "Passwort ändern"
+            "changePassword" : "Passwort ändern",
+            "browsebeerheading" : "Johan"
         }
     ],
 
