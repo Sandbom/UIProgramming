@@ -19,6 +19,8 @@
         -->
         <script src="../Scripts/translateCustomerPage.js"></script>
 
+        <script src="../Scripts/translateOrderConfirmation.js"></script>
+
         <script src="../Scripts/translateShoppingBasket.js"></script>
 
         <script src="../Scripts/translateStaffSettings.js"></script>
@@ -64,6 +66,7 @@
                     $(window).on("load", translateCompleteOrderTo(english));
                     $(window).on("load", translateMasterPageTo(english));
                     $(window).on("load", translateWelcomeTo(english));
+                    $(window).on("load", translateOrderConfirmationTo(english));
 
                     if(sessionStorage.getItem("login") === "true") {
                         $("#logout").show();
@@ -86,7 +89,8 @@
                 $(window).on("load", translateStaffBasketTo(language));
                 $(window).on("load", translatePlaceNewOrderTo(language));
                 $(window).on("load", translateCompleteOrderTo(language));
-                $(window).on("load", translateWelcomeTo(english));
+                $(window).on("load", translateWelcomeTo(language));
+                $(window).on("load", translateOrderConfirmationTo(language));
 
                     if(sessionStorage.getItem("login") === "true") {
                         $("#logout").show();
@@ -116,6 +120,7 @@
 
             $(function() {
                 $("#swedishFlag").on("click", function(){
+                    localStorage.setItem("language", "swedish");
                     translateCustomerBeerInfoTo(swedish);
                     translateCustomerPageTo(swedish);
                     translateShoppingBasketTo(swedish);
@@ -124,11 +129,13 @@
                     translatePlaceNewOrderTo(swedish);
                     translateCompleteOrderTo(swedish);
                     translateWelcomeTo(swedish);
+                    translateOrderConfirmationTo(swedish);
                 });
             });
 
             $(function() {
                 $("#ukFlag").on("click", function(){
+                    localStorage.setItem("language", "english");
                     translateCustomerBeerInfoTo(english);
                     translateCustomerPageTo(english);
                     translateShoppingBasketTo(english);
@@ -136,9 +143,9 @@
                     translateStaffBasketTo(english);
                     translatePlaceNewOrderTo(english);
                     translateCompleteOrderTo(english);
-                    translateMasterPageTo(english)
+                    translateMasterPageTo(english);
                     translateWelcomeTo(english);
-
+                    translateOrderConfirmationTo(english);
 
                 });
             });
@@ -228,14 +235,12 @@
                      */
 
                     var location = window.location.href;
-                    // Checking if a substring exists on the location
+                    // Checking if the substring "beertype.html "exists on the current location
                     if(location.indexOf("beertype.html") !== -1){
                     saveCart();
-
-
                     }
-                    window.location.href = "shoppingBasketNew.html"
-                    console.log("git fix");
+                    window.location.href = "shoppingBasketNew.html";
+
 
                 });
 

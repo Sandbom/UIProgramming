@@ -82,6 +82,15 @@ var swedish = {
             "beerbutton" : "Vår öl"
         }
 
+    ],
+
+    "orderConfirmation" : [
+        {
+            "thankmsg" : "Tack för att du handlade hos den Flygande Holländaren, på återseende!"
+
+        }
+
+
     ]
 
 };
@@ -169,7 +178,8 @@ var greek = {
             "beerbutton" : "Η μπύρα μας"
         }
 
-    ]
+    ],
+
 };
 
 /* ENGLISH */
@@ -257,7 +267,16 @@ var english = {
             "beerbutton" : "Our beer"
         }
 
+    ],
+
+    "orderConfirmation" : [
+        {
+            "thankmsg" : "Thank you for buying beer at the Flying Dutchman. Welcome back!"
+        }
+
+
     ]
+
 };
 
 /* GERMAN */
