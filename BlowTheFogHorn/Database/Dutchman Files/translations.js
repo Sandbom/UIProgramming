@@ -397,6 +397,13 @@ var german = {
 
     ],
 
+    "orderConfirmation" : [
+        {
+            "thankmsg" : "Vielen Dank für Ihre Bestellung!"
+        }
+
+    ],
+
     "searchBeer" : [
         {
             "searchBeerh1" : "Fill in german"
