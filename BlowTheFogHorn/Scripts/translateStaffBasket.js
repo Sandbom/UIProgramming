@@ -13,7 +13,9 @@ function translateStaffBasketTo(language) {
 }
 
 
-
+/*
+Fetches translations from translations.js
+ */
 function translateStaffBasket(language) {
     var translations = [];
 
