@@ -4,6 +4,8 @@
 table {
     border-collapse: collapse;
     display: inline-block;
+    overflow: scroll;
+    height: 300px;
 }
 
 td, th {
