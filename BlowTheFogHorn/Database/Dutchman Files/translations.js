@@ -1,5 +1,6 @@
 
-/* SWEDISH */
+/* This variable is used to translate items to swedish, on the left hand side of every "item" : "item" is the id of the item
+that is supposed be changed and on the right side is the translation we want to add to that id */
 
 var swedish = {
 
@@ -14,6 +15,7 @@ var swedish = {
             "payButton" : "Lägg till i varukorgen"
         }
     ],
+
     "placeNewOrder" : [
         {
             "newOrder" : "Lägg En Ny Order ",
@@ -37,7 +39,6 @@ var swedish = {
             "result" : "Resultat",
             "addToBasket" : "Lägg I korgen",
             "beersToOrder" : "Tryck för att betala "
-
         }
 
     ],
@@ -48,7 +49,7 @@ var swedish = {
             "topUpCredit" : "Fyll på saldo",
             "seeOrderHistory" : "Se order historiken",
             "changePassword" : "Byt lösenord",
-            "browsebeerheading" : "Johan"
+            "user" : "Johan"
         }
     ],
 
@@ -60,15 +61,14 @@ var swedish = {
             "payButton" : "Betala",
             "headingShoppingCart" : "Varukorg"
         }
-
     ],
+
     "staffSettings" : [
         {
             "vipOrders" : "Se VIP beställningar",
             "updateBeerDB" : "Uppdatera Öl-databasen",
             "updateVIPDB" : "Uppdatera VIP-databasen"
         }
-
     ],
 
     "staffBasket" : [
@@ -93,22 +93,20 @@ var swedish = {
 
         }
 
+    ],
 
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Upptäck vår öl"
+
+        }
     ]
 
 };
 
-/* GREEK */ 
 
+/* This variable is used to translate items to greek*/
 var greek = {
-
-    "orderConfirmation" : [
-        {
-            "thankmsg" : "Ευχαριστούμε για τη προτίμηση σας στον Ιπτάμενο Ολλανδό!! Θα χαρούμε να σας ξαναδούμε!"
-        }
-
-
-    ],
 
     "customerBeerInfo": [
         {
@@ -121,13 +119,13 @@ var greek = {
             "payButton" : "Προσθήκη"
         }
     ],
+
     "completeOrder" : [
         {
             "info" : "Πληροφορίες: ",
             "result" : "Αποτελέσματα",
             "addToBasket" : "Προσθήκη",
             "beersToOrder" : "Προς Πληρωμή "
-
         }
 
     ],
@@ -136,7 +134,7 @@ var greek = {
         {
             "vipBtn" : "V.I.P Σύνδεση",
             "cartBtn" : "Καλάθι",
-            "logoutBtn":"Αποσύνδεση"
+            "logoutBtn" : "Αποσύνδεση"
         }
     ],
 
@@ -146,27 +144,27 @@ var greek = {
             "topUpCredit" : "Ανανέωση Μονάδων",
             "seeOrderHistory" : "Ιστορικό",
             "changePassword" : "Αλλαγή Συνθηματικού",
-            "browsebeerheading" : "Johan"
+            "user" : "Johan"
         }
     ],
-
 
     "shoppingBasket" : [
         {
             "article" : "Άρθρο",
             "amount" : "Ποσότητα",
-            "cost" : "Κόστος"
+            "cost" : "Κόστος",
+            "payButton" : "Fill in greek",
+            "headingShoppingCart" : "Fill in greek"
         }
 
     ],
 
     "staffSettings" : [
         {
-            "vipOrders" : " Παραγγελίες VIP ",
+            "vipOrders" : "Παραγγελίες VIP",
             "updateBeerDB" : "Ενημέρωση Βάσης Δ",
             "updateVIPDB" : "Ενημέρωση VIP-Βάσης Δ"
         }
-
     ],
 
     "placeNewOrder" : [
@@ -184,18 +182,30 @@ var greek = {
             "payStaff" : "Πληρωμή"
         }
     ],
+
      "welcome" : [
         {
             "welcomeheader" : "Καλώς ήρθατε στον ιπτάμενο ολλανδό",
             "beerbutton" : "Η μπύρες μας"
         }
-
     ],
+
+    "orderConfirmation" : [
+        {
+            "thankmsg" : "Ευχαριστούμε για τη προτίμηση σας στον Ιπτάμενο Ολλανδό!! Θα χαρούμε να σας ξαναδούμε!"
+        }
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Fill in greek"
+
+        }
+    ]
 
 };
 
-/* ENGLISH */
-
+/* This variable is used to translate items to English*/
 var english = {
 
     "customerBeerInfo" : [
@@ -244,7 +254,7 @@ var english = {
             "topUpCredit" : "Top up credit",
             "seeOrderHistory" : "See order history",
             "changePassword" : "Change password",
-            "browsebeerheading" : "Johan"
+            "user" : "Johan"
         }
     ],
 
@@ -275,6 +285,7 @@ var english = {
             "payStaff" : "Press to pay"
         }
     ],
+
      "welcome" : [
         {
             "welcomeheader" : "Welcome to the Flying Dutchman",
@@ -288,13 +299,18 @@ var english = {
             "thankmsg" : "Thank you for buying beer at the Flying Dutchman. Welcome back!"
         }
 
+    ],
 
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Browse our beer"
+
+        }
     ]
 
 };
 
-/* GERMAN */
-
+/* This variable is used to translate items to German*/
 var german = {
 
 
@@ -335,7 +351,7 @@ var german = {
             "topUpCredit" : "Guthaben aufladen",
             "seeOrderHistory" : "Meine Bestellungen",
             "changePassword" : "Passwort ändern",
-            "browsebeerheading" : "Johan"
+            "user" : "Johan"
         }
     ],
 
@@ -380,6 +396,19 @@ var german = {
             "beerbutton" : "Unser Bier"
         }
 
+    ],
+
+    "orderConfirmation" : [
+        {
+            "thankmsg" : "Vielen Dank für Ihre Bestellung!"
+        }
+
+    ],
+
+    "searchBeer" : [
+        {
+            "searchBeerh1" : "Fill in german"
+        }
     ]
 
 };
